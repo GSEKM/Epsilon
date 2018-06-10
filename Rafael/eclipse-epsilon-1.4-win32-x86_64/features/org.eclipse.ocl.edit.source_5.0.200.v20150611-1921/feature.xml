@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.ocl.edit.source"
+      label="%featureName"
+      version="5.0.200.v20150611-1921"
+      provider-name="%providerName">
+
+   <description url="http://www.eclipse.org/modeling/mdt/ocl">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://www.eclipse.org/modeling/updates"/>
+      <discovery label="%updateSiteName" url="http://www.eclipse.org/modeling/updates"/>
+   </url>
+
+   <plugin
+         id="org.eclipse.ocl.edit.source"
+         download-size="0"
+         install-size="0"
+         version="4.0.200.v20150611-1921"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.ecore.edit.source"
+         download-size="0"
+         install-size="0"
+         version="4.0.200.v20150611-1921"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ocl.uml.edit.source"
+         download-size="0"
+         install-size="0"
+         version="5.1.100.v20150611-1921"
+         unpack="false"/>
+
+</feature>

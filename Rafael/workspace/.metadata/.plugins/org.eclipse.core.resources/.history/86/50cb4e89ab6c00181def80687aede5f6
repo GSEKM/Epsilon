@@ -1,0 +1,32 @@
+@namespace(uri="http://iotgmf/1.0", prefix="gmf.diagram")
+
+@gmf
+package myModel;
+
+@gmf.diagram
+class Arduino {
+  op void setup();
+  op void loop();
+  attr String board;
+  val Module[*] modules;
+}
+
+@gmf.link(label="test",source="source",target="target",style="dot")
+abstract class Módulo {
+  ref Arduino[*] Módulos;
+}
+
+@gmf.node() 
+class Module {
+	val String teste;
+}
+
+/*
+
+class Motor extends Módulo {
+  op void girar();
+  attr int graus;
+}
+
+*/
+

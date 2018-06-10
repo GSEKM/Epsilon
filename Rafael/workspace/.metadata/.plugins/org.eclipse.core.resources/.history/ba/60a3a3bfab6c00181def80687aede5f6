@@ -1,0 +1,43 @@
+
+/*
+ * 
+ */
+package myModel.diagram.part;
+
+/**
+ * @generated
+ */
+public class MyModelPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(myModel.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createModule1CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createModule1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(myModel.diagram.part.Messages.Module1CreationTool_title, myModel.diagram.part.Messages.Module1CreationTool_desc, java.util.Collections.singletonList(myModel.diagram.providers.MyModelElementTypes.Module_2001));
+				 entry.setId("createModule1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(myModel.diagram.providers.MyModelElementTypes.getImageDescriptor(myModel.diagram.providers.MyModelElementTypes.Module_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

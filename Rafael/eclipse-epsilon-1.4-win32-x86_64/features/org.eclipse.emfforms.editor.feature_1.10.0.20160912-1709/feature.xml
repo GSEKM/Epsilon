@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.emfforms.editor.feature"
+      label="EMF Forms Ecore Editor"
+      version="1.10.0.20160912-1709"
+      provider-name="%providerName"
+      plugin="org.eclipse.emfforms.editor">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="org.eclipse.emf.ecp.emfforms.runtime.feature" version="1.8.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.emfforms.editor"
+         download-size="75"
+         install-size="157"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emfforms.editor.ecore"
+         download-size="84"
+         install-size="197"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emfforms.editor.genmodel"
+         download-size="42"
+         install-size="124"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emfforms.swt.treemasterdetail"
+         download-size="96"
+         install-size="194"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+</feature>

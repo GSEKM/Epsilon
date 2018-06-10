@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package myModel.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramAppearancePreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramAppearancePreferencePage() {
+		setPreferenceStore(myModel.diagram.part.MyModelDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

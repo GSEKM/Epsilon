@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- contextQualifierLength=14 -->
+<!-- contextQualifierLength=14 -->
+<feature
+      id="org.eclipse.ocl.all.sdk"
+      label="%featureName"
+      version="5.2.0.v20160523-1914"
+      provider-name="%providerName"
+      plugin="org.eclipse.ocl.all">
+
+   <description url="http://www.eclipse.org/modeling/mdt/ocl">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://www.eclipse.org/modeling/updates"/>
+      <discovery label="%updateSiteName" url="http://www.eclipse.org/modeling/updates"/>
+   </url>
+
+   <includes
+         id="org.eclipse.ocl.core.sdk"
+         version="5.2.0.v20160523-1914"/>
+
+   <includes
+         id="org.eclipse.ocl.doc"
+         version="3.6.0.v20160523-1150"/>
+
+   <includes
+         id="org.eclipse.ocl.doc.source"
+         version="3.6.0.v20160523-1150"/>
+
+   <includes
+         id="org.eclipse.ocl.edit"
+         version="5.0.200.v20150611-1921"/>
+
+   <includes
+         id="org.eclipse.ocl.edit.source"
+         version="5.0.200.v20150611-1921"/>
+
+   <includes
+         id="org.eclipse.ocl.ui"
+         version="2.1.0.v20160521-2033"/>
+
+   <includes
+         id="org.eclipse.ocl.ui.source"
+         version="2.1.0.v20160521-2033"/>
+
+</feature>

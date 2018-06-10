@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="myModel" nsURI="http://iotgmf/1.0" nsPrefix="gmf.diagram">
+  <eAnnotations source="gmf"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Arduino">
+    <eAnnotations source="gmf.diagram"/>
+    <eOperations name="setup"/>
+    <eOperations name="loop"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="board" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="#//Module" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Módulo" abstract="true">
+    <eAnnotations source="gmf.link">
+      <details key="label" value="test"/>
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="style" value="dot"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Módulos" upperBound="-1"
+        eType="#//Arduino"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Module">
+    <eAnnotations source="gmf.node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teste" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

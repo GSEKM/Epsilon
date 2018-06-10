@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.emf.ecp.demo.e4.feature"
+      label="ECP e4 Demo Application"
+      version="1.10.0.20160912-1709"
+      provider-name="%providerName"
+      plugin="org.eclipse.emf.ecp.application.e4"
+      image="eclipse_update_120.jpg">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.emf.ecp.e4.feature"
+         version="1.10.0.20160912-1709"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.emfforms.runtime.feature"
+         version="1.10.0.20160912-1709"/>
+
+   <requires>
+      <import plugin="org.eclipse.equinox.ds"/>
+      <import plugin="org.eclipse.equinox.event"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.emf.ecp.application.e4"
+         download-size="26"
+         install-size="50"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.application.e4.source"
+         download-size="9"
+         install-size="13"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ui.rcp"
+         download-size="11"
+         install-size="15"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.eclipse.emf.parsley.junit4.feature.source" version="1.0.1.v20160706-1123" label="EMF Parsley Junit4 Support Developer Resources" provider-name="%providerName">
+  <includes id="org.eclipse.emf.parsley.junit4.feature" version="1.0.1.v20160706-1123"/>
+  <description url="http://www.eclipse.org/emfparsley">
+      EMF Parsley Junit4 Support.
+   </description>
+  <copyright>
+      %copyright
+   </copyright>
+  <license url="http://www.eclipse.org/legal/epl-v10.html">
+      %license
+   </license>
+  <plugin id="org.eclipse.emf.parsley.junit4.source" version="1.0.1.v20160706-1123" download-size="0" install-size="0" unpack="false"/>
+</feature>

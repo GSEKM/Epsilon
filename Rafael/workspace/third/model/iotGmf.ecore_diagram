@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_kZkPEFI9Eeii0PiVWpVN-A" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_kpAZQFI9Eeii0PiVWpVN-A" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_kpDckFI9Eeii0PiVWpVN-A" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_kpQQ4FI9Eeii0PiVWpVN-A" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kpQ38FI9Eeii0PiVWpVN-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kpQ38VI9Eeii0PiVWpVN-A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_kpQ38lI9Eeii0PiVWpVN-A" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kpQ381I9Eeii0PiVWpVN-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kpQ39FI9Eeii0PiVWpVN-A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_kpQ39VI9Eeii0PiVWpVN-A" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_kpQ39lI9Eeii0PiVWpVN-A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_kpQ391I9Eeii0PiVWpVN-A"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="iotGmf.ecore#//Arduino"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kpBAUFI9Eeii0PiVWpVN-A" x="24" y="12" width="145"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_lOU54F0fEeiKsJvDNC5JHA" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_lOU54l0fEeiKsJvDNC5JHA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lOVg8F0fEeiKsJvDNC5JHA" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lOVg8V0fEeiKsJvDNC5JHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lOVg8l0fEeiKsJvDNC5JHA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lOVg810fEeiKsJvDNC5JHA" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lOVg9F0fEeiKsJvDNC5JHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lOVg9V0fEeiKsJvDNC5JHA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_lOVg9l0fEeiKsJvDNC5JHA" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_lOVg910fEeiKsJvDNC5JHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_lOVg-F0fEeiKsJvDNC5JHA"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="iotGmf.ecore#//Módulo"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lOU54V0fEeiKsJvDNC5JHA" x="48" y="216" width="145" height="85"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_tsdccF0iEeiKsJvDNC5JHA" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_tseDgF0iEeiKsJvDNC5JHA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_tseDgV0iEeiKsJvDNC5JHA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_4pd2Ml0aEeiKsJvDNC5JHA" type="3001">
+        <element xmi:type="ecore:EAttribute" href="iotGmf.ecore#//Motor/graus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4pd2M10aEeiKsJvDNC5JHA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tseDgl0iEeiKsJvDNC5JHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tseDg10iEeiKsJvDNC5JHA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_tseDhF0iEeiKsJvDNC5JHA" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_4pkj4F0aEeiKsJvDNC5JHA" type="3002">
+        <element xmi:type="ecore:EOperation" href="iotGmf.ecore#//Motor/girar"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4pkj4V0aEeiKsJvDNC5JHA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tseDhV0iEeiKsJvDNC5JHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tseDhl0iEeiKsJvDNC5JHA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_tseDh10iEeiKsJvDNC5JHA" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_tseDiF0iEeiKsJvDNC5JHA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_tseDiV0iEeiKsJvDNC5JHA"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="iotGmf.ecore#//Motor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tsdccV0iEeiKsJvDNC5JHA" x="276" y="120" width="169" height="97"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_kZkPEVI9Eeii0PiVWpVN-A"/>
+  <element xmi:type="ecore:EPackage" href="iotGmf.ecore#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_G9BTAF0pEeiKsJvDNC5JHA" type="4004" source="_tsdccF0iEeiKsJvDNC5JHA" target="_lOU54F0fEeiKsJvDNC5JHA">
+    <styles xmi:type="notation:FontStyle" xmi:id="_G9BTAV0pEeiKsJvDNC5JHA" fontName="Ubuntu"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_G9BTAl0pEeiKsJvDNC5JHA" points="[42, -16, -119, 56]$[162, -29, 1, 43]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_G9DvQF0pEeiKsJvDNC5JHA" id="(0.0,0.4329896907216495)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o9NFQGgpEeie0LdHXkRvPQ" id="(0.903448275862069,0.5647058823529412)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_TnuVcGgpEeie0LdHXkRvPQ" type="4002" source="_lOU54F0fEeiKsJvDNC5JHA" target="_kpAZQFI9Eeii0PiVWpVN-A">
+    <children xmi:type="notation:DecorationNode" xmi:id="_TnuVc2gpEeie0LdHXkRvPQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TnuVdGgpEeie0LdHXkRvPQ" y="40"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_Tnu8gGgpEeie0LdHXkRvPQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Tnu8gWgpEeie0LdHXkRvPQ" y="60"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TnuVcWgpEeie0LdHXkRvPQ" fontName="Ubuntu"/>
+    <element xmi:type="ecore:EReference" href="iotGmf.ecore#//Módulo/Módulos"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TnuVcmgpEeie0LdHXkRvPQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

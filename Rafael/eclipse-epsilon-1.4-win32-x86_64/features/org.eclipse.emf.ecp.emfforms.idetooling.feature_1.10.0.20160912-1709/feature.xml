@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.emf.ecp.emfforms.idetooling.feature"
+      label="EMF Forms IDE Tooling"
+      version="1.10.0.20160912-1709"
+      provider-name="Eclipse Modeling Project">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.model.editor.feature"
+         version="1.10.0.20160912-1709"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.model.controls.feature"
+         version="1.10.0.20160912-1709"/>
+
+   <includes
+         id="org.eclipse.emf.ecp.view.validation.initial.feature"
+         version="1.10.0.20160912-1709"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ide.util"
+         download-size="17"
+         install-size="29"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.model.preview.common"
+         download-size="17"
+         install-size="29"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.model.preview.e3"
+         download-size="41"
+         install-size="74"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.model.project.installer"
+         download-size="34"
+         install-size="69"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ide.editor.viewmodel"
+         download-size="13"
+         install-size="28"
+         version="1.10.0.20160912-1709"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ide.editor.view"
+         download-size="48"
+         install-size="94"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ide.view.service"
+         download-size="16"
+         install-size="25"
+         version="1.10.0.20160912-1709"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.makeithappen.wizards"
+         download-size="381"
+         install-size="986"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.view.template.tooling"
+         download-size="99"
+         install-size="223"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emfforms.editor"
+         download-size="75"
+         install-size="157"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.emf.ecp.ide.editor.view.templatebridge"
+         download-size="12"
+         install-size="16"
+         version="1.10.0.20160912-1709"
+         unpack="false"/>
+
+</feature>

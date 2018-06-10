@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: genie.gmf-tooling
+Build-Jdk: 1.7.0_80
+Created-By: Apache Maven
+
+Name: epl-v10.html
+SHA-256-Digest: T9ZK7tNA1ipkqNpLNx7+D20NdF9NLb76y6hsZG02vHI=
+
+Name: feature.xml
+SHA-256-Digest: CfOC6nQphVS5WN8n8xuFA3FFQocL+SgO6po9Htq1+LQ=
+
+Name: eclipse_update_120.jpg
+SHA-256-Digest: FAcZHH5NmCjIaBJgABBc1DvPQxRvfHUuFrwxg5VdYkc=
+
+Name: feature.properties
+SHA-256-Digest: v/AQMx6mEZh2kBCShcMoz6d61tUCNia0NmYFywAFQsM=
+
+Name: license.html
+SHA-256-Digest: X315zLynvdLZ4DaYSopgxruQUUEadA3FOPNviC+YO24=
+
+Name: META-INF/maven/org.eclipse.gmf-tooling.features/org.eclipse.gmf.
+ tooling.runtime/pom.properties
+SHA-256-Digest: VFR17mUUsaz4omOMxkz6cD2NjWUTyNPJT+KR9dvmGm4=
+
+Name: META-INF/maven/org.eclipse.gmf-tooling.features/org.eclipse.gmf.
+ tooling.runtime/pom.xml
+SHA-256-Digest: DzmigN/ENRsOgmEGkDBgaEF55lwlICnfvM/d8RsN3hg=
+

@@ -1,0 +1,7 @@
+# Tracing options for the model.gmf.example.diagram plug-in
+
+# Common issues
+model.gmf.example.diagram/debug=false
+
+# Visual IDs
+model.gmf.example.diagram/debug/visualID=false

@@ -1,7 +1,0 @@
-package iotgmf.diagram.edit.helpers;
-
-/**
- * @generated
- */
-public class ArduinoEditHelper extends iotgmf.diagram.edit.helpers.IotGmfBaseEditHelper {
-	}

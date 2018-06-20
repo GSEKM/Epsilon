@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/GMFiot" element2="/GMFteste" element3="/tcc.dao.jpa.poa.metamodel" element4="/tcc.dao.jpa.poa.metamodel.diagram" element5="/tcc.dao.jpa.poa.metamodel.edit" element6="/tcc.dao.jpa.poa.metamodel.editor" element7="/tcc.dao.jpa.poa.metamodel.tests" element8="/teste" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1525391375735"/>
-</session>

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete 8 elements from project &apos;teste&apos;&#x0A;- Original project: &apos;teste&apos;&#x0A;- Original elements:&#x0A;     genericJpaDaoPoa.ecore&#x0A;     genericJpaDaoPoa.ecorediag&#x0A;     genericJpaDaoPoa.genmodel&#x0A;     My.gmfgen&#x0A;     My.gmfgraph&#x0A;     My.gmfmap&#x0A;     My.gmftool&#x0A;     My.trace" description="Delete elements" element1="model/My.gmfgraph" element2="model/genericJpaDaoPoa.genmodel" element3="model/My.gmfgen" element4="model/My.gmfmap" element5="model/My.gmftool" element6="model/genericJpaDaoPoa.ecore" element7="model/My.trace" element8="model/genericJpaDaoPoa.ecorediag" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="8" stamp="1525710814266" subPackages="false" version="1.0"/>
-</session>

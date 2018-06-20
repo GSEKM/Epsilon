@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package friends.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPrintingPreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.PrintingPreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramPrintingPreferencePage() {
+		setPreferenceStore(friends.diagram.part.FriendsDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

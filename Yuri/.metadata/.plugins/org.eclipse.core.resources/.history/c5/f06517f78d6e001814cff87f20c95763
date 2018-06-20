@@ -1,0 +1,40 @@
+pluginName=Iot Plugin
+providerName=Sample Plugin Provider, Inc
+
+editorName=Iot Diagram Editing
+context.description=Iot Diagram Editing
+context.name=In Iot Diagram Editor
+newWizardName=Iot Diagram
+newWizardDesc=Creates Iot diagram.
+
+initDiagramActionLabel=Initialize iot_diagram diagram file
+
+
+navigatorContentName=*.iot_diagram diagram contents
+domainNavigatorContentName=*.iot model contents
+update.diagram.name=Update Iot diagram
+update.diagram.description=Perform Iot diagram update
+
+
+# Property Sheet
+tab.appearance=Appearance
+tab.diagram=Rulers & Grid
+tab.domain=Core
+
+# Preferences
+prefpage.model.gmf.example.diagram.general=Iot Diagram
+prefpage.model.gmf.example.diagram.appearance=Appearance
+prefpage.model.gmf.example.diagram.connections=Connections
+prefpage.model.gmf.example.diagram.printing=Printing
+prefpage.model.gmf.example.diagram.rulersAndGrid=Rulers And Grid
+
+
+# Providers
+metatype.name.Board_1000=Undefined
+metatype.name.Arduino_2002=Arduino
+metatype.name.ArduinoConector_4004=Undefined
+
+# Commands and menu actions
+cmdcategory.name=Iot Editor Commands
+cmdcategory.desc=Iot Editor Commands
+

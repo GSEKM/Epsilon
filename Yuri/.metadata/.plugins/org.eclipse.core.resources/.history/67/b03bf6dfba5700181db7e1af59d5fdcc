@@ -1,0 +1,182 @@
+	package iotgmf.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class IotGmfNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof iotgmf.diagram.navigator.IotGmfNavigatorItem && !isOwnView(((iotgmf.diagram.navigator.IotGmfNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof iotgmf.diagram.navigator.IotGmfNavigatorGroup) {
+	iotgmf.diagram.navigator.IotGmfNavigatorGroup group = (iotgmf.diagram.navigator.IotGmfNavigatorGroup) element;
+	return iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof iotgmf.diagram.navigator.IotGmfNavigatorItem) {
+	iotgmf.diagram.navigator.IotGmfNavigatorItem navigatorItem = (iotgmf.diagram.navigator.IotGmfNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (iotgmf.diagram.part.IotGmfVisualIDRegistry.getVisualID(view)) {
+		case iotgmf.diagram.edit.parts.ArduinoEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?http://iotgmf/1.0?Arduino", iotgmf.diagram.providers.IotGmfElementTypes.Arduino_1000); //$NON-NLS-1$
+case iotgmf.diagram.edit.parts.MóduloEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?http://iotgmf/1.0?Módulo", iotgmf.diagram.providers.IotGmfElementTypes.Módulo_2001); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && iotgmf.diagram.providers.IotGmfElementTypes.isKnownElementType(elementType)) {
+		image = iotgmf.diagram.providers.IotGmfElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof iotgmf.diagram.navigator.IotGmfNavigatorGroup) {
+	iotgmf.diagram.navigator.IotGmfNavigatorGroup group = (iotgmf.diagram.navigator.IotGmfNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof iotgmf.diagram.navigator.IotGmfNavigatorItem) {
+	iotgmf.diagram.navigator.IotGmfNavigatorItem navigatorItem = (iotgmf.diagram.navigator.IotGmfNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (iotgmf.diagram.part.IotGmfVisualIDRegistry.getVisualID(view)) {
+		case iotgmf.diagram.edit.parts.ArduinoEditPart.VISUAL_ID:
+	return getArduino_1000Text(view);
+case iotgmf.diagram.edit.parts.MóduloEditPart.VISUAL_ID:
+	return getMódulo_2001Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getArduino_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+					return "";  //$NON-NLS-1$
+	}
+	/**
+ * @generated
+ */
+private String getMódulo_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					iotgmf.Módulo domainModelElement = (iotgmf.Módulo) view.getElement();
+if (domainModelElement != null) {
+	return String.valueOf(domainModelElement.getPorta());
+} else {
+	iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 2001);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+		}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return iotgmf.diagram.edit.parts.ArduinoEditPart.MODEL_ID.equals(iotgmf.diagram.part.IotGmfVisualIDRegistry.getModelID(view));
+}
+
+	}

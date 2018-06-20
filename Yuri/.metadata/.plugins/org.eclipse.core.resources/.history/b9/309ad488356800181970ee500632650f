@@ -1,0 +1,25 @@
+package iotgmf.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

@@ -1,0 +1,78 @@
+	package iotgmf.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class IotGmfNavigatorItem extends iotgmf.diagram.navigator.IotGmfAbstractNavigatorItem {
+
+		/**
+ * @generated
+ */
+static {
+	final Class[] supportedTypes = new Class[] { org.eclipse.gmf.runtime.notation.View.class, org.eclipse.emf.ecore.EObject.class };
+	org.eclipse.core.runtime.Platform.getAdapterManager().registerAdapters(new org.eclipse.core.runtime.IAdapterFactory() {
+		
+		public Object getAdapter(Object adaptableObject, Class adapterType) {
+			if (adaptableObject instanceof iotgmf.diagram.navigator.IotGmfNavigatorItem && (adapterType == org.eclipse.gmf.runtime.notation.View.class || adapterType == org.eclipse.emf.ecore.EObject.class)) {
+				return ((iotgmf.diagram.navigator.IotGmfNavigatorItem) adaptableObject).getView();
+			}
+			return null;
+		}
+
+		public Class[] getAdapterList() {
+			return supportedTypes;
+		}
+	}, iotgmf.diagram.navigator.IotGmfNavigatorItem.class);
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.gmf.runtime.notation.View myView;
+	
+	/**
+ * @generated
+ */
+private boolean myLeaf = false;	
+	
+		/**
+ * @generated
+ */
+public IotGmfNavigatorItem(org.eclipse.gmf.runtime.notation.View view, Object parent, boolean isLeaf) {
+	super(parent);
+	myView = view;
+	myLeaf = isLeaf;
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.gmf.runtime.notation.View getView() {
+	return myView;
+}
+	
+		/**
+ * @generated
+ */
+public boolean isLeaf() {
+	return myLeaf;
+}
+
+		/**
+ * @generated
+ */
+public boolean equals(Object obj) {
+	if (obj instanceof iotgmf.diagram.navigator.IotGmfNavigatorItem) {
+		return org.eclipse.emf.ecore.util.EcoreUtil.getURI(getView()).equals(org.eclipse.emf.ecore.util.EcoreUtil.getURI(((iotgmf.diagram.navigator.IotGmfNavigatorItem) obj).getView()));
+	}
+	return super.equals(obj);
+}
+	
+		/**
+ * @generated
+ */
+public int hashCode() {
+	return org.eclipse.emf.ecore.util.EcoreUtil.getURI(getView()).hashCode();
+}
+
+	}

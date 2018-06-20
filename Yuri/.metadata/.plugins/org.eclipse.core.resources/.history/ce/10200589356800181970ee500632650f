@@ -1,0 +1,27 @@
+package iotgmf.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		iotgmf.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+iotgmf.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+iotgmf.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+iotgmf.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+iotgmf.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

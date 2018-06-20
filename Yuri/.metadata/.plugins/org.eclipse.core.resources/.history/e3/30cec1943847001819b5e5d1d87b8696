@@ -1,0 +1,167 @@
+package genericjpadaopoa.diagram.part;
+
+import genericjpadaopoa.diagram.providers.GenericJpaDaoPoaElementTypes;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.gef.Tool;
+import org.eclipse.gef.palette.PaletteContainer;
+import org.eclipse.gef.palette.PaletteGroup;
+import org.eclipse.gef.palette.PaletteRoot;
+import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
+/**
+ * @generated
+ */
+public class GenericJpaDaoPoaPaletteFactory {
+
+	/**
+	 * @generated
+	 */
+	public void fillPalette(PaletteRoot paletteRoot) {
+		paletteRoot.add(createGenericjpadaopoa1Group());
+	}
+
+	/**
+	 * Creates "genericjpadaopoa" palette tool group
+	 * @generated
+	 */
+	private PaletteContainer createGenericjpadaopoa1Group() {
+		PaletteGroup paletteContainer = new PaletteGroup(
+				Messages.Genericjpadaopoa1Group_title);
+		paletteContainer.setId("createGenericjpadaopoa1Group"); //$NON-NLS-1$
+		paletteContainer.add(createControle1CreationTool());
+		paletteContainer.add(createAspectDAO2CreationTool());
+		paletteContainer.add(createPersistence3CreationTool());
+		paletteContainer.add(createObjeto4CreationTool());
+		paletteContainer.add(createAtributos5CreationTool());
+		paletteContainer.add(createDaoClass6CreationTool());
+		paletteContainer.add(createControleGenericObjeto7CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createControle1CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Controle1CreationTool_title,
+				Messages.Controle1CreationTool_desc,
+				Collections
+						.singletonList(GenericJpaDaoPoaElementTypes.AspectDAO_2001));
+		entry.setId("createControle1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(GenericJpaDaoPoaElementTypes
+				.getImageDescriptor(GenericJpaDaoPoaElementTypes.AspectDAO_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createAspectDAO2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.AspectDAO2CreationTool_title,
+				Messages.AspectDAO2CreationTool_desc,
+				Collections
+						.singletonList(GenericJpaDaoPoaElementTypes.Controle_2002));
+		entry.setId("createAspectDAO2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(GenericJpaDaoPoaElementTypes
+				.getImageDescriptor(GenericJpaDaoPoaElementTypes.Controle_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createPersistence3CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(
+				Messages.Persistence3CreationTool_title,
+				Messages.Persistence3CreationTool_desc,
+				Collections
+						.singletonList(GenericJpaDaoPoaElementTypes.Persistence_2003));
+		entry.setId("createPersistence3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(GenericJpaDaoPoaElementTypes
+				.getImageDescriptor(GenericJpaDaoPoaElementTypes.Persistence_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createObjeto4CreationTool() {
+		ToolEntry entry = new ToolEntry(Messages.Objeto4CreationTool_title,
+				Messages.Objeto4CreationTool_desc, null, null) {
+		};
+		entry.setId("createObjeto4CreationTool"); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createAtributos5CreationTool() {
+		ToolEntry entry = new ToolEntry(Messages.Atributos5CreationTool_title,
+				Messages.Atributos5CreationTool_desc, null, null) {
+		};
+		entry.setId("createAtributos5CreationTool"); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createDaoClass6CreationTool() {
+		ToolEntry entry = new ToolEntry(Messages.DaoClass6CreationTool_title,
+				Messages.DaoClass6CreationTool_desc, null, null) {
+		};
+		entry.setId("createDaoClass6CreationTool"); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createControleGenericObjeto7CreationTool() {
+		ToolEntry entry = new ToolEntry(
+				Messages.ControleGenericObjeto7CreationTool_title,
+				Messages.ControleGenericObjeto7CreationTool_desc, null, null) {
+		};
+		entry.setId("createControleGenericObjeto7CreationTool"); //$NON-NLS-1$
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static class NodeToolEntry extends ToolEntry {
+
+		/**
+		 * @generated
+		 */
+		private final List<IElementType> elementTypes;
+
+		/**
+		 * @generated
+		 */
+		private NodeToolEntry(String title, String description,
+				List<IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+		 * @generated
+		 */
+		public Tool createTool() {
+			Tool tool = new UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

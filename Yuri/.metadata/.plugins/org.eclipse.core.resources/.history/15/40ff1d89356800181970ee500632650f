@@ -1,0 +1,85 @@
+
+package iotgmf.diagram.part;
+
+/**
+ * @generated
+ */
+public class IotGmfPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createIotgmf1Group());
+	}
+
+	/**
+ * Creates "iotgmf" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createIotgmf1Group() {
+				org.eclipse.gef.palette.PaletteGroup paletteContainer = new org.eclipse.gef.palette.PaletteGroup(iotgmf.diagram.part.Messages.Iotgmf1Group_title);
+				 paletteContainer.setId("createIotgmf1Group"); //$NON-NLS-1$
+								paletteContainer.add(createArduino1CreationTool());
+paletteContainer.add(createMotor2CreationTool());
+paletteContainer.add(createMóduloMódulos3CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createArduino1CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(iotgmf.diagram.part.Messages.Arduino1CreationTool_title, iotgmf.diagram.part.Messages.Arduino1CreationTool_desc, java.util.Collections.singletonList(iotgmf.diagram.providers.IotGmfElementTypes.Arduino_2001));
+				 entry.setId("createArduino1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(iotgmf.diagram.providers.IotGmfElementTypes.getImageDescriptor(iotgmf.diagram.providers.IotGmfElementTypes.Arduino_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createMotor2CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(iotgmf.diagram.part.Messages.Motor2CreationTool_title, iotgmf.diagram.part.Messages.Motor2CreationTool_desc, null, null) {};
+				 entry.setId("createMotor2CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createMóduloMódulos3CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(iotgmf.diagram.part.Messages.MóduloMódulos3CreationTool_title, iotgmf.diagram.part.Messages.MóduloMódulos3CreationTool_desc, null, null) {};
+				 entry.setId("createMóduloMódulos3CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+
+
+
+	/**
+ * @generated
+ */
+	private static class NodeToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes;
+
+		/**
+ * @generated
+ */
+		private NodeToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

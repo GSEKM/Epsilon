@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package friends.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		friends.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+friends.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+friends.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+friends.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+friends.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return friends.diagram.part.FriendsDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

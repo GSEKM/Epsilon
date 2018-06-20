@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package friends.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramAppearancePreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramAppearancePreferencePage() {
+		setPreferenceStore(friends.diagram.part.FriendsDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

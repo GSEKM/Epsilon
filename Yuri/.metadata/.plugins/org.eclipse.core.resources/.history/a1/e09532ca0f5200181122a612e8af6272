@@ -1,0 +1,7 @@
+package iotgmf.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class InitEditHelper extends iotgmf.diagram.edit.helpers.IotGmfBaseEditHelper {
+	}

@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package iot.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class IotModelingAssistantProviderOfArduinoEditPart extends iot.diagram.providers.IotModelingAssistantProvider {
+
+					
+	
+
+	}

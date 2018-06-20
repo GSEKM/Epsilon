@@ -1,7 +1,0 @@
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/model.gmf.example/model/iotGmf.genmodel
-gmf_dashboard/domainModel=platform\:/resource/model.gmf.example/model/iotGmf.ecore
-gmf_dashboard/generationModel=platform\:/resource/model.gmf.example/model/iotGmf.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/model.gmf.example/model/GMF/iotGmf.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/model.gmf.example/model/GMF/iotGmf.gmfmap
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/model.gmf.example/model/GMF/iotGmf.gmftool

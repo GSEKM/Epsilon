@@ -1,0 +1,156 @@
+/*
+ * 
+ */
+package friends.diagram.part;
+
+/**
+ * @generated
+ */
+public class FriendsCreationWizard
+		extends org.eclipse.jface.wizard.Wizard implements org.eclipse.ui.INewWizard {
+
+	/**
+ * @generated
+ */
+	private org.eclipse.ui.IWorkbench workbench;
+
+	/**
+ * @generated
+ */
+    protected org.eclipse.jface.viewers.IStructuredSelection selection;
+
+	/**
+ * @generated
+ */
+	protected friends.diagram.part.FriendsCreationWizardPage diagramModelFilePage;
+	
+	/**
+ * @generated
+ */
+	protected friends.diagram.part.FriendsCreationWizardPage domainModelFilePage;
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.resource.Resource diagram;
+
+	/**
+ * @generated
+ */
+	private boolean openNewlyCreatedDiagramEditor = true;
+
+	/**
+ * @generated
+ */
+    public org.eclipse.ui.IWorkbench getWorkbench() {
+        return workbench;
+    }
+
+	/**
+ * @generated
+ */
+	public org.eclipse.jface.viewers.IStructuredSelection getSelection() {
+        return selection;
+    }
+
+	/**
+ * @generated
+ */
+	public final org.eclipse.emf.ecore.resource.Resource getDiagram() {
+		return diagram;
+	}
+
+	/**
+ * @generated
+ */
+	public final boolean isOpenNewlyCreatedDiagramEditor() {
+		return openNewlyCreatedDiagramEditor;
+	}
+
+	/**
+ * @generated
+ */
+	public void setOpenNewlyCreatedDiagramEditor(boolean openNewlyCreatedDiagramEditor) {
+		this.openNewlyCreatedDiagramEditor = openNewlyCreatedDiagramEditor;
+	}
+
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IWorkbench workbench, org.eclipse.jface.viewers.IStructuredSelection selection) {
+        this.workbench = workbench;
+        this.selection = selection;
+		setWindowTitle(friends.diagram.part.Messages.FriendsCreationWizardTitle);
+		setDefaultPageImageDescriptor(friends.diagram.part.FriendsDiagramEditorPlugin.getBundledImageDescriptor(
+				"icons/wizban/NewFriendsWizard.gif")); //$NON-NLS-1$
+		setNeedsProgressMonitor(true);
+	}
+
+	/**
+ * @generated
+ */
+	public void addPages() {
+		diagramModelFilePage = new friends.diagram.part.FriendsCreationWizardPage(
+				"DiagramModelFile", getSelection(), "friends_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+		diagramModelFilePage.setTitle(friends.diagram.part.Messages.FriendsCreationWizard_DiagramModelFilePageTitle);
+		diagramModelFilePage.setDescription(friends.diagram.part.Messages.FriendsCreationWizard_DiagramModelFilePageDescription);
+		addPage(diagramModelFilePage);
+	
+		domainModelFilePage = new friends.diagram.part.FriendsCreationWizardPage(
+				"DomainModelFile", getSelection(), "friends") { //$NON-NLS-1$ //$NON-NLS-2$
+
+			public void setVisible(boolean visible) {
+				if (visible) {
+					String fileName = diagramModelFilePage.getFileName();
+					fileName = fileName.substring(0, fileName.length() - ".friends_diagram".length()); //$NON-NLS-1$
+					setFileName(friends.diagram.part.FriendsDiagramEditorUtil.getUniqueFileName(
+							getContainerFullPath(), fileName, "friends")); //$NON-NLS-1$
+				}
+				super.setVisible(visible);
+			}
+		};
+		domainModelFilePage.setTitle(friends.diagram.part.Messages.FriendsCreationWizard_DomainModelFilePageTitle);
+		domainModelFilePage.setDescription(friends.diagram.part.Messages.FriendsCreationWizard_DomainModelFilePageDescription);
+		addPage(domainModelFilePage);
+		}
+
+	/**
+ * @generated
+ */
+	public boolean performFinish() {
+		org.eclipse.jface.operation.IRunnableWithProgress op =
+					new org.eclipse.ui.actions.WorkspaceModifyOperation(null) {
+
+			protected void execute(org.eclipse.core.runtime.IProgressMonitor monitor)
+					throws org.eclipse.core.runtime.CoreException, InterruptedException {
+					diagram = friends.diagram.part.FriendsDiagramEditorUtil.createDiagram(diagramModelFilePage.getURI(),
+							domainModelFilePage.getURI(),
+							monitor);
+				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
+					try {
+						friends.diagram.part.FriendsDiagramEditorUtil.openDiagram(diagram);
+					} catch (org.eclipse.ui.PartInitException e) {
+						org.eclipse.jface.dialogs.ErrorDialog.openError(getContainer().getShell(),
+								friends.diagram.part.Messages.FriendsCreationWizardOpenEditorError, null, e.getStatus());
+					}
+				}
+			}
+		};
+		try {
+			getContainer().run(false, true, op);
+		} catch (InterruptedException e) {
+			return false;
+		} catch (java.lang.reflect.InvocationTargetException e) {
+			if (e.getTargetException() instanceof org.eclipse.core.runtime.CoreException) {
+				org.eclipse.jface.dialogs.ErrorDialog.openError(getContainer().getShell(),
+						friends.diagram.part.Messages.FriendsCreationWizardCreationError, null,
+						((org.eclipse.core.runtime.CoreException) e.getTargetException()).getStatus());
+			} else {
+				friends.diagram.part.FriendsDiagramEditorPlugin.getInstance().logError(
+						"Error creating diagram", e.getTargetException()); //$NON-NLS-1$
+			}
+			return false;
+		}
+		return diagram != null;
+	}
+	}

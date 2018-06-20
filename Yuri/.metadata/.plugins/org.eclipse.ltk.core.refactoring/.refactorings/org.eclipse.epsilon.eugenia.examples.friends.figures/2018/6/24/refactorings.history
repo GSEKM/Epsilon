@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;PersonFigure.java&apos; to &apos;org.eclipse.epsilon.eugenia.examples.friends.figures/src/figures&apos;&#x0A;- Original project: &apos;org.eclipse.epsilon.eugenia.examples.friends.figures&apos;&#x0A;- Destination element: &apos;org.eclipse.epsilon.eugenia.examples.friends.figures/src/figures&apos;&#x0A;- Original element: &apos;figures.PersonFigure.java&apos;" description="Copy compilation unit" destination="/src&lt;figures" element1="/src&lt;figures{PersonFigure.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1528815921817" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,88 @@
+
+package iotgmf.diagram.part;
+
+/**
+ * @generated
+ */
+public class IotGmfPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createIotgmf1Group());
+	}
+
+	/**
+ * Creates "iotgmf" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createIotgmf1Group() {
+				org.eclipse.gef.palette.PaletteGroup paletteContainer = new org.eclipse.gef.palette.PaletteGroup(iotgmf.diagram.part.Messages.Iotgmf1Group_title);
+				 paletteContainer.setId("createIotgmf1Group"); //$NON-NLS-1$
+								paletteContainer.add(new org.eclipse.gef.palette.PaletteSeparator());
+paletteContainer.add(createArduinoUno2CreationTool());
+paletteContainer.add(createConector3CreationTool());
+paletteContainer.add(new org.eclipse.gef.palette.PaletteSeparator());
+paletteContainer.add(createMotor5CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createArduinoUno2CreationTool() {
+		NodeToolEntry entry = new NodeToolEntry(iotgmf.diagram.part.Messages.ArduinoUno2CreationTool_title, iotgmf.diagram.part.Messages.ArduinoUno2CreationTool_desc, java.util.Collections.singletonList(iotgmf.diagram.providers.IotGmfElementTypes.Módulo_2001));
+				 entry.setId("createArduinoUno2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(iotgmf.diagram.providers.IotGmfElementTypes.getImageDescriptor(iotgmf.diagram.providers.IotGmfElementTypes.Módulo_2001));
+		entry.setLargeIcon(iotgmf.diagram.part.IotGmfDiagramEditorPlugin.findImageDescriptor("/Arduino/images/87915-200.png"));  //$NON-NLS-1$
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createConector3CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(iotgmf.diagram.part.Messages.Conector3CreationTool_title, iotgmf.diagram.part.Messages.Conector3CreationTool_desc, null, null) {};
+				 entry.setId("createConector3CreationTool"); //$NON-NLS-1$
+										return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createMotor5CreationTool() {
+		org.eclipse.gef.palette.ToolEntry entry = new org.eclipse.gef.palette.ToolEntry(iotgmf.diagram.part.Messages.Motor5CreationTool_title, iotgmf.diagram.part.Messages.Motor5CreationTool_desc, null, null) {};
+				 entry.setId("createMotor5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(iotgmf.diagram.part.IotGmfDiagramEditorPlugin.findImageDescriptor("images/engine.png")); //$NON-NLS-1$
+								return entry;
+	}
+
+
+
+	/**
+ * @generated
+ */
+	private static class NodeToolEntry extends org.eclipse.gef.palette.ToolEntry {
+
+		/**
+ * @generated
+ */
+		private final java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes;
+
+		/**
+ * @generated
+ */
+		private NodeToolEntry(String title, String description, java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> elementTypes) {
+			super(title, description, null, null);
+			this.elementTypes = elementTypes;
+		}
+
+		/**
+ * @generated
+ */
+		public org.eclipse.gef.Tool createTool() {
+			org.eclipse.gef.Tool tool = new org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool(elementTypes);
+			tool.setProperties(getToolProperties());
+			return tool;
+		}
+	}
+}

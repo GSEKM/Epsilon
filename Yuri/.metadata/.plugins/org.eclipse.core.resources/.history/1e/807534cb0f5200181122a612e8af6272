@@ -1,0 +1,295 @@
+	package iotgmf.diagram.part;
+
+	/**
+ * @generated
+ */
+public class IotGmfDiagramUpdater {
+		
+		/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (iotgmf.diagram.part.IotGmfVisualIDRegistry.getVisualID(view)) {
+		case iotgmf.diagram.edit.parts.InitEditPart.VISUAL_ID:
+	return getInit_1000SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfNodeDescriptor> getInit_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+iotgmf.Init modelElement = (iotgmf.Init) view.getElement();
+	java.util.LinkedList<iotgmf.diagram.part.IotGmfNodeDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getSensor().iterator(); it.hasNext();) {
+		iotgmf.Sensor childElement = (iotgmf.Sensor) it.next();
+					int visualID = iotgmf.diagram.part.IotGmfVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == iotgmf.diagram.edit.parts.SensorEditPart.VISUAL_ID) {
+	result.add(new iotgmf.diagram.part.IotGmfNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (iotgmf.diagram.part.IotGmfVisualIDRegistry.getVisualID(view)) {
+		case iotgmf.diagram.edit.parts.InitEditPart.VISUAL_ID:
+	return getInit_1000ContainedLinks(view);
+case iotgmf.diagram.edit.parts.SensorEditPart.VISUAL_ID:
+	return getSensor_2001ContainedLinks(view);
+case iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID:
+	return getSensor_4001ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (iotgmf.diagram.part.IotGmfVisualIDRegistry.getVisualID(view)) {
+		case iotgmf.diagram.edit.parts.SensorEditPart.VISUAL_ID:
+	return getSensor_2001IncomingLinks(view);
+case iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID:
+	return getSensor_4001IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (iotgmf.diagram.part.IotGmfVisualIDRegistry.getVisualID(view)) {
+		case iotgmf.diagram.edit.parts.SensorEditPart.VISUAL_ID:
+	return getSensor_2001OutgoingLinks(view);
+case iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID:
+	return getSensor_4001OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getInit_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Init modelElement = (iotgmf.Init) view.getElement();
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Sensor_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getSensor_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Sensor modelElement = (iotgmf.Sensor) view.getElement();
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Sensor_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getSensor_4001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Sensor modelElement = (iotgmf.Sensor) view.getElement();
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Sensor_4001(modelElement));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getSensor_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Sensor modelElement = (iotgmf.Sensor) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sensor_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getSensor_4001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Sensor modelElement = (iotgmf.Sensor) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Sensor_4001(modelElement, crossReferences));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getSensor_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Sensor modelElement = (iotgmf.Sensor) view.getElement();
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sensor_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getSensor_4001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	iotgmf.Sensor modelElement = (iotgmf.Sensor) view.getElement();
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Sensor_4001(modelElement));	
+	return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<iotgmf.diagram.part.IotGmfLinkDescriptor> getContainedTypeModelFacetLinks_Sensor_4001(iotgmf.Init container) {
+	java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getSensor().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof iotgmf.Sensor) {
+		continue;
+	}
+	iotgmf.Sensor link = (iotgmf.Sensor) linkObject;
+		if (iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID != iotgmf.diagram.part.IotGmfVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			java.util.List targets = link.getSensor();
+Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+if (false == theTarget instanceof iotgmf.Sensor) {
+	continue;
+}
+iotgmf.Sensor dst = (iotgmf.Sensor) theTarget;
+							java.util.List sources = link.getSensor();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof iotgmf.Sensor) {
+	continue;
+}
+iotgmf.Sensor src = (iotgmf.Sensor) theSource;
+							result.add(new iotgmf.diagram.part.IotGmfLinkDescriptor(src, dst, link, iotgmf.diagram.providers.IotGmfElementTypes.Sensor_4001, iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID));
+		}
+	return result;	
+}
+	
+/**
+ * @generated
+ */
+private static java.util.Collection<iotgmf.diagram.part.IotGmfLinkDescriptor> getIncomingTypeModelFacetLinks_Sensor_4001(iotgmf.Sensor target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != iotgmf.IotgmfPackage.eINSTANCE.getInit_Sensor() || false == setting.getEObject() instanceof iotgmf.Sensor) {
+	continue;
+}
+iotgmf.Sensor link = (iotgmf.Sensor) setting.getEObject();
+	if (iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID != iotgmf.diagram.part.IotGmfVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				java.util.List sources = link.getSensor();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof iotgmf.Sensor) {
+	continue;
+}
+iotgmf.Sensor src = (iotgmf.Sensor) theSource;
+			result.add(new iotgmf.diagram.part.IotGmfLinkDescriptor(src, target, link, iotgmf.diagram.providers.IotGmfElementTypes.Sensor_4001, iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID));
+		}
+	return result;	
+}
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<iotgmf.diagram.part.IotGmfLinkDescriptor> getOutgoingTypeModelFacetLinks_Sensor_4001(iotgmf.Sensor source) {
+	iotgmf.Init container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof iotgmf.Init) {
+			container = (iotgmf.Init) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor> result = new java.util.LinkedList<iotgmf.diagram.part.IotGmfLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getSensor().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof iotgmf.Sensor) {
+		continue;
+	}
+	iotgmf.Sensor link = (iotgmf.Sensor) linkObject;
+		if (iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID != iotgmf.diagram.part.IotGmfVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			java.util.List targets = link.getSensor();
+Object theTarget = targets.size() == 1 ? targets.get(0) : null;
+if (false == theTarget instanceof iotgmf.Sensor) {
+	continue;
+}
+iotgmf.Sensor dst = (iotgmf.Sensor) theTarget;
+							java.util.List sources = link.getSensor();
+Object theSource = sources.size() == 1 ? sources.get(0) : null;
+if (false == theSource instanceof iotgmf.Sensor) {
+	continue;
+}
+iotgmf.Sensor src = (iotgmf.Sensor) theSource;
+								if (src != source) {
+	continue;
+}
+						result.add(new iotgmf.diagram.part.IotGmfLinkDescriptor(src, dst, link, iotgmf.diagram.providers.IotGmfElementTypes.Sensor_4001, iotgmf.diagram.edit.parts.Sensor2EditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+		
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<iotgmf.diagram.part.IotGmfNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return IotGmfDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return IotGmfDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return IotGmfDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<iotgmf.diagram.part.IotGmfLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return IotGmfDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

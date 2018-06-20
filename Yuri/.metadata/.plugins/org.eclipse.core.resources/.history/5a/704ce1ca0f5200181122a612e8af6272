@@ -1,0 +1,99 @@
+	package iotgmf.diagram.part;
+
+	/**
+ * @generated
+ */
+public class IotGmfDiagramEditor  extends org.eclipse.gmf.runtime.diagram.ui.resources.editor.parts.DiagramDocumentEditor {
+
+		/**
+ * @generated
+ */
+public static final String ID = "iotgmf.diagram.part.IotGmfDiagramEditorID";  //$NON-NLS-1$
+	
+	/**
+ * @generated
+ */
+public static final String CONTEXT_ID = "iotgmf.diagram.ui.diagramContext";  //$NON-NLS-1$
+	
+		/**
+ * @generated
+ */
+public IotGmfDiagramEditor() {
+	super(true);
+}
+	
+		/**
+ * @generated
+ */
+protected String getContextID() {
+	return CONTEXT_ID;
+}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.palette.PaletteRoot createPaletteRoot(org.eclipse.gef.palette.PaletteRoot existingPaletteRoot) {
+	org.eclipse.gef.palette.PaletteRoot root = super.createPaletteRoot(existingPaletteRoot);
+	new iotgmf.diagram.part.IotGmfPaletteFactory().fillPalette(root);
+	return root;
+}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferencesHint() {
+	return iotgmf.diagram.part.IotGmfDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+}
+	
+		/**
+ * @generated
+ */
+public String getContributorId() {
+	return iotgmf.diagram.part.IotGmfDiagramEditorPlugin.ID;
+}
+		
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocumentProvider getDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		return iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getDocumentProvider();
+	}
+	return super.getDocumentProvider(input);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.emf.transaction.TransactionalEditingDomain getEditingDomain() {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocument document = getEditorInput() != null ? getDocumentProvider().getDocument(getEditorInput()) : null;
+	if (document instanceof org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) {
+		return ((org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) document).getEditingDomain();
+	}
+	return super.getEditingDomain();
+}
+	
+		/**
+ * @generated
+ */
+protected void setDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		setDocumentProvider(iotgmf.diagram.part.IotGmfDiagramEditorPlugin.getInstance().getDocumentProvider());
+	} else {
+		super.setDocumentProvider(input);
+	}
+}
+	
+		/**
+ * @generated
+ */
+	protected void configureGraphicalViewer() {
+		super.configureGraphicalViewer();
+		iotgmf.diagram.part.DiagramEditorContextMenuProvider provider =
+				new iotgmf.diagram.part.DiagramEditorContextMenuProvider(this, getDiagramGraphicalViewer());
+		getDiagramGraphicalViewer().setContextMenu(provider);
+		getSite().registerContextMenu(org.eclipse.gmf.runtime.diagram.ui.actions.ActionIds.DIAGRAM_EDITOR_CONTEXT_MENU, provider, getDiagramGraphicalViewer());
+	}
+
+	
+	}

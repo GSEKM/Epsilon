@@ -1,0 +1,15 @@
+package iotgmf.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class IotGmfBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

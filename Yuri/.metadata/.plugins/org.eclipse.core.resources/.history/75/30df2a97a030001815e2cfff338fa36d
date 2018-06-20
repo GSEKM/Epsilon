@@ -1,0 +1,52 @@
+#
+
+pluginName = GenericJpaDaoPoa Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_Init_type = Init
+_UI_Controle_type = Controle
+_UI_AspectDAO_type = Aspect DAO
+_UI_Persistence_type = Persistence
+_UI_Objeto_type = Objeto
+_UI_Atributos_type = Atributos
+_UI_GenericDAO_type = Generic DAO
+_UI_DaoClass_type = Dao Class
+_UI_ControleGenericObjeto_type = Controle Generic Objeto
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_Init_className_feature = Class Name
+_UI_Init_package_feature = Package
+_UI_Init_aspect_feature = Aspect
+_UI_Init_persistence_feature = Persistence
+_UI_Init_controle_feature = Controle
+_UI_Controle_className_feature = Class Name
+_UI_Controle_package_feature = Package
+_UI_Controle_controleGenericoObjeto_feature = Controle Generico Objeto
+_UI_Persistence_url_feature = Url
+_UI_Persistence_driver_feature = Driver
+_UI_Persistence_user_feature = User
+_UI_Persistence_password_feature = Password
+_UI_Objeto_className_feature = Class Name
+_UI_Objeto_package_feature = Package
+_UI_Objeto_id_feature = Id
+_UI_Objeto_type_feature = Type
+_UI_Objeto_atributo_feature = Atributo
+_UI_Atributos_name_feature = Name
+_UI_Atributos_type_feature = Type
+_UI_GenericDAO_className_feature = Class Name
+_UI_GenericDAO_package_feature = Package
+_UI_ControleGenericObjeto_GenericDAO_feature = Generic DAO
+_UI_ControleGenericObjeto_Objeto_feature = Objeto
+_UI_Unknown_feature = Unspecified
+

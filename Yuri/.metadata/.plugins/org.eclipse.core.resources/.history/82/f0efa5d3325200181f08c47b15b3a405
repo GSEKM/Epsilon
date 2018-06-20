@@ -1,0 +1,338 @@
+package iotgmf.diagram.part;
+
+import org.eclipse.osgi.util.NLS;
+
+/**
+ * @generated
+ */
+public class Messages extends NLS {
+
+	public static final String ApplicationMenuName_Edit = null;
+
+	public static final String ApplicationMenuName_File = null;
+
+	public static final String ApplicationMenuName_Help = null;
+
+	public static final String ApplicationMenuName_New = null;
+
+	public static final String ApplicationMenuName_Window = null;
+
+	public static final String DiagramEditorActionBarAdvisor_AboutDialogMessage = null;
+
+	public static final String DiagramEditorActionBarAdvisor_AboutDialogTitle = null;
+
+	public static final String DiagramEditorActionBarAdvisor_DefaultEditorOpenErrorTitle = null;
+
+	public static final String DiagramEditorActionBarAdvisor_DefaultFileEditorMessage = null;
+
+	public static final String DiagramEditorActionBarAdvisor_DefaultFileEditorTitle = null;
+
+	public static final String DiagramEditorWorkbenchWindowAdvisor_Title = null;
+
+	public static final String WizardNewFileCreationPage_EmptyFileNameError = null;
+
+	/**
+	 * @generated
+	 */
+	static {
+		NLS.initializeMessages("messages", Messages.class); //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private Messages() {
+	}
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizard_DiagramModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizard_DiagramModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizard_DomainModelFilePageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizard_DomainModelFilePageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizardOpenEditorError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizardCreationError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfCreationWizardPageExtensionError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditorUtil_OpenModelResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditorUtil_OpenModelResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditorUtil_CreateDiagramProgressTask;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditorUtil_CreateDiagramCommandLabel;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_isModifiable;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_handleElementContentChanged;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_IncorrectInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_NoDiagramInResourceError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_DiagramLoadingError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_UnsynchronizedFileSaveError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_SaveDiagramTask;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_SaveNextResourceTask;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDocumentProvider_SaveAsOperation;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_ResourceErrorDialogMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_WizardTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String InitDiagramFile_OpenModelFileDialogTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_CreationPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_CreationPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_CreationPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_RootSelectionPageName;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_RootSelectionPageTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_RootSelectionPageDescription;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_RootSelectionPageNoSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_InitDiagramCommand;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfNewDiagramFileWizard_IncorrectRootError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditor_SavingDeletedFile;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditor_SaveAsErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditor_SaveAsErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditor_SaveErrorTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfDiagramEditor_SaveErrorMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfElementChooserDialog_SelectModelElementTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String ModelElementSelectionPageMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String ValidateActionMessage;
+
+	/**
+	 * @generated
+	 */
+	public static String Iotgmf1Group_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Init1CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Init1CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String InitSensor2CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String InitSensor2CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String Sensor3CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String Sensor3CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String CommandName_OpenDiagram;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_UnexpectedValueType;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_WrongStringConversion;
+
+	/**
+	 * @generated
+	 */
+	public static String AbstractParser_UnknownLiteral;
+
+	/**
+	 * @generated
+	 */
+	public static String MessageFormatParser_InvalidInputError;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfModelingAssistantProviderTitle;
+
+	/**
+	 * @generated
+	 */
+	public static String IotGmfModelingAssistantProviderMessage;
+
+	//TODO: put accessor fields manually	
+}

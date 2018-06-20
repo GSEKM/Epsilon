@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="genericjpadaopoa" nsURI="http://genericjpadaopoa/1.0" nsPrefix="genericjpadaopoa">
+  <eClassifiers xsi:type="ecore:EClass" name="Init">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aspect" eType="#//AspectDAO"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persistence" eType="#//Persistence"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controle" upperBound="-1"
+        eType="#//Controle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Controle">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controleGenericoObjeto"
+        upperBound="-1" eType="#//ControleGenericObjeto" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AspectDAO">
+    <eOperations name="getEntityManager"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Persistence">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="driver" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="user" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objeto">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributo" upperBound="-1"
+        eType="#//Atributos" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atributos"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericDAO" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DaoClass" eSuperTypes="#//GenericDAO"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControleGenericObjeto">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="GenericDAO" lowerBound="1"
+        eType="#//GenericDAO" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Objeto" lowerBound="1"
+        eType="#//Objeto" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

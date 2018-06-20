@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_oBRjAG6AEeiaaeQydYiGlw" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_oB7qUG6AEeiaaeQydYiGlw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_oCgSEG6AEeiaaeQydYiGlw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_oCiHQG6AEeiaaeQydYiGlw" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_oCiHQW6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oCiHQm6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oCiHQ26AEeiaaeQydYiGlw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_oCiuUG6AEeiaaeQydYiGlw" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_oCiuUW6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oCiuUm6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oCiuU26AEeiaaeQydYiGlw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_oB7qUW6AEeiaaeQydYiGlw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="../iot.ecore#//Board"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oB7qUm6AEeiaaeQydYiGlw" x="176" y="248"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_oCu7kG6AEeiaaeQydYiGlw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_oCu7k26AEeiaaeQydYiGlw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_oCvioG6AEeiaaeQydYiGlw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_oCwJsG6AEeiaaeQydYiGlw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="../iot.ecore#//Arduino/modelo"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oCwJsW6AEeiaaeQydYiGlw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_oCvioW6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oCviom6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oCvio26AEeiaaeQydYiGlw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_oCvipG6AEeiaaeQydYiGlw" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_oCxX0G6AEeiaaeQydYiGlw" type="2002">
+        <element xmi:type="ecore:EOperation" href="../iot.ecore#//Arduino/setup"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oCxX0W6AEeiaaeQydYiGlw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oCx-4G6AEeiaaeQydYiGlw" type="2002">
+        <element xmi:type="ecore:EOperation" href="../iot.ecore#//Arduino/loop"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oCx-4W6AEeiaaeQydYiGlw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_oCvipW6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oCvipm6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oCvip26AEeiaaeQydYiGlw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_oCu7kW6AEeiaaeQydYiGlw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="../iot.ecore#//Arduino"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCu7km6AEeiaaeQydYiGlw" y="116"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_oCx-4m6AEeiaaeQydYiGlw" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_oCyl8G6AEeiaaeQydYiGlw" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_oCyl8W6AEeiaaeQydYiGlw" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_oCz0EG6AEeiaaeQydYiGlw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="../iot.ecore#//Motor/graus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oCz0EW6AEeiaaeQydYiGlw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_oCyl8m6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oCyl826AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oCyl9G6AEeiaaeQydYiGlw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_oCzNAG6AEeiaaeQydYiGlw" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_oC0bIG6AEeiaaeQydYiGlw" type="2002">
+        <element xmi:type="ecore:EOperation" href="../iot.ecore#//Motor/girar"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_oC0bIW6AEeiaaeQydYiGlw"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_oCzNAW6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oCzNAm6AEeiaaeQydYiGlw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oCzNA26AEeiaaeQydYiGlw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_oCx-426AEeiaaeQydYiGlw" fontColor="4210752" fontName="Ubuntu" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="../iot.ecore#//Motor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oCx-5G6AEeiaaeQydYiGlw" x="170"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_oBSKEG6AEeiaaeQydYiGlw"/>
+  <element xmi:type="ecore:EPackage" href="../iot.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_oC8W8G6AEeiaaeQydYiGlw" type="3002" source="_oB7qUG6AEeiaaeQydYiGlw" target="_oCu7kG6AEeiaaeQydYiGlw">
+    <children xmi:type="notation:Node" xmi:id="_oC9lEG6AEeiaaeQydYiGlw" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oC9lEW6AEeiaaeQydYiGlw" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_oDABUG6AEeiaaeQydYiGlw" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDABUW6AEeiaaeQydYiGlw" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_oC8W8W6AEeiaaeQydYiGlw" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oC8W8m6AEeiaaeQydYiGlw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="../iot.ecore#//Board/modelo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oC8W826AEeiaaeQydYiGlw" points="[0, 0, 137, 60]$[-137, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oIQ70G6AEeiaaeQydYiGlw" id="(0.24509803921568626,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oIRi4G6AEeiaaeQydYiGlw" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oDAoYG6AEeiaaeQydYiGlw" type="3002" source="_oB7qUG6AEeiaaeQydYiGlw" target="_oCx-4m6AEeiaaeQydYiGlw">
+    <children xmi:type="notation:Node" xmi:id="_oDAoZG6AEeiaaeQydYiGlw" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDAoZW6AEeiaaeQydYiGlw" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_oDBPcG6AEeiaaeQydYiGlw" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDBPcW6AEeiaaeQydYiGlw" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_oDAoYW6AEeiaaeQydYiGlw" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oDAoYm6AEeiaaeQydYiGlw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="../iot.ecore#//Board/módulo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDAoY26AEeiaaeQydYiGlw" points="[0, 0, 0, 192]$[0, -192, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oISxAG6AEeiaaeQydYiGlw" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oITYEG6AEeiaaeQydYiGlw" id="(0.4956521739130435,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oDBPcm6AEeiaaeQydYiGlw" type="3002" source="_oCu7kG6AEeiaaeQydYiGlw" target="_oCx-4m6AEeiaaeQydYiGlw">
+    <children xmi:type="notation:Node" xmi:id="_oDB2gG6AEeiaaeQydYiGlw" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDB2gW6AEeiaaeQydYiGlw" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_oDB2gm6AEeiaaeQydYiGlw" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oDB2g26AEeiaaeQydYiGlw" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_oDBPc26AEeiaaeQydYiGlw" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oDBPdG6AEeiaaeQydYiGlw" fontColor="4210752" fontName="Ubuntu" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="../iot.ecore#//Arduino/conector"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDBPdW6AEeiaaeQydYiGlw" points="[0, 0, -134, 60]$[134, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oISJ8G6AEeiaaeQydYiGlw" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oISJ8W6AEeiaaeQydYiGlw" id="(0.24347826086956523,1.0)"/>
+  </edges>
+</notation:Diagram>

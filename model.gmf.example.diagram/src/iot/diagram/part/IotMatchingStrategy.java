@@ -1,6 +1,6 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.part;
 
 import org.eclipse.emf.common.ui.URIEditorInput;
@@ -15,8 +15,8 @@ import org.eclipse.ui.PartInitException;
 public class IotMatchingStrategy implements IEditorMatchingStrategy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean matches(IEditorReference editorRef, IEditorInput input) {
 		IEditorInput editorInput;
 		try {

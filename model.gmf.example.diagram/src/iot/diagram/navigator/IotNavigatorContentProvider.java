@@ -1,14 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.navigator;
-
-import iot.diagram.edit.parts.ArduinoConectorEditPart;
-import iot.diagram.edit.parts.ArduinoEditPart;
-import iot.diagram.edit.parts.BoardEditPart;
-import iot.diagram.edit.parts.MotorEditPart;
-import iot.diagram.part.IotVisualIDRegistry;
-import iot.diagram.part.Messages;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -35,39 +28,46 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonContentProvider;
 
+import iot.diagram.edit.parts.ArduinoConectorEditPart;
+import iot.diagram.edit.parts.ArduinoEditPart;
+import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorEditPart;
+import iot.diagram.part.IotVisualIDRegistry;
+import iot.diagram.part.Messages;
+
 /**
  * @generated
  */
 public class IotNavigatorContentProvider implements ICommonContentProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static final Object[] EMPTY_ARRAY = new Object[0];
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Viewer myViewer;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private AdapterFactoryEditingDomain myEditingDomain;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private WorkspaceSynchronizer myWorkspaceSynchronizer;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Runnable myViewerRefreshRunnable;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
 	public IotNavigatorContentProvider() {
 		TransactionalEditingDomain editingDomain = GMFEditingDomainFactory.INSTANCE.createEditingDomain();
@@ -112,8 +112,8 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void dispose() {
 		myWorkspaceSynchronizer.dispose();
 		myWorkspaceSynchronizer = null;
@@ -125,15 +125,15 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 		myViewer = viewer;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	void unloadAllResources() {
 		for (Resource nextResource : myEditingDomain.getResourceSet().getResources()) {
 			nextResource.unload();
@@ -141,8 +141,8 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	void asyncRefresh() {
 		if (myViewer != null && !myViewer.getControl().isDisposed()) {
 			myViewer.getControl().getDisplay().asyncExec(myViewerRefreshRunnable);
@@ -150,15 +150,15 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Object[] getElements(Object inputElement) {
 		return getChildren(inputElement);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void restoreState(IMemento aMemento) {
 	}
 
@@ -169,14 +169,14 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void init(ICommonContentExtensionSite aConfig) {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Object[] getChildren(Object parentElement) {
 		if (parentElement instanceof IFile) {
 			IFile file = (IFile) parentElement;
@@ -221,8 +221,8 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Object[] getViewChildren(View view, Object parentElement) {
 		switch (IotVisualIDRegistry.getVisualID(view)) {
 
@@ -252,7 +252,7 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<IotAbstractNavigatorItem> result = new LinkedList<IotAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			IotNavigatorGroup outgoinglinks = new IotNavigatorGroup(
-					Messages.NavigatorGroupName_Arduino_2002_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					Messages.NavigatorGroupName_Arduino_2006_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -268,7 +268,7 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 			LinkedList<IotAbstractNavigatorItem> result = new LinkedList<IotAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			IotNavigatorGroup incominglinks = new IotNavigatorGroup(
-					Messages.NavigatorGroupName_Motor_2003_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					Messages.NavigatorGroupName_Motor_2007_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -283,9 +283,9 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 		case ArduinoConectorEditPart.VISUAL_ID: {
 			LinkedList<IotAbstractNavigatorItem> result = new LinkedList<IotAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
-			IotNavigatorGroup target = new IotNavigatorGroup(Messages.NavigatorGroupName_ArduinoConector_4004_target,
+			IotNavigatorGroup target = new IotNavigatorGroup(Messages.NavigatorGroupName_ArduinoConector_4005_target,
 					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			IotNavigatorGroup source = new IotNavigatorGroup(Messages.NavigatorGroupName_ArduinoConector_4004_source,
+			IotNavigatorGroup source = new IotNavigatorGroup(Messages.NavigatorGroupName_ArduinoConector_4005_source,
 					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -307,8 +307,8 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Collection<View> getLinksSourceByType(Collection<Edge> edges, String type) {
 		LinkedList<View> result = new LinkedList<View>();
 		for (Edge nextEdge : edges) {
@@ -425,8 +425,8 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Object getParent(Object element) {
 		if (element instanceof IotAbstractNavigatorItem) {
 			IotAbstractNavigatorItem abstractNavigatorItem = (IotAbstractNavigatorItem) element;
@@ -436,8 +436,8 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean hasChildren(Object element) {
 		return element instanceof IFile || getChildren(element).length > 0;
 	}

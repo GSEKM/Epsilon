@@ -1,11 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.edit.policies;
-
-import iot.diagram.edit.commands.ArduinoCreateCommand;
-import iot.diagram.edit.commands.MotorCreateCommand;
-import iot.diagram.providers.IotElementTypes;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.gef.commands.Command;
@@ -14,47 +10,51 @@ import org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsComma
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 
+import iot.diagram.edit.commands.ArduinoCreateCommand;
+import iot.diagram.edit.commands.MotorCreateCommand;
+import iot.diagram.providers.IotElementTypes;
+
 /**
  * @generated
  */
 public class BoardItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public BoardItemSemanticEditPolicy() {
 		super(IotElementTypes.Board_1000);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (IotElementTypes.Arduino_2002 == req.getElementType()) {
+		if (IotElementTypes.Arduino_2006 == req.getElementType()) {
 			return getGEFWrapper(new ArduinoCreateCommand(req));
 		}
-		if (IotElementTypes.Motor_2003 == req.getElementType()) {
+		if (IotElementTypes.Motor_2007 == req.getElementType()) {
 			return getGEFWrapper(new MotorCreateCommand(req));
 		}
 		return super.getCreateCommand(req);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDuplicateCommand(DuplicateElementsRequest req) {
 		TransactionalEditingDomain editingDomain = ((IGraphicalEditPart) getHost()).getEditingDomain();
 		return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class DuplicateAnythingCommand extends DuplicateEObjectsCommand {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public DuplicateAnythingCommand(TransactionalEditingDomain editingDomain, DuplicateElementsRequest req) {
 			super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
 		}

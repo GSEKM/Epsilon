@@ -44,7 +44,7 @@ public class MotorEditPart extends AbstractBorderedShapeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2003;
+	public static final int VISUAL_ID = 2007;
 
 	/**
 	* @generated
@@ -83,7 +83,7 @@ public class MotorEditPart extends AbstractBorderedShapeEditPart {
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				View childView = (View) child.getModel();
 				switch (IotVisualIDRegistry.getVisualID(childView)) {
-				case MotorGrausEditPart.VISUAL_ID:
+				case MotorNameEditPart.VISUAL_ID:
 					return new BorderItemSelectionEditPolicy() {
 
 						protected List createSelectionHandles() {
@@ -129,7 +129,7 @@ public class MotorEditPart extends AbstractBorderedShapeEditPart {
 	* @generated
 	*/
 	protected void addBorderItem(IFigure borderItemContainer, IBorderItemEditPart borderItemEditPart) {
-		if (borderItemEditPart instanceof MotorGrausEditPart) {
+		if (borderItemEditPart instanceof MotorNameEditPart) {
 			BorderItemLocator locator = new BorderItemLocator(getMainFigure(), PositionConstants.SOUTH);
 			locator.setBorderItemOffset(new Dimension(-20, -20));
 			borderItemContainer.add(borderItemEditPart.getFigure(), locator);
@@ -223,7 +223,7 @@ public class MotorEditPart extends AbstractBorderedShapeEditPart {
 	* @generated
 	*/
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(IotVisualIDRegistry.getType(MotorGrausEditPart.VISUAL_ID));
+		return getChildBySemanticHint(IotVisualIDRegistry.getType(MotorNameEditPart.VISUAL_ID));
 	}
 
 	/**

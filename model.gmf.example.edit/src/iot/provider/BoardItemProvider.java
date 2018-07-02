@@ -81,8 +81,8 @@ public class BoardItemProvider
   {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IotPackage.Literals.BOARD__MODELO);
-			childrenFeatures.add(IotPackage.Literals.BOARD__MODULO);
+			childrenFeatures.add(IotPackage.Literals.BOARD__ARDUINO);
+			childrenFeatures.add(IotPackage.Literals.BOARD__MOTOR);
 		}
 		return childrenFeatures;
 	}
@@ -138,8 +138,8 @@ public class BoardItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Board.class)) {
-			case IotPackage.BOARD__MODELO:
-			case IotPackage.BOARD__MODULO:
+			case IotPackage.BOARD__ARDUINO:
+			case IotPackage.BOARD__MOTOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -160,12 +160,12 @@ public class BoardItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IotPackage.Literals.BOARD__MODELO,
+				(IotPackage.Literals.BOARD__ARDUINO,
 				 IotFactory.eINSTANCE.createArduino()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IotPackage.Literals.BOARD__MODULO,
+				(IotPackage.Literals.BOARD__MOTOR,
 				 IotFactory.eINSTANCE.createMotor()));
 	}
 

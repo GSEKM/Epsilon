@@ -63,27 +63,27 @@ public class ArduinoItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addModeloPropertyDescriptor(object);
+			addModelPropertyDescriptor(object);
 			addConectorPropertyDescriptor(object);
+			addPinsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Modelo feature.
+	 * This adds a property descriptor for the Model feature.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addModeloPropertyDescriptor(Object object)
-  {
+	protected void addModelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Arduino_modelo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Arduino_modelo_feature", "_UI_Arduino_type"),
-				 IotPackage.Literals.ARDUINO__MODELO,
+				 getString("_UI_Arduino_model_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Arduino_model_feature", "_UI_Arduino_type"),
+				 IotPackage.Literals.ARDUINO__MODEL,
 				 true,
 				 false,
 				 false,
@@ -92,7 +92,7 @@ public class ArduinoItemProvider
 				 null));
 	}
 
-  /**
+		/**
 	 * This adds a property descriptor for the Conector feature.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -116,6 +116,28 @@ public class ArduinoItemProvider
 	}
 
   /**
+	 * This adds a property descriptor for the Pins feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPinsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Arduino_pins_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Arduino_pins_feature", "_UI_Arduino_type"),
+				 IotPackage.Literals.ARDUINO__PINS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This returns Arduino.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -136,7 +158,7 @@ public class ArduinoItemProvider
   @Override
   public String getText(Object object)
   {
-		String label = ((Arduino)object).getModelo();
+		String label = ((Arduino)object).getModel();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Arduino_type") :
 			getString("_UI_Arduino_type") + " " + label;
@@ -155,7 +177,8 @@ public class ArduinoItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Arduino.class)) {
-			case IotPackage.ARDUINO__MODELO:
+			case IotPackage.ARDUINO__MODEL:
+			case IotPackage.ARDUINO__PINS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

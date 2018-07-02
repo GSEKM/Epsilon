@@ -3,9 +3,9 @@
  */
 package iot.diagram.preferences;
 
-import iot.diagram.part.IotDiagramEditorPlugin;
-
 import org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage;
+
+import iot.diagram.part.IotDiagramEditorPlugin;
 
 /**
  * @generated
@@ -13,8 +13,8 @@ import org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage;
 public class DiagramAppearancePreferencePage extends AppearancePreferencePage {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public DiagramAppearancePreferencePage() {
 		setPreferenceStore(IotDiagramEditorPlugin.getInstance().getPreferenceStore());
 	}

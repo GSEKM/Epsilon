@@ -3,18 +3,12 @@
  */
 package iot.diagram.part;
 
-import iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy;
-import iot.diagram.providers.ElementInitializers;
-import iot.provider.IotItemProviderAdapterFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -28,14 +22,18 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
+import iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy;
+import iot.diagram.providers.ElementInitializers;
+import iot.provider.IotItemProviderAdapterFactory;
+
 /**
  * @generated
  */
 public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final String ID = "model.gmf.example.diagram"; //$NON-NLS-1$
 
 	/**
@@ -44,44 +42,44 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	private LogHelper myLogHelper;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final PreferencesHint DIAGRAM_PREFERENCES_HINT = new PreferencesHint(ID);
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static IotDiagramEditorPlugin instance;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private ComposedAdapterFactory adapterFactory;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IotDocumentProvider documentProvider;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IotBaseItemSemanticEditPolicy.LinkConstraints linkConstraints;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private ElementInitializers initializers;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public IotDiagramEditorPlugin() {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		instance = this;
@@ -91,8 +89,8 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void stop(BundleContext context) throws Exception {
 		adapterFactory.dispose();
 		adapterFactory = null;
@@ -103,15 +101,15 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static IotDiagramEditorPlugin getInstance() {
 		return instance;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected ComposedAdapterFactory createAdapterFactory() {
 		ArrayList<AdapterFactory> factories = new ArrayList<AdapterFactory>();
 		fillItemProviderFactories(factories);
@@ -119,8 +117,8 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void fillItemProviderFactories(List<AdapterFactory> factories) {
 		factories.add(new IotItemProviderAdapterFactory());
 		factories.add(new ResourceItemProviderAdapterFactory());
@@ -128,15 +126,15 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public AdapterFactory getItemProvidersAdapterFactory() {
 		return adapterFactory;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ImageDescriptor getItemImageDescriptor(Object item) {
 		IItemLabelProvider labelProvider = (IItemLabelProvider) adapterFactory.adapt(item, IItemLabelProvider.class);
 		if (labelProvider != null) {
@@ -203,8 +201,8 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public IotDocumentProvider getDocumentProvider() {
 		if (documentProvider == null) {
 			documentProvider = new IotDocumentProvider();
@@ -213,57 +211,57 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public IotBaseItemSemanticEditPolicy.LinkConstraints getLinkConstraints() {
 		return linkConstraints;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void setLinkConstraints(IotBaseItemSemanticEditPolicy.LinkConstraints lc) {
 		this.linkConstraints = lc;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ElementInitializers getElementInitializers() {
 		return initializers;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void setElementInitializers(ElementInitializers i) {
 		this.initializers = i;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logError(String error) {
 		getLogHelper().logError(error, null);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logError(String error, Throwable throwable) {
 		getLogHelper().logError(error, throwable);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logInfo(String message) {
 		getLogHelper().logInfo(message, null);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void logInfo(String message, Throwable throwable) {
 		getLogHelper().logInfo(message, throwable);
 	}
@@ -274,4 +272,5 @@ public class IotDiagramEditorPlugin extends AbstractUIPlugin {
 	public LogHelper getLogHelper() {
 		return myLogHelper;
 	}
+
 }

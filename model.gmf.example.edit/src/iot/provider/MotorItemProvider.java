@@ -63,26 +63,28 @@ public class MotorItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addGrausPropertyDescriptor(object);
+			addDegreesPropertyDescriptor(object);
+			addPinsPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addLibraryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
   /**
-	 * This adds a property descriptor for the Graus feature.
+	 * This adds a property descriptor for the Degrees feature.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  protected void addGrausPropertyDescriptor(Object object)
-  {
+	protected void addDegreesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Motor_graus_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Motor_graus_feature", "_UI_Motor_type"),
-				 IotPackage.Literals.MOTOR__GRAUS,
+				 getString("_UI_Motor_degrees_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Motor_degrees_feature", "_UI_Motor_type"),
+				 IotPackage.Literals.MOTOR__DEGREES,
 				 true,
 				 false,
 				 false,
@@ -91,7 +93,73 @@ public class MotorItemProvider
 				 null));
 	}
 
-  /**
+		/**
+	 * This adds a property descriptor for the Pins feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPinsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Motor_pins_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Motor_pins_feature", "_UI_Motor_type"),
+				 IotPackage.Literals.MOTOR__PINS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Motor_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Motor_name_feature", "_UI_Motor_type"),
+				 IotPackage.Literals.MOTOR__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
+	 * This adds a property descriptor for the Library feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLibraryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Motor_library_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Motor_library_feature", "_UI_Motor_type"),
+				 IotPackage.Literals.MOTOR__LIBRARY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
 	 * This returns Motor.gif.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -112,7 +180,7 @@ public class MotorItemProvider
   @Override
   public String getText(Object object)
   {
-		String label = ((Motor)object).getGraus();
+		String label = ((Motor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Motor_type") :
 			getString("_UI_Motor_type") + " " + label;
@@ -131,7 +199,10 @@ public class MotorItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Motor.class)) {
-			case IotPackage.MOTOR__GRAUS:
+			case IotPackage.MOTOR__DEGREES:
+			case IotPackage.MOTOR__PINS:
+			case IotPackage.MOTOR__NAME:
+			case IotPackage.MOTOR__LIBRARY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

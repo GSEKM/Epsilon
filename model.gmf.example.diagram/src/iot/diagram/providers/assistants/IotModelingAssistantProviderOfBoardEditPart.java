@@ -24,8 +24,8 @@ public class IotModelingAssistantProviderOfBoardEditPart extends IotModelingAssi
 
 	public List<IElementType> getTypesForPopupBar(IAdaptable host) {
 		List<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(IotElementTypes.Arduino_2002);
-		types.add(IotElementTypes.Motor_2003);
+		types.add(IotElementTypes.Arduino_2006);
+		types.add(IotElementTypes.Motor_2007);
 		return types;
 	}
 

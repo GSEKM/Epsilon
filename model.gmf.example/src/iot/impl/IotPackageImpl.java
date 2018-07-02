@@ -119,20 +119,19 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EReference getBoard_Modelo()
-  {
+	public EReference getBoard_Arduino() {
 		return (EReference)boardEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBoard_Modulo() {
+	public EReference getBoard_Motor() {
 		return (EReference)boardEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -148,15 +147,14 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getArduino_Modelo()
-  {
+	public EAttribute getArduino_Model() {
 		return (EAttribute)arduinoEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -168,6 +166,15 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
   /**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArduino_Pins() {
+		return (EAttribute)arduinoEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -178,15 +185,41 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EAttribute getMotor_Graus()
-  {
+	public EAttribute getMotor_Degrees() {
 		return (EAttribute)motorEClass.getEStructuralFeatures().get(0);
 	}
 
-  /**
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMotor_Pins() {
+		return (EAttribute)motorEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMotor_Name() {
+		return (EAttribute)motorEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMotor_Library() {
+		return (EAttribute)motorEClass.getEStructuralFeatures().get(3);
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -217,15 +250,19 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
 		// Create classes and their features
 		boardEClass = createEClass(BOARD);
-		createEReference(boardEClass, BOARD__MODELO);
-		createEReference(boardEClass, BOARD__MODULO);
+		createEReference(boardEClass, BOARD__ARDUINO);
+		createEReference(boardEClass, BOARD__MOTOR);
 
 		arduinoEClass = createEClass(ARDUINO);
-		createEAttribute(arduinoEClass, ARDUINO__MODELO);
+		createEAttribute(arduinoEClass, ARDUINO__MODEL);
 		createEReference(arduinoEClass, ARDUINO__CONECTOR);
+		createEAttribute(arduinoEClass, ARDUINO__PINS);
 
 		motorEClass = createEClass(MOTOR);
-		createEAttribute(motorEClass, MOTOR__GRAUS);
+		createEAttribute(motorEClass, MOTOR__DEGREES);
+		createEAttribute(motorEClass, MOTOR__PINS);
+		createEAttribute(motorEClass, MOTOR__NAME);
+		createEAttribute(motorEClass, MOTOR__LIBRARY);
 	}
 
   /**
@@ -260,21 +297,25 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(boardEClass, Board.class, "Board", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBoard_Modelo(), this.getArduino(), null, "modelo", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBoard_Modulo(), this.getMotor(), null, "modulo", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoard_Arduino(), this.getArduino(), null, "Arduino", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoard_Motor(), this.getMotor(), null, "Motor", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arduinoEClass, Arduino.class, "Arduino", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArduino_Modelo(), ecorePackage.getEString(), "modelo", null, 0, 1, Arduino.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduino_Model(), ecorePackage.getEString(), "model", null, 0, 1, Arduino.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArduino_Conector(), this.getMotor(), null, "conector", null, 0, -1, Arduino.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduino_Pins(), ecorePackage.getEInt(), "pins", null, 0, 1, Arduino.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(arduinoEClass, null, "setup", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(arduinoEClass, null, "loop", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(motorEClass, Motor.class, "Motor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMotor_Graus(), ecorePackage.getEString(), "graus", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMotor_Degrees(), ecorePackage.getEString(), "degrees", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMotor_Pins(), ecorePackage.getEInt(), "pins", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMotor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMotor_Library(), ecorePackage.getEString(), "library", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		addEOperation(motorEClass, null, "girar", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(motorEClass, null, "turn", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -320,7 +361,7 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 		   new String[] {
 			 "figure", "figures.ArduinoFigure",
 			 "label.icon", "false",
-			 "label", "modelo",
+			 "label", "model",
 			 "label.placement", "external"
 		   });	
 		addAnnotation
@@ -329,7 +370,7 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 		   new String[] {
 			 "figure", "figures.PersonFigure",
 			 "label.icon", "false",
-			 "label", "graus",
+			 "label", "name",
 			 "label.placement", "external"
 		   });
 	}

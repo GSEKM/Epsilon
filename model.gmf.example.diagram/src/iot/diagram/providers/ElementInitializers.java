@@ -15,8 +15,8 @@ public class ElementInitializers {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static ElementInitializers getInstance() {
 		ElementInitializers cached = IotDiagramEditorPlugin.getInstance().getElementInitializers();
 		if (cached == null) {

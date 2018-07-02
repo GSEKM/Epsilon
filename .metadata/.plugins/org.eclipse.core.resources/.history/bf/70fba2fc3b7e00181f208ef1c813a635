@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated iotGmf -->
+      <package
+            uri="http://iotgmf/1.0"
+            class="iotgmf.IotgmfPackage"
+            genModel="model/iotGmf.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated iot -->
+      <package
+            uri="friends"
+            class="iot.IotPackage"/>
+   </extension>
+
+</plugin>

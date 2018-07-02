@@ -1,13 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.navigator;
-
-import iot.diagram.edit.parts.BoardEditPart;
-import iot.diagram.part.IotDiagramEditor;
-import iot.diagram.part.IotDiagramEditorPlugin;
-import iot.diagram.part.IotVisualIDRegistry;
-import iot.diagram.part.Messages;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.common.ui.URIEditorInput;
@@ -31,24 +25,30 @@ import org.eclipse.ui.navigator.ICommonActionExtensionSite;
 import org.eclipse.ui.navigator.ICommonViewerWorkbenchSite;
 import org.eclipse.ui.part.FileEditorInput;
 
+import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.part.IotDiagramEditor;
+import iot.diagram.part.IotDiagramEditorPlugin;
+import iot.diagram.part.IotVisualIDRegistry;
+import iot.diagram.part.Messages;
+
 /**
  * @generated
  */
 public class IotNavigatorActionProvider extends CommonActionProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean myContribute;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private OpenDiagramAction myOpenDiagramAction;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void init(ICommonActionExtensionSite aSite) {
 		super.init(aSite);
 		if (aSite.getViewSite() instanceof ICommonViewerWorkbenchSite) {
@@ -60,15 +60,15 @@ public class IotNavigatorActionProvider extends CommonActionProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private void makeActions(ICommonViewerWorkbenchSite viewerSite) {
 		myOpenDiagramAction = new OpenDiagramAction(viewerSite);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void fillActionBars(IActionBars actionBars) {
 		if (!myContribute) {
 			return;
@@ -81,37 +81,37 @@ public class IotNavigatorActionProvider extends CommonActionProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void fillContextMenu(IMenuManager menu) {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class OpenDiagramAction extends Action {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private Diagram myDiagram;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private ICommonViewerWorkbenchSite myViewerSite;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public OpenDiagramAction(ICommonViewerWorkbenchSite viewerSite) {
 			super(Messages.NavigatorActionProvider_OpenDiagramActionName);
 			myViewerSite = viewerSite;
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public final void selectionChanged(IStructuredSelection selection) {
 			myDiagram = null;
 			if (selection.size() == 1) {
@@ -132,8 +132,8 @@ public class IotNavigatorActionProvider extends CommonActionProvider {
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public void run() {
 			if (myDiagram == null || myDiagram.eResource() == null) {
 				return;
@@ -149,8 +149,8 @@ public class IotNavigatorActionProvider extends CommonActionProvider {
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private static IEditorInput getEditorInput(Diagram diagram) {
 			Resource diagramResource = diagram.eResource();
 			for (EObject nextEObject : diagramResource.getContents()) {

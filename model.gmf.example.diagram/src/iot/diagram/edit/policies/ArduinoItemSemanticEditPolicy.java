@@ -1,13 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.edit.policies;
-
-import iot.diagram.edit.commands.ArduinoConectorCreateCommand;
-import iot.diagram.edit.commands.ArduinoConectorReorientCommand;
-import iot.diagram.edit.parts.ArduinoConectorEditPart;
-import iot.diagram.part.IotVisualIDRegistry;
-import iot.diagram.providers.IotElementTypes;
 
 import java.util.Iterator;
 
@@ -24,21 +18,27 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
+import iot.diagram.edit.commands.ArduinoConectorCreateCommand;
+import iot.diagram.edit.commands.ArduinoConectorReorientCommand;
+import iot.diagram.edit.parts.ArduinoConectorEditPart;
+import iot.diagram.part.IotVisualIDRegistry;
+import iot.diagram.providers.IotElementTypes;
+
 /**
  * @generated
  */
 public class ArduinoItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ArduinoItemSemanticEditPolicy() {
-		super(IotElementTypes.Arduino_2002);
+		super(IotElementTypes.Arduino_2006);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
@@ -78,7 +78,7 @@ public class ArduinoItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy
 	 * @generated
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (IotElementTypes.ArduinoConector_4004 == req.getElementType()) {
+		if (IotElementTypes.ArduinoConector_4005 == req.getElementType()) {
 			return getGEFWrapper(new ArduinoConectorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
@@ -88,7 +88,7 @@ public class ArduinoItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy
 	 * @generated
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (IotElementTypes.ArduinoConector_4004 == req.getElementType()) {
+		if (IotElementTypes.ArduinoConector_4005 == req.getElementType()) {
 			return null;
 		}
 		return null;

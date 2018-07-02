@@ -8,7 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="iot.ecore#//Board/modelo"/>
+        href="iot.ecore#//Board/Arduino"/>
     <ownedChild>
       <domainMetaElement
           href="iot.ecore#//Arduino"/>
@@ -17,7 +17,7 @@
         <diagramLabel
             href="iot.gmfgraph#ArduinoLabel"/>
         <features
-            href="iot.ecore#//Arduino/modelo"/>
+            href="iot.ecore#//Arduino/model"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -28,7 +28,7 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="iot.ecore#//Board/modulo"/>
+        href="iot.ecore#//Board/Motor"/>
     <ownedChild>
       <domainMetaElement
           href="iot.ecore#//Motor"/>
@@ -37,7 +37,7 @@
         <diagramLabel
             href="iot.gmfgraph#MotorLabel"/>
         <features
-            href="iot.ecore#//Motor/graus"/>
+            href="iot.ecore#//Motor/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"

@@ -3,12 +3,6 @@
  */
 package iot.diagram.providers;
 
-import iot.IotPackage;
-import iot.diagram.edit.parts.ArduinoModeloEditPart;
-import iot.diagram.edit.parts.MotorGrausEditPart;
-import iot.diagram.parsers.MessageFormatParser;
-import iot.diagram.part.IotVisualIDRegistry;
-
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
@@ -22,69 +16,75 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
 
+import iot.IotPackage;
+import iot.diagram.edit.parts.ArduinoModelEditPart;
+import iot.diagram.edit.parts.MotorNameEditPart;
+import iot.diagram.parsers.MessageFormatParser;
+import iot.diagram.part.IotVisualIDRegistry;
+
 /**
  * @generated
  */
 public class IotParserProvider extends AbstractProvider implements IParserProvider {
 
 	/**
-	 * @generated
-	 */
-	private IParser arduinoModelo_5002Parser;
+	* @generated
+	*/
+	private IParser arduinoModel_5006Parser;
 
 	/**
-	 * @generated
-	 */
-	private IParser getArduinoModelo_5002Parser() {
-		if (arduinoModelo_5002Parser == null) {
-			EAttribute[] features = new EAttribute[] { IotPackage.eINSTANCE.getArduino_Modelo() };
+	* @generated
+	*/
+	private IParser getArduinoModel_5006Parser() {
+		if (arduinoModel_5006Parser == null) {
+			EAttribute[] features = new EAttribute[] { IotPackage.eINSTANCE.getArduino_Model() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			arduinoModelo_5002Parser = parser;
+			arduinoModel_5006Parser = parser;
 		}
-		return arduinoModelo_5002Parser;
+		return arduinoModel_5006Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser motorGraus_5003Parser;
+	private IParser motorName_5007Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getMotorGraus_5003Parser() {
-		if (motorGraus_5003Parser == null) {
-			EAttribute[] features = new EAttribute[] { IotPackage.eINSTANCE.getMotor_Graus() };
+	private IParser getMotorName_5007Parser() {
+		if (motorName_5007Parser == null) {
+			EAttribute[] features = new EAttribute[] { IotPackage.eINSTANCE.getMotor_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			motorGraus_5003Parser = parser;
+			motorName_5007Parser = parser;
 		}
-		return motorGraus_5003Parser;
+		return motorName_5007Parser;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
-		case ArduinoModeloEditPart.VISUAL_ID:
-			return getArduinoModelo_5002Parser();
-		case MotorGrausEditPart.VISUAL_ID:
-			return getMotorGraus_5003Parser();
+		case ArduinoModelEditPart.VISUAL_ID:
+			return getArduinoModel_5006Parser();
+		case MotorNameEditPart.VISUAL_ID:
+			return getMotorName_5007Parser();
 		}
 		return null;
 	}
 
 	/**
-	 * Utility method that consults ParserService
-	 * @generated
-	 */
+	* Utility method that consults ParserService
+	* @generated
+	*/
 	public static IParser getParser(IElementType type, EObject object, String parserHint) {
 		return ParserService.getInstance().getParser(new HintAdapter(type, object, parserHint));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public IParser getParser(IAdaptable hint) {
 		String vid = (String) hint.getAdapter(String.class);
 		if (vid != null) {
@@ -98,8 +98,8 @@ public class IotParserProvider extends AbstractProvider implements IParserProvid
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean provides(IOperation operation) {
 		if (operation instanceof GetParserOperation) {
 			IAdaptable hint = ((GetParserOperation) operation).getHint();
@@ -112,18 +112,18 @@ public class IotParserProvider extends AbstractProvider implements IParserProvid
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static class HintAdapter extends ParserHintAdapter {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		private final IElementType elementType;
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public HintAdapter(IElementType type, EObject object, String parserHint) {
 			super(object, parserHint);
 			assert type != null;
@@ -131,8 +131,8 @@ public class IotParserProvider extends AbstractProvider implements IParserProvid
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public Object getAdapter(Class adapter) {
 			if (IElementType.class.equals(adapter)) {
 				return elementType;

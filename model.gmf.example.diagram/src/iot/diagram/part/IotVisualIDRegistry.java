@@ -1,17 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.part;
-
-import iot.Board;
-import iot.IotPackage;
-import iot.diagram.edit.parts.ArduinoConectorEditPart;
-import iot.diagram.edit.parts.ArduinoEditPart;
-import iot.diagram.edit.parts.ArduinoModeloEditPart;
-import iot.diagram.edit.parts.BoardEditPart;
-import iot.diagram.edit.parts.MotorEditPart;
-import iot.diagram.edit.parts.MotorGrausEditPart;
-import iot.diagram.edit.parts.WrappingLabelEditPart;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.emf.ecore.EAnnotation;
@@ -19,6 +9,16 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
+
+import iot.Board;
+import iot.IotPackage;
+import iot.diagram.edit.parts.ArduinoConectorEditPart;
+import iot.diagram.edit.parts.ArduinoEditPart;
+import iot.diagram.edit.parts.ArduinoModelEditPart;
+import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorEditPart;
+import iot.diagram.edit.parts.MotorNameEditPart;
+import iot.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -30,13 +30,13 @@ import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 public class IotVisualIDRegistry {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static final String DEBUG_KEY = "model.gmf.example.diagram/debug/visualID"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static int getVisualID(View view) {
 		if (view instanceof Diagram) {
 			if (BoardEditPart.MODEL_ID.equals(view.getType())) {
@@ -49,8 +49,8 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static String getModelID(View view) {
 		View diagram = view.getDiagram();
 		while (view != diagram) {
@@ -64,8 +64,8 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static int getVisualID(String type) {
 		try {
 			return Integer.parseInt(type);
@@ -79,15 +79,15 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static String getType(int visualID) {
 		return Integer.toString(visualID);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static int getDiagramVisualID(EObject domainElement) {
 		if (domainElement == null) {
 			return -1;
@@ -99,8 +99,8 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static int getNodeVisualID(View containerView, EObject domainElement) {
 		if (domainElement == null) {
 			return -1;
@@ -133,8 +133,8 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean canCreateNode(View containerView, int nodeVisualID) {
 		String containerModelID = iot.diagram.part.IotVisualIDRegistry.getModelID(containerView);
 		if (!BoardEditPart.MODEL_ID.equals(containerModelID) && !"iot".equals(containerModelID)) { //$NON-NLS-1$
@@ -160,12 +160,12 @@ public class IotVisualIDRegistry {
 			}
 			break;
 		case ArduinoEditPart.VISUAL_ID:
-			if (ArduinoModeloEditPart.VISUAL_ID == nodeVisualID) {
+			if (ArduinoModelEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case MotorEditPart.VISUAL_ID:
-			if (MotorGrausEditPart.VISUAL_ID == nodeVisualID) {
+			if (MotorNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -179,8 +179,8 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static int getLinkWithClassVisualID(EObject domainElement) {
 		if (domainElement == null) {
 			return -1;
@@ -189,18 +189,18 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * User can change implementation of this method to handle some specific
-	 * situations not covered by default logic.
-	 * 
-	 * @generated
-	 */
+	* User can change implementation of this method to handle some specific
+	* situations not covered by default logic.
+	* 
+	* @generated
+	*/
 	private static boolean isDiagram(Board element) {
 		return true;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean checkNodeVisualID(View containerView, EObject domainElement, int candidate) {
 		if (candidate == -1) {
 			//unrecognized id is always bad
@@ -211,15 +211,15 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean isCompartmentVisualID(int visualID) {
 		return false;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean isSemanticLeafVisualID(int visualID) {
 		switch (visualID) {
 		case BoardEditPart.VISUAL_ID:
@@ -234,8 +234,8 @@ public class IotVisualIDRegistry {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final DiagramStructure TYPED_INSTANCE = new DiagramStructure() {
 		/**
 		* @generated

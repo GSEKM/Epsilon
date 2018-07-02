@@ -16,7 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following operations are tested:
  * <ul>
- *   <li>{@link iot.Motor#girar() <em>Girar</em>}</li>
+ *   <li>{@link iot.Motor#turn() <em>Turn</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -100,14 +100,13 @@ public class MotorTest extends TestCase
 	}
 
   /**
-	 * Tests the '{@link iot.Motor#girar() <em>Girar</em>}' operation.
+	 * Tests the '{@link iot.Motor#turn() <em>Turn</em>}' operation.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see iot.Motor#girar()
+	 * <!-- end-user-doc -->
+	 * @see iot.Motor#turn()
 	 * @generated
 	 */
-  public void testGirar()
-  {
+	public void testTurn() {
 		// TODO: implement this operation test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

@@ -33,7 +33,7 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 	* @generated
 	*/
 	public MotorItemSemanticEditPolicy() {
-		super(IotElementTypes.Motor_2003);
+		super(IotElementTypes.Motor_2007);
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 	 * @generated
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (IotElementTypes.ArduinoConector_4004 == req.getElementType()) {
+		if (IotElementTypes.ArduinoConector_4005 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -88,7 +88,7 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 	 * @generated
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (IotElementTypes.ArduinoConector_4004 == req.getElementType()) {
+		if (IotElementTypes.ArduinoConector_4005 == req.getElementType()) {
 			return getGEFWrapper(new ArduinoConectorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;

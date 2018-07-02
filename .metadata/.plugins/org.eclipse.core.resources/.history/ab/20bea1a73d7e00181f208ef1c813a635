@@ -1,0 +1,29 @@
+@namespace(uri="iot", prefix="")
+package iot;
+
+@gmf.diagram(foo="bar")
+class Board {
+  val Arduino[*] Arduino;
+  val Motor[*] Module;
+}
+
+@gmf.node(figure="figures.ArduinoFigure", label.icon="false", label="model", label.placement="external")
+class Arduino {
+  op void setup();
+  op void loop();
+  attr String model;
+
+  @gmf.link(width="2", color="0,255,0", source.decoration="arrow", target.decoration="arrow", style="dash")
+  ref Motor[*] conector;
+  attr int pins;
+}
+
+@gmf.node(figure="figures.PersonFigure", label.icon="false", label="name", label.placement="external")
+class Motor {
+  op void turn();
+  attr String degrees;
+  attr int pins;
+  attr String name;
+  attr String library;
+}
+

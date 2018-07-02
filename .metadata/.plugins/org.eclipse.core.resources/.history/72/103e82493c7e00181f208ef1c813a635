@@ -1,0 +1,75 @@
+
+/*
+ * 
+ */
+package iot.diagram.part;
+
+/**
+ * @generated
+ */
+public class IotPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(iot.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createArduino1CreationTool());
+paletteContainer.add(createMotor2CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(iot.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createConector1CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createArduino1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(iot.diagram.part.Messages.Arduino1CreationTool_title, iot.diagram.part.Messages.Arduino1CreationTool_desc, java.util.Collections.singletonList(iot.diagram.providers.IotElementTypes.Arduino_2004));
+				 entry.setId("createArduino1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(iot.diagram.providers.IotElementTypes.getImageDescriptor(iot.diagram.providers.IotElementTypes.Arduino_2004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createMotor2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(iot.diagram.part.Messages.Motor2CreationTool_title, iot.diagram.part.Messages.Motor2CreationTool_desc, java.util.Collections.singletonList(iot.diagram.providers.IotElementTypes.Motor_2005));
+				 entry.setId("createMotor2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(iot.diagram.providers.IotElementTypes.getImageDescriptor(iot.diagram.providers.IotElementTypes.Motor_2005));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createConector1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(iot.diagram.part.Messages.Conector1CreationTool_title, iot.diagram.part.Messages.Conector1CreationTool_desc, java.util.Collections.singletonList(iot.diagram.providers.IotElementTypes.ArduinoConector_4005));
+				 entry.setId("createConector1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(iot.diagram.providers.IotElementTypes.getImageDescriptor(iot.diagram.providers.IotElementTypes.ArduinoConector_4005));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

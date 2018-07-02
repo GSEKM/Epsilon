@@ -6,9 +6,11 @@ package iot.diagram.providers.assistants;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.providers.IotElementTypes;
@@ -34,7 +36,7 @@ public class IotModelingAssistantProviderOfArduinoEditPart extends IotModelingAs
 	*/
 	public List<IElementType> doGetRelTypesOnSource(ArduinoEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(IotElementTypes.ArduinoConector_4004);
+		types.add(IotElementTypes.ArduinoConector_4005);
 		return types;
 	}
 
@@ -56,7 +58,7 @@ public class IotModelingAssistantProviderOfArduinoEditPart extends IotModelingAs
 			IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof MotorEditPart) {
-			types.add(IotElementTypes.ArduinoConector_4004);
+			types.add(IotElementTypes.ArduinoConector_4005);
 		}
 		return types;
 	}
@@ -76,8 +78,8 @@ public class IotModelingAssistantProviderOfArduinoEditPart extends IotModelingAs
 	*/
 	public List<IElementType> doGetTypesForTarget(ArduinoEditPart source, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == IotElementTypes.ArduinoConector_4004) {
-			types.add(IotElementTypes.Motor_2003);
+		if (relationshipType == IotElementTypes.ArduinoConector_4005) {
+			types.add(IotElementTypes.Motor_2007);
 		}
 		return types;
 	}

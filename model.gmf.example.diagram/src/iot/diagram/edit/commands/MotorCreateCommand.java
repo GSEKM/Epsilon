@@ -58,7 +58,7 @@ public class MotorCreateCommand extends EditElementCommand {
 		Motor newElement = IotFactory.eINSTANCE.createMotor();
 
 		Board owner = (Board) getElementToEdit();
-		owner.getModulo().add(newElement);
+		owner.getMotor().add(newElement);
 
 		doConfigure(newElement, monitor, info);
 

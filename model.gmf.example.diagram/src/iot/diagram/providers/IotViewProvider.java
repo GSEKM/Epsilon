@@ -3,15 +3,6 @@
  */
 package iot.diagram.providers;
 
-import iot.diagram.edit.parts.ArduinoConectorEditPart;
-import iot.diagram.edit.parts.ArduinoEditPart;
-import iot.diagram.edit.parts.ArduinoModeloEditPart;
-import iot.diagram.edit.parts.BoardEditPart;
-import iot.diagram.edit.parts.MotorEditPart;
-import iot.diagram.edit.parts.MotorGrausEditPart;
-import iot.diagram.edit.parts.WrappingLabelEditPart;
-import iot.diagram.part.IotVisualIDRegistry;
-
 import java.util.ArrayList;
 
 import org.eclipse.core.runtime.IAdaptable;
@@ -53,14 +44,23 @@ import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
 
+import iot.diagram.edit.parts.ArduinoConectorEditPart;
+import iot.diagram.edit.parts.ArduinoEditPart;
+import iot.diagram.edit.parts.ArduinoModelEditPart;
+import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorEditPart;
+import iot.diagram.edit.parts.MotorNameEditPart;
+import iot.diagram.edit.parts.WrappingLabelEditPart;
+import iot.diagram.part.IotVisualIDRegistry;
+
 /**
  * @generated
  */
 public class IotViewProvider extends AbstractProvider implements IViewProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public final boolean provides(IOperation operation) {
 		if (operation instanceof CreateViewForKindOperation) {
 			return provides((CreateViewForKindOperation) operation);
@@ -77,8 +77,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean provides(CreateViewForKindOperation op) {
 		/*
 		    if (op.getViewKind() == Node.class)
@@ -90,16 +90,16 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean provides(CreateDiagramViewOperation op) {
 		return BoardEditPart.MODEL_ID.equals(op.getSemanticHint())
 				&& IotVisualIDRegistry.getDiagramVisualID(getSemanticElement(op.getSemanticAdapter())) != -1;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean provides(CreateNodeViewOperation op) {
 		if (op.getContainerView() == null) {
 			return false;
@@ -150,8 +150,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean provides(CreateEdgeViewOperation op) {
 		IElementType elementType = getSemanticElementType(op.getSemanticAdapter());
 		if (!IotElementTypes.isKnownElementType(elementType) || (!(elementType instanceof IHintedType))) {
@@ -171,8 +171,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Diagram createDiagram(IAdaptable semanticAdapter, String diagramKind, PreferencesHint preferencesHint) {
 		Diagram diagram = NotationFactory.eINSTANCE.createDiagram();
 		diagram.getStyles().add(NotationFactory.eINSTANCE.createDiagramStyle());
@@ -183,8 +183,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Node createNode(IAdaptable semanticAdapter, View containerView, String semanticHint, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		final EObject domainElement = getSemanticElement(semanticAdapter);
@@ -196,33 +196,33 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 		}
 		switch (visualID) {
 		case ArduinoEditPart.VISUAL_ID:
-			return createArduino_2002(domainElement, containerView, index, persisted, preferencesHint);
+			return createArduino_2006(domainElement, containerView, index, persisted, preferencesHint);
 		case MotorEditPart.VISUAL_ID:
-			return createMotor_2003(domainElement, containerView, index, persisted, preferencesHint);
+			return createMotor_2007(domainElement, containerView, index, persisted, preferencesHint);
 		}
 		// can't happen, provided #provides(CreateNodeViewOperation) is correct
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Edge createEdge(IAdaptable semanticAdapter, View containerView, String semanticHint, int index,
 			boolean persisted, PreferencesHint preferencesHint) {
 		IElementType elementType = getSemanticElementType(semanticAdapter);
 		String elementTypeHint = ((IHintedType) elementType).getSemanticHint();
 		switch (IotVisualIDRegistry.getVisualID(elementTypeHint)) {
 		case ArduinoConectorEditPart.VISUAL_ID:
-			return createArduinoConector_4004(containerView, index, persisted, preferencesHint);
+			return createArduinoConector_4005(containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
-	public Node createArduino_2002(EObject domainElement, View containerView, int index, boolean persisted,
+	* @generated
+	*/
+	public Node createArduino_2006(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -252,18 +252,18 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node, IotVisualIDRegistry.getType(ArduinoModeloEditPart.VISUAL_ID));
-		label5002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
-		Location location5002 = (Location) label5002.getLayoutConstraint();
-		location5002.setX(0);
-		location5002.setY(5);
+		Node label5006 = createLabel(node, IotVisualIDRegistry.getType(ArduinoModelEditPart.VISUAL_ID));
+		label5006.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location5006 = (Location) label5006.getLayoutConstraint();
+		location5006.setX(0);
+		location5006.setY(5);
 		return node;
 	}
 
 	/**
 	* @generated
 	*/
-	public Node createMotor_2003(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createMotor_2007(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
@@ -293,18 +293,18 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5003 = createLabel(node, IotVisualIDRegistry.getType(MotorGrausEditPart.VISUAL_ID));
-		label5003.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
-		Location location5003 = (Location) label5003.getLayoutConstraint();
-		location5003.setX(0);
-		location5003.setY(5);
+		Node label5007 = createLabel(node, IotVisualIDRegistry.getType(MotorNameEditPart.VISUAL_ID));
+		label5007.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location5007 = (Location) label5007.getLayoutConstraint();
+		location5007.setX(0);
+		location5007.setY(5);
 		return node;
 	}
 
 	/**
-	 * @generated
-	 */
-	public Edge createArduinoConector_4004(View containerView, int index, boolean persisted,
+	* @generated
+	*/
+	public Edge createArduinoConector_4005(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -335,18 +335,18 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 		if (routing != null) {
 			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
 		}
-		Node label6004 = createLabel(edge, IotVisualIDRegistry.getType(WrappingLabelEditPart.VISUAL_ID));
-		label6004.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		label6004.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
-		Location location6004 = (Location) label6004.getLayoutConstraint();
-		location6004.setX(0);
-		location6004.setY(40);
+		Node label6005 = createLabel(edge, IotVisualIDRegistry.getType(WrappingLabelEditPart.VISUAL_ID));
+		label6005.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		label6005.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6005 = (Location) label6005.getLayoutConstraint();
+		location6005.setX(0);
+		location6005.setY(40);
 		return edge;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private void stampShortcut(View containerView, Node target) {
 		if (!BoardEditPart.MODEL_ID.equals(IotVisualIDRegistry.getModelID(containerView))) {
 			EAnnotation shortcutAnnotation = EcoreFactory.eINSTANCE.createEAnnotation();
@@ -357,8 +357,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Node createLabel(View owner, String hint) {
 		DecorationNode rv = NotationFactory.eINSTANCE.createDecorationNode();
 		rv.setType(hint);
@@ -367,8 +367,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private EObject getSemanticElement(IAdaptable semanticAdapter) {
 		if (semanticAdapter == null) {
 			return null;

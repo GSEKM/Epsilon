@@ -1,0 +1,156 @@
+/*
+ * 
+ */
+package iot.diagram.part;
+
+/**
+ * @generated
+ */
+public class IotCreationWizard
+		extends org.eclipse.jface.wizard.Wizard implements org.eclipse.ui.INewWizard {
+
+	/**
+ * @generated
+ */
+	private org.eclipse.ui.IWorkbench workbench;
+
+	/**
+ * @generated
+ */
+    protected org.eclipse.jface.viewers.IStructuredSelection selection;
+
+	/**
+ * @generated
+ */
+	protected iot.diagram.part.IotCreationWizardPage diagramModelFilePage;
+	
+	/**
+ * @generated
+ */
+	protected iot.diagram.part.IotCreationWizardPage domainModelFilePage;
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.emf.ecore.resource.Resource diagram;
+
+	/**
+ * @generated
+ */
+	private boolean openNewlyCreatedDiagramEditor = true;
+
+	/**
+ * @generated
+ */
+    public org.eclipse.ui.IWorkbench getWorkbench() {
+        return workbench;
+    }
+
+	/**
+ * @generated
+ */
+	public org.eclipse.jface.viewers.IStructuredSelection getSelection() {
+        return selection;
+    }
+
+	/**
+ * @generated
+ */
+	public final org.eclipse.emf.ecore.resource.Resource getDiagram() {
+		return diagram;
+	}
+
+	/**
+ * @generated
+ */
+	public final boolean isOpenNewlyCreatedDiagramEditor() {
+		return openNewlyCreatedDiagramEditor;
+	}
+
+	/**
+ * @generated
+ */
+	public void setOpenNewlyCreatedDiagramEditor(boolean openNewlyCreatedDiagramEditor) {
+		this.openNewlyCreatedDiagramEditor = openNewlyCreatedDiagramEditor;
+	}
+
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IWorkbench workbench, org.eclipse.jface.viewers.IStructuredSelection selection) {
+        this.workbench = workbench;
+        this.selection = selection;
+		setWindowTitle(iot.diagram.part.Messages.IotCreationWizardTitle);
+		setDefaultPageImageDescriptor(iot.diagram.part.IotDiagramEditorPlugin.getBundledImageDescriptor(
+				"icons/wizban/NewIotWizard.gif")); //$NON-NLS-1$
+		setNeedsProgressMonitor(true);
+	}
+
+	/**
+ * @generated
+ */
+	public void addPages() {
+		diagramModelFilePage = new iot.diagram.part.IotCreationWizardPage(
+				"DiagramModelFile", getSelection(), "iot_diagram"); //$NON-NLS-1$ //$NON-NLS-2$
+		diagramModelFilePage.setTitle(iot.diagram.part.Messages.IotCreationWizard_DiagramModelFilePageTitle);
+		diagramModelFilePage.setDescription(iot.diagram.part.Messages.IotCreationWizard_DiagramModelFilePageDescription);
+		addPage(diagramModelFilePage);
+	
+		domainModelFilePage = new iot.diagram.part.IotCreationWizardPage(
+				"DomainModelFile", getSelection(), "iot") { //$NON-NLS-1$ //$NON-NLS-2$
+
+			public void setVisible(boolean visible) {
+				if (visible) {
+					String fileName = diagramModelFilePage.getFileName();
+					fileName = fileName.substring(0, fileName.length() - ".iot_diagram".length()); //$NON-NLS-1$
+					setFileName(iot.diagram.part.IotDiagramEditorUtil.getUniqueFileName(
+							getContainerFullPath(), fileName, "iot")); //$NON-NLS-1$
+				}
+				super.setVisible(visible);
+			}
+		};
+		domainModelFilePage.setTitle(iot.diagram.part.Messages.IotCreationWizard_DomainModelFilePageTitle);
+		domainModelFilePage.setDescription(iot.diagram.part.Messages.IotCreationWizard_DomainModelFilePageDescription);
+		addPage(domainModelFilePage);
+		}
+
+	/**
+ * @generated
+ */
+	public boolean performFinish() {
+		org.eclipse.jface.operation.IRunnableWithProgress op =
+					new org.eclipse.ui.actions.WorkspaceModifyOperation(null) {
+
+			protected void execute(org.eclipse.core.runtime.IProgressMonitor monitor)
+					throws org.eclipse.core.runtime.CoreException, InterruptedException {
+					diagram = iot.diagram.part.IotDiagramEditorUtil.createDiagram(diagramModelFilePage.getURI(),
+							domainModelFilePage.getURI(),
+							monitor);
+				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
+					try {
+						iot.diagram.part.IotDiagramEditorUtil.openDiagram(diagram);
+					} catch (org.eclipse.ui.PartInitException e) {
+						org.eclipse.jface.dialogs.ErrorDialog.openError(getContainer().getShell(),
+								iot.diagram.part.Messages.IotCreationWizardOpenEditorError, null, e.getStatus());
+					}
+				}
+			}
+		};
+		try {
+			getContainer().run(false, true, op);
+		} catch (InterruptedException e) {
+			return false;
+		} catch (java.lang.reflect.InvocationTargetException e) {
+			if (e.getTargetException() instanceof org.eclipse.core.runtime.CoreException) {
+				org.eclipse.jface.dialogs.ErrorDialog.openError(getContainer().getShell(),
+						iot.diagram.part.Messages.IotCreationWizardCreationError, null,
+						((org.eclipse.core.runtime.CoreException) e.getTargetException()).getStatus());
+			} else {
+				iot.diagram.part.IotDiagramEditorPlugin.getInstance().logError(
+						"Error creating diagram", e.getTargetException()); //$NON-NLS-1$
+			}
+			return false;
+		}
+		return diagram != null;
+	}
+	}

@@ -1,13 +1,13 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.edit.policies;
-
-import iot.diagram.providers.IotElementTypes;
 
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
+
+import iot.diagram.providers.IotElementTypes;
 
 /**
  * @generated
@@ -15,15 +15,15 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest;
 public class ArduinoConectorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ArduinoConectorItemSemanticEditPolicy() {
-		super(IotElementTypes.ArduinoConector_4004);
+		super(IotElementTypes.ArduinoConector_4005);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyReferenceCommand(DestroyReferenceRequest req) {
 		return getGEFWrapper(new DestroyReferenceCommand(req));
 	}

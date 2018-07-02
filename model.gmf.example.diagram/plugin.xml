@@ -258,8 +258,8 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Iot"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2002,2003"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4004"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2006,2007"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4005"/>
       </viewProvider>
    </extension>
 
@@ -271,13 +271,13 @@
             <method name="getType()" value="Iot"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2002,2003"/>
+            <method name="getType()" value="2006,2007"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4004"/>
+            <method name="getType()" value="4005"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5002,5003"/>
+            <method name="getType()" value="5006,5007"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -286,6 +286,7 @@
       </editpartProvider>
    </extension>
 
+   
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
       <modelingAssistantProvider class="iot.diagram.providers.assistants.IotModelingAssistantProviderOfBoardEditPart">
@@ -295,16 +296,17 @@
       </modelingAssistantProvider>
             <modelingAssistantProvider class="iot.diagram.providers.assistants.IotModelingAssistantProviderOfArduinoEditPart">
          <Priority name="Lowest"/>
-         <object class="iot.diagram.edit.parts.ArduinoEditPart" id="Arduino_2002"/>
-         <context elements="Arduino_2002"/>
+         <object class="iot.diagram.edit.parts.ArduinoEditPart" id="Arduino_2006"/>
+         <context elements="Arduino_2006"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="iot.diagram.providers.assistants.IotModelingAssistantProviderOfMotorEditPart">
          <Priority name="Lowest"/>
-         <object class="iot.diagram.edit.parts.MotorEditPart" id="Motor_2003"/>
-         <context elements="Motor_2003"/>
+         <object class="iot.diagram.edit.parts.MotorEditPart" id="Motor_2007"/>
+         <context elements="Motor_2007"/>
       </modelingAssistantProvider>
       
    </extension>
+
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
       <?gmfgen generated="true"?>
@@ -325,7 +327,7 @@
       <decoratorProvider class="iot.diagram.providers.IotShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
-            <method name="getType()" value="2002,2003"/>
+            <method name="getType()" value="2006,2007"/>
          </object>
          <context decoratorTargets="generated-top-nodes"/>
       </decoratorProvider>
@@ -333,7 +335,7 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
       <?gmfgen generated="true"?>
-      <metamodel nsURI="friends">
+      <metamodel nsURI="iot">
          <metamodelType
                id="model.gmf.example.diagram.Board_1000"
                name="%metatype.name.Board_1000"
@@ -343,33 +345,33 @@
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="friends">
+      <metamodel nsURI="iot">
          <metamodelType
-               id="model.gmf.example.diagram.Arduino_2002"
-               name="%metatype.name.Arduino_2002"
+               id="model.gmf.example.diagram.Arduino_2006"
+               name="%metatype.name.Arduino_2006"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Arduino"
                edithelper="iot.diagram.edit.helpers.ArduinoEditHelper">
-            <param name="semanticHint" value="2002"/>
+            <param name="semanticHint" value="2006"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="friends">
+      <metamodel nsURI="iot">
          <metamodelType
-               id="model.gmf.example.diagram.Motor_2003"
-               name="%metatype.name.Motor_2003"
+               id="model.gmf.example.diagram.Motor_2007"
+               name="%metatype.name.Motor_2007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Motor"
                edithelper="iot.diagram.edit.helpers.MotorEditHelper">
-            <param name="semanticHint" value="2003"/>
+            <param name="semanticHint" value="2007"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="friends">
+      <metamodel nsURI="iot">
          <specializationType
-               id="model.gmf.example.diagram.ArduinoConector_4004"
-               name="%metatype.name.ArduinoConector_4004"
+               id="model.gmf.example.diagram.ArduinoConector_4005"
+               name="%metatype.name.ArduinoConector_4005"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4004"/>
+            <param name="semanticHint" value="4005"/>
          </specializationType>
       </metamodel>
    </extension>
@@ -385,9 +387,9 @@
       </clientContext> 
       <binding context="model.gmf.example.diagram.TypeContext">
          <elementType ref="model.gmf.example.diagram.Board_1000"/>
-         <elementType ref="model.gmf.example.diagram.Arduino_2002"/>
-         <elementType ref="model.gmf.example.diagram.Motor_2003"/>
-         <elementType ref="model.gmf.example.diagram.ArduinoConector_4004"/>
+         <elementType ref="model.gmf.example.diagram.Arduino_2006"/>
+         <elementType ref="model.gmf.example.diagram.Motor_2007"/>
+         <elementType ref="model.gmf.example.diagram.ArduinoConector_4005"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

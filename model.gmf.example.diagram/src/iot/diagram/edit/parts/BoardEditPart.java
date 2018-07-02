@@ -3,25 +3,16 @@
  */
 package iot.diagram.edit.parts;
 
-import iot.diagram.edit.commands.IotCreateShortcutDecorationsCommand;
-import iot.diagram.edit.policies.BoardCanonicalEditPolicy;
-import iot.diagram.edit.policies.BoardItemSemanticEditPolicy;
-import iot.diagram.part.IotVisualIDRegistry;
-
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.commands.Command;
-import org.eclipse.gef.handles.MoveHandle;
 import org.eclipse.gmf.runtime.diagram.ui.commands.ICommandProxy;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.DiagramDragDropEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
-import org.eclipse.gmf.runtime.diagram.ui.editpolicies.NonResizableLabelEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.requests.CreateViewRequest;
 import org.eclipse.gmf.runtime.diagram.ui.requests.DropObjectsRequest;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
@@ -29,31 +20,36 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
 
+import iot.diagram.edit.commands.IotCreateShortcutDecorationsCommand;
+import iot.diagram.edit.policies.BoardCanonicalEditPolicy;
+import iot.diagram.edit.policies.BoardItemSemanticEditPolicy;
+import iot.diagram.part.IotVisualIDRegistry;
+
 /**
  * @generated
  */
 public class BoardEditPart extends DiagramEditPart {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public final static String MODEL_ID = "Iot"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final int VISUAL_ID = 1000;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public BoardEditPart(View view) {
 		super(view);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new BoardItemSemanticEditPolicy());

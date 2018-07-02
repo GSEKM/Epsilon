@@ -1,11 +1,11 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.navigator;
 
-import iot.diagram.part.IotVisualIDRegistry;
-
 import org.eclipse.jface.viewers.ViewerSorter;
+
+import iot.diagram.part.IotVisualIDRegistry;
 
 /**
  * @generated
@@ -13,18 +13,18 @@ import org.eclipse.jface.viewers.ViewerSorter;
 public class IotNavigatorSorter extends ViewerSorter {
 
 	/**
-	 * @generated
-	 */
-	private static final int GROUP_CATEGORY = 4006;
+	* @generated
+	*/
+	private static final int GROUP_CATEGORY = 4007;
 
 	/**
-	 * @generated
-	 */
-	private static final int SHORTCUTS_CATEGORY = 4005;
+	* @generated
+	*/
+	private static final int SHORTCUTS_CATEGORY = 4006;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public int category(Object element) {
 		if (element instanceof IotNavigatorItem) {
 			IotNavigatorItem item = (IotNavigatorItem) element;

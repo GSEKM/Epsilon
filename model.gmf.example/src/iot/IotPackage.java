@@ -38,7 +38,7 @@ public interface IotPackage extends EPackage
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  String eNS_URI = "friends";
+  String eNS_URI = "iot";
 
   /**
 	 * The package namespace name.
@@ -67,22 +67,22 @@ public interface IotPackage extends EPackage
   int BOARD = 0;
 
   /**
-	 * The feature id for the '<em><b>Modelo</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-  int BOARD__MODELO = 0;
-
-  /**
-	 * The feature id for the '<em><b>Modulo</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Arduino</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOARD__MODULO = 1;
+	int BOARD__ARDUINO = 0;
+
+		/**
+	 * The feature id for the '<em><b>Motor</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOARD__MOTOR = 1;
 
 		/**
 	 * The number of structural features of the '<em>Board</em>' class.
@@ -104,15 +104,15 @@ public interface IotPackage extends EPackage
   int ARDUINO = 1;
 
   /**
-	 * The feature id for the '<em><b>Modelo</b></em>' attribute.
+	 * The feature id for the '<em><b>Model</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ARDUINO__MODELO = 0;
+	int ARDUINO__MODEL = 0;
 
-  /**
+		/**
 	 * The feature id for the '<em><b>Conector</b></em>' reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -122,13 +122,22 @@ public interface IotPackage extends EPackage
   int ARDUINO__CONECTOR = 1;
 
   /**
+	 * The feature id for the '<em><b>Pins</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO__PINS = 2;
+
+		/**
 	 * The number of structural features of the '<em>Arduino</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int ARDUINO_FEATURE_COUNT = 2;
+  int ARDUINO_FEATURE_COUNT = 3;
 
   /**
 	 * The meta object id for the '{@link iot.impl.MotorImpl <em>Motor</em>}' class.
@@ -141,22 +150,49 @@ public interface IotPackage extends EPackage
   int MOTOR = 2;
 
   /**
-	 * The feature id for the '<em><b>Graus</b></em>' attribute.
+	 * The feature id for the '<em><b>Degrees</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MOTOR__GRAUS = 0;
+	int MOTOR__DEGREES = 0;
 
-  /**
+		/**
+	 * The feature id for the '<em><b>Pins</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__PINS = 1;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__NAME = 2;
+
+		/**
+	 * The feature id for the '<em><b>Library</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__LIBRARY = 3;
+
+		/**
 	 * The number of structural features of the '<em>Motor</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MOTOR_FEATURE_COUNT = 1;
+  int MOTOR_FEATURE_COUNT = 4;
 
 
   /**
@@ -170,26 +206,26 @@ public interface IotPackage extends EPackage
   EClass getBoard();
 
   /**
-	 * Returns the meta object for the containment reference list '{@link iot.Board#getModelo <em>Modelo</em>}'.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Modelo</em>'.
-	 * @see iot.Board#getModelo()
-	 * @see #getBoard()
-	 * @generated
-	 */
-  EReference getBoard_Modelo();
-
-  /**
-	 * Returns the meta object for the containment reference list '{@link iot.Board#getModulo <em>Modulo</em>}'.
+	 * Returns the meta object for the containment reference list '{@link iot.Board#getArduino <em>Arduino</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Modulo</em>'.
-	 * @see iot.Board#getModulo()
+	 * @return the meta object for the containment reference list '<em>Arduino</em>'.
+	 * @see iot.Board#getArduino()
 	 * @see #getBoard()
 	 * @generated
 	 */
-	EReference getBoard_Modulo();
+	EReference getBoard_Arduino();
+
+		/**
+	 * Returns the meta object for the containment reference list '{@link iot.Board#getMotor <em>Motor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Motor</em>'.
+	 * @see iot.Board#getMotor()
+	 * @see #getBoard()
+	 * @generated
+	 */
+	EReference getBoard_Motor();
 
 		/**
 	 * Returns the meta object for class '{@link iot.Arduino <em>Arduino</em>}'.
@@ -202,17 +238,17 @@ public interface IotPackage extends EPackage
   EClass getArduino();
 
   /**
-	 * Returns the meta object for the attribute '{@link iot.Arduino#getModelo <em>Modelo</em>}'.
+	 * Returns the meta object for the attribute '{@link iot.Arduino#getModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Modelo</em>'.
-	 * @see iot.Arduino#getModelo()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Model</em>'.
+	 * @see iot.Arduino#getModel()
 	 * @see #getArduino()
 	 * @generated
 	 */
-  EAttribute getArduino_Modelo();
+	EAttribute getArduino_Model();
 
-  /**
+		/**
 	 * Returns the meta object for the reference list '{@link iot.Arduino#getConector <em>Conector</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -224,6 +260,17 @@ public interface IotPackage extends EPackage
   EReference getArduino_Conector();
 
   /**
+	 * Returns the meta object for the attribute '{@link iot.Arduino#getPins <em>Pins</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pins</em>'.
+	 * @see iot.Arduino#getPins()
+	 * @see #getArduino()
+	 * @generated
+	 */
+	EAttribute getArduino_Pins();
+
+		/**
 	 * Returns the meta object for class '{@link iot.Motor <em>Motor</em>}'.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -234,17 +281,50 @@ public interface IotPackage extends EPackage
   EClass getMotor();
 
   /**
-	 * Returns the meta object for the attribute '{@link iot.Motor#getGraus <em>Graus</em>}'.
+	 * Returns the meta object for the attribute '{@link iot.Motor#getDegrees <em>Degrees</em>}'.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Graus</em>'.
-	 * @see iot.Motor#getGraus()
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Degrees</em>'.
+	 * @see iot.Motor#getDegrees()
 	 * @see #getMotor()
 	 * @generated
 	 */
-  EAttribute getMotor_Graus();
+	EAttribute getMotor_Degrees();
 
-  /**
+		/**
+	 * Returns the meta object for the attribute '{@link iot.Motor#getPins <em>Pins</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pins</em>'.
+	 * @see iot.Motor#getPins()
+	 * @see #getMotor()
+	 * @generated
+	 */
+	EAttribute getMotor_Pins();
+
+		/**
+	 * Returns the meta object for the attribute '{@link iot.Motor#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see iot.Motor#getName()
+	 * @see #getMotor()
+	 * @generated
+	 */
+	EAttribute getMotor_Name();
+
+		/**
+	 * Returns the meta object for the attribute '{@link iot.Motor#getLibrary <em>Library</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Library</em>'.
+	 * @see iot.Motor#getLibrary()
+	 * @see #getMotor()
+	 * @generated
+	 */
+	EAttribute getMotor_Library();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -278,20 +358,20 @@ public interface IotPackage extends EPackage
     EClass BOARD = eINSTANCE.getBoard();
 
     /**
-		 * The meta object literal for the '<em><b>Modelo</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-		 * @generated
-		 */
-    EReference BOARD__MODELO = eINSTANCE.getBoard_Modelo();
-
-    /**
-		 * The meta object literal for the '<em><b>Modulo</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Arduino</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BOARD__MODULO = eINSTANCE.getBoard_Modulo();
+		EReference BOARD__ARDUINO = eINSTANCE.getBoard_Arduino();
+
+				/**
+		 * The meta object literal for the '<em><b>Motor</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOARD__MOTOR = eINSTANCE.getBoard_Motor();
 
 				/**
 		 * The meta object literal for the '{@link iot.impl.ArduinoImpl <em>Arduino</em>}' class.
@@ -304,14 +384,14 @@ public interface IotPackage extends EPackage
     EClass ARDUINO = eINSTANCE.getArduino();
 
     /**
-		 * The meta object literal for the '<em><b>Modelo</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Model</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute ARDUINO__MODELO = eINSTANCE.getArduino_Modelo();
+		EAttribute ARDUINO__MODEL = eINSTANCE.getArduino_Model();
 
-    /**
+				/**
 		 * The meta object literal for the '<em><b>Conector</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -320,6 +400,14 @@ public interface IotPackage extends EPackage
     EReference ARDUINO__CONECTOR = eINSTANCE.getArduino_Conector();
 
     /**
+		 * The meta object literal for the '<em><b>Pins</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO__PINS = eINSTANCE.getArduino_Pins();
+
+				/**
 		 * The meta object literal for the '{@link iot.impl.MotorImpl <em>Motor</em>}' class.
 		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -330,12 +418,36 @@ public interface IotPackage extends EPackage
     EClass MOTOR = eINSTANCE.getMotor();
 
     /**
-		 * The meta object literal for the '<em><b>Graus</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Degrees</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-    EAttribute MOTOR__GRAUS = eINSTANCE.getMotor_Graus();
+		EAttribute MOTOR__DEGREES = eINSTANCE.getMotor_Degrees();
+
+				/**
+		 * The meta object literal for the '<em><b>Pins</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOTOR__PINS = eINSTANCE.getMotor_Pins();
+
+				/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOTOR__NAME = eINSTANCE.getMotor_Name();
+
+				/**
+		 * The meta object literal for the '<em><b>Library</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOTOR__LIBRARY = eINSTANCE.getMotor_Library();
 
   }
 

@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package iot.diagram.providers;
+
+/**
+ * @generated
+ */
+public class IotIconProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+		/**
+ * @generated
+ */
+	public IotIconProvider() {
+		super(iot.diagram.providers.IotElementTypes.TYPED_INSTANCE);
+	}
+
+	}

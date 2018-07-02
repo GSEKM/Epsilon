@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link iot.impl.BoardImpl#getModelo <em>Modelo</em>}</li>
- *   <li>{@link iot.impl.BoardImpl#getModulo <em>Modulo</em>}</li>
+ *   <li>{@link iot.impl.BoardImpl#getArduino <em>Arduino</em>}</li>
+ *   <li>{@link iot.impl.BoardImpl#getMotor <em>Motor</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,24 +38,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class BoardImpl extends EObjectImpl implements Board
 {
   /**
-	 * The cached value of the '{@link #getModelo() <em>Modelo</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getModelo()
-	 * @generated
-	 * @ordered
-	 */
-  protected EList<Arduino> modelo;
-
-  /**
-	 * The cached value of the '{@link #getModulo() <em>Modulo</em>}' containment reference list.
+	 * The cached value of the '{@link #getArduino() <em>Arduino</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getModulo()
+	 * @see #getArduino()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Motor> modulo;
+	protected EList<Arduino> arduino;
+
+	/**
+	 * The cached value of the '{@link #getMotor() <em>Motor</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMotor()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Motor> motor;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -80,27 +80,26 @@ public class BoardImpl extends EObjectImpl implements Board
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public EList<Arduino> getModelo()
-  {
-		if (modelo == null) {
-			modelo = new EObjectContainmentEList<Arduino>(Arduino.class, this, IotPackage.BOARD__MODELO);
+	public EList<Arduino> getArduino() {
+		if (arduino == null) {
+			arduino = new EObjectContainmentEList<Arduino>(Arduino.class, this, IotPackage.BOARD__ARDUINO);
 		}
-		return modelo;
+		return arduino;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Motor> getModulo() {
-		if (modulo == null) {
-			modulo = new EObjectContainmentEList<Motor>(Motor.class, this, IotPackage.BOARD__MODULO);
+	public EList<Motor> getMotor() {
+		if (motor == null) {
+			motor = new EObjectContainmentEList<Motor>(Motor.class, this, IotPackage.BOARD__MOTOR);
 		}
-		return modulo;
+		return motor;
 	}
 
 		/**
@@ -112,10 +111,10 @@ public class BoardImpl extends EObjectImpl implements Board
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
 		switch (featureID) {
-			case IotPackage.BOARD__MODELO:
-				return ((InternalEList<?>)getModelo()).basicRemove(otherEnd, msgs);
-			case IotPackage.BOARD__MODULO:
-				return ((InternalEList<?>)getModulo()).basicRemove(otherEnd, msgs);
+			case IotPackage.BOARD__ARDUINO:
+				return ((InternalEList<?>)getArduino()).basicRemove(otherEnd, msgs);
+			case IotPackage.BOARD__MOTOR:
+				return ((InternalEList<?>)getMotor()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,10 +128,10 @@ public class BoardImpl extends EObjectImpl implements Board
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case IotPackage.BOARD__MODELO:
-				return getModelo();
-			case IotPackage.BOARD__MODULO:
-				return getModulo();
+			case IotPackage.BOARD__ARDUINO:
+				return getArduino();
+			case IotPackage.BOARD__MOTOR:
+				return getMotor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -147,13 +146,13 @@ public class BoardImpl extends EObjectImpl implements Board
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case IotPackage.BOARD__MODELO:
-				getModelo().clear();
-				getModelo().addAll((Collection<? extends Arduino>)newValue);
+			case IotPackage.BOARD__ARDUINO:
+				getArduino().clear();
+				getArduino().addAll((Collection<? extends Arduino>)newValue);
 				return;
-			case IotPackage.BOARD__MODULO:
-				getModulo().clear();
-				getModulo().addAll((Collection<? extends Motor>)newValue);
+			case IotPackage.BOARD__MOTOR:
+				getMotor().clear();
+				getMotor().addAll((Collection<? extends Motor>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -168,11 +167,11 @@ public class BoardImpl extends EObjectImpl implements Board
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case IotPackage.BOARD__MODELO:
-				getModelo().clear();
+			case IotPackage.BOARD__ARDUINO:
+				getArduino().clear();
 				return;
-			case IotPackage.BOARD__MODULO:
-				getModulo().clear();
+			case IotPackage.BOARD__MOTOR:
+				getMotor().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -187,10 +186,10 @@ public class BoardImpl extends EObjectImpl implements Board
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case IotPackage.BOARD__MODELO:
-				return modelo != null && !modelo.isEmpty();
-			case IotPackage.BOARD__MODULO:
-				return modulo != null && !modulo.isEmpty();
+			case IotPackage.BOARD__ARDUINO:
+				return arduino != null && !arduino.isEmpty();
+			case IotPackage.BOARD__MOTOR:
+				return motor != null && !motor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

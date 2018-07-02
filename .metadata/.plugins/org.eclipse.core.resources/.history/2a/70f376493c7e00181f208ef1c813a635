@@ -1,0 +1,17 @@
+/*
+ * 
+ */
+package iot.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramAppearancePreferencePage extends org.eclipse.gmf.runtime.diagram.ui.preferences.AppearancePreferencePage {
+
+	/**
+ * @generated
+ */
+	public DiagramAppearancePreferencePage() {
+		setPreferenceStore(iot.diagram.part.IotDiagramEditorPlugin.getInstance().getPreferenceStore());
+	}
+}

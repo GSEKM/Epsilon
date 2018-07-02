@@ -3,12 +3,6 @@
  */
 package iot.diagram.edit.policies;
 
-import iot.Arduino;
-import iot.Motor;
-import iot.diagram.part.IotDiagramEditorPlugin;
-import iot.diagram.part.IotVisualIDRegistry;
-import iot.diagram.providers.IotElementTypes;
-
 import java.util.Iterator;
 
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
@@ -41,38 +35,44 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
+import iot.Arduino;
+import iot.Motor;
+import iot.diagram.part.IotDiagramEditorPlugin;
+import iot.diagram.part.IotVisualIDRegistry;
+import iot.diagram.providers.IotElementTypes;
+
 /**
  * @generated
  */
 public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 
 	/**
-	 * Extended request data key to hold editpart visual id.
-	 * @generated
-	 */
+	* Extended request data key to hold editpart visual id.
+	* @generated
+	*/
 	public static final String VISUAL_ID_KEY = "visual_id"; //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final IElementType myElementType;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected IotBaseItemSemanticEditPolicy(IElementType elementType) {
 		myElementType = elementType;
 	}
 
 	/**
-	 * Extended request data key to hold editpart visual id.
-	 * Add visual id of edited editpart to extended data of the request
-	 * so command switch can decide what kind of diagram element is being edited.
-	 * It is done in those cases when it's not possible to deduce diagram
-	 * element kind from domain element.
-	 * 
-	 * @generated
-	 */
+	* Extended request data key to hold editpart visual id.
+	* Add visual id of edited editpart to extended data of the request
+	* so command switch can decide what kind of diagram element is being edited.
+	* It is done in those cases when it's not possible to deduce diagram
+	* element kind from domain element.
+	* 
+	* @generated
+	*/
 	public Command getCommand(Request request) {
 		if (request instanceof ReconnectRequest) {
 			Object view = ((ReconnectRequest) request).getConnectionEditPart().getModel();
@@ -85,17 +85,17 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	}
 
 	/**
-	 * Returns visual id from request parameters.
-	 * @generated
-	 */
+	* Returns visual id from request parameters.
+	* @generated
+	*/
 	protected int getVisualID(IEditCommandRequest request) {
 		Object id = request.getParameter(VISUAL_ID_KEY);
 		return id instanceof Integer ? ((Integer) id).intValue() : -1;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getSemanticCommand(IEditCommandRequest request) {
 		IEditCommandRequest completedRequest = completeRequest(request);
 		Command semanticCommand = getSemanticCommandSwitch(completedRequest);
@@ -108,16 +108,16 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command addDeleteViewCommand(Command mainCommand, DestroyRequest completedRequest) {
 		Command deleteViewCommand = getGEFWrapper(new DeleteCommand(getEditingDomain(), (View) getHost().getModel()));
 		return mainCommand == null ? deleteViewCommand : mainCommand.chain(deleteViewCommand);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Command getEditHelperCommand(IEditCommandRequest request, Command editPolicyCommand) {
 		if (editPolicyCommand != null) {
 			ICommand command = editPolicyCommand instanceof ICommandProxy
@@ -139,16 +139,16 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IElementType getContextElementType(IEditCommandRequest request) {
 		IElementType requestContextElementType = IotElementTypes.getElementType(getVisualID(request));
 		return requestContextElementType != null ? requestContextElementType : myElementType;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getSemanticCommandSwitch(IEditCommandRequest req) {
 		if (req instanceof CreateRelationshipRequest) {
 			return getCreateRelationshipCommand((CreateRelationshipRequest) req);
@@ -177,101 +177,101 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getConfigureCommand(ConfigureRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateRelationshipCommand(CreateRelationshipRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getCreateCommand(CreateElementRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getSetCommand(SetRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getEditContextCommand(GetEditContextRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyElementCommand(DestroyElementRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDestroyReferenceCommand(DestroyReferenceRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getDuplicateCommand(DuplicateElementsRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getMoveCommand(MoveRequest req) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getReorientReferenceRelationshipCommand(ReorientReferenceRelationshipRequest req) {
 		return UnexecutableCommand.INSTANCE;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Command getReorientRelationshipCommand(ReorientRelationshipRequest req) {
 		return UnexecutableCommand.INSTANCE;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected final Command getGEFWrapper(ICommand cmd) {
 		return new ICommandProxy(cmd);
 	}
 
 	/**
-	 * Returns editing domain from the host edit part.
-	 * @generated
-	 */
+	* Returns editing domain from the host edit part.
+	* @generated
+	*/
 	protected TransactionalEditingDomain getEditingDomain() {
 		return ((IGraphicalEditPart) getHost()).getEditingDomain();
 	}
 
 	/**
-	 * Clean all shortcuts to the host element from the same diagram
-	 * @generated
-	 */
+	* Clean all shortcuts to the host element from the same diagram
+	* @generated
+	*/
 	protected void addDestroyShortcutsCommand(ICompositeCommand cmd, View view) {
 		assert view.getEAnnotation("Shortcut") == null; //$NON-NLS-1$
 		for (Iterator it = view.getDiagram().getChildren().iterator(); it.hasNext();) {
@@ -285,8 +285,8 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static LinkConstraints getLinkConstraints() {
 		LinkConstraints cached = IotDiagramEditorPlugin.getInstance().getLinkConstraints();
 		if (cached == null) {
@@ -301,8 +301,8 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	public static class LinkConstraints {
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		LinkConstraints() {
 			// use static method #getLinkConstraints() to access instance
 		}
@@ -310,20 +310,20 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateArduinoConector_4004(Arduino source, Motor target) {
+		public boolean canCreateArduinoConector_4005(Arduino source, Motor target) {
 			if (source != null) {
 				if (source.getConector().contains(target)) {
 					return false;
 				}
 			}
 
-			return canExistArduinoConector_4004(source, target);
+			return canExistArduinoConector_4005(source, target);
 		}
 
 		/**
-		 * @generated
-		 */
-		public boolean canExistArduinoConector_4004(Arduino source, Motor target) {
+		* @generated
+		*/
+		public boolean canExistArduinoConector_4005(Arduino source, Motor target) {
 			return true;
 		}
 	}

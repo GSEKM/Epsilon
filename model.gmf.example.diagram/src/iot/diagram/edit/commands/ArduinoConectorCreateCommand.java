@@ -3,10 +3,6 @@
  */
 package iot.diagram.edit.commands;
 
-import iot.Arduino;
-import iot.Motor;
-import iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy;
-
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -15,24 +11,28 @@ import org.eclipse.gmf.runtime.common.core.command.CommandResult;
 import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
+import iot.Arduino;
+import iot.Motor;
+import iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy;
+
 /**
  * @generated
  */
 public class ArduinoConectorCreateCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject source;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject target;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ArduinoConectorCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
@@ -40,8 +40,8 @@ public class ArduinoConectorCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		if (source == null && target == null) {
 			return false;
@@ -56,13 +56,13 @@ public class ArduinoConectorCreateCommand extends EditElementCommand {
 			return true; // link creation is in progress; source is not defined yet
 		}
 		// target may be null here but it's possible to check constraint
-		return IotBaseItemSemanticEditPolicy.getLinkConstraints().canCreateArduinoConector_4004(getSource(),
+		return IotBaseItemSemanticEditPolicy.getLinkConstraints().canCreateArduinoConector_4005(getSource(),
 				getTarget());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		if (!canExecute()) {
 			throw new ExecutionException("Invalid arguments in create link command"); //$NON-NLS-1$
@@ -76,22 +76,22 @@ public class ArduinoConectorCreateCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void setElementToEdit(EObject element) {
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Arduino getSource() {
 		return (Arduino) source;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Motor getTarget() {
 		return (Motor) target;
 	}

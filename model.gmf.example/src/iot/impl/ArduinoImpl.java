@@ -27,8 +27,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link iot.impl.ArduinoImpl#getModelo <em>Modelo</em>}</li>
+ *   <li>{@link iot.impl.ArduinoImpl#getModel <em>Model</em>}</li>
  *   <li>{@link iot.impl.ArduinoImpl#getConector <em>Conector</em>}</li>
+ *   <li>{@link iot.impl.ArduinoImpl#getPins <em>Pins</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,26 +37,26 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 public class ArduinoImpl extends EObjectImpl implements Arduino
 {
   /**
-	 * The default value of the '{@link #getModelo() <em>Modelo</em>}' attribute.
+	 * The default value of the '{@link #getModel() <em>Model</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getModelo()
+	 * <!-- end-user-doc -->
+	 * @see #getModel()
 	 * @generated
 	 * @ordered
 	 */
-  protected static final String MODELO_EDEFAULT = null;
+	protected static final String MODEL_EDEFAULT = null;
 
-  /**
-	 * The cached value of the '{@link #getModelo() <em>Modelo</em>}' attribute.
+	/**
+	 * The cached value of the '{@link #getModel() <em>Model</em>}' attribute.
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-	 * @see #getModelo()
+	 * <!-- end-user-doc -->
+	 * @see #getModel()
 	 * @generated
 	 * @ordered
 	 */
-  protected String modelo = MODELO_EDEFAULT;
+	protected String model = MODEL_EDEFAULT;
 
-  /**
+		/**
 	 * The cached value of the '{@link #getConector() <em>Conector</em>}' reference list.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -66,6 +67,26 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
   protected EList<Motor> conector;
 
   /**
+	 * The default value of the '{@link #getPins() <em>Pins</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPins()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int PINS_EDEFAULT = 0;
+
+		/**
+	 * The cached value of the '{@link #getPins() <em>Pins</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPins()
+	 * @generated
+	 * @ordered
+	 */
+	protected int pins = PINS_EDEFAULT;
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -88,28 +109,26 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
 
   /**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public String getModelo()
-  {
-		return modelo;
+	public String getModel() {
+		return model;
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-  public void setModelo(String newModelo)
-  {
-		String oldModelo = modelo;
-		modelo = newModelo;
+	public void setModel(String newModel) {
+		String oldModel = model;
+		model = newModel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotPackage.ARDUINO__MODELO, oldModelo, modelo));
+			eNotify(new ENotificationImpl(this, Notification.SET, IotPackage.ARDUINO__MODEL, oldModel, model));
 	}
 
-  /**
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -123,6 +142,27 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
 	}
 
   /**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getPins() {
+		return pins;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPins(int newPins) {
+		int oldPins = pins;
+		pins = newPins;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IotPackage.ARDUINO__PINS, oldPins, pins));
+	}
+
+		/**
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
@@ -155,10 +195,12 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
 		switch (featureID) {
-			case IotPackage.ARDUINO__MODELO:
-				return getModelo();
+			case IotPackage.ARDUINO__MODEL:
+				return getModel();
 			case IotPackage.ARDUINO__CONECTOR:
 				return getConector();
+			case IotPackage.ARDUINO__PINS:
+				return getPins();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,12 +215,15 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
-			case IotPackage.ARDUINO__MODELO:
-				setModelo((String)newValue);
+			case IotPackage.ARDUINO__MODEL:
+				setModel((String)newValue);
 				return;
 			case IotPackage.ARDUINO__CONECTOR:
 				getConector().clear();
 				getConector().addAll((Collection<? extends Motor>)newValue);
+				return;
+			case IotPackage.ARDUINO__PINS:
+				setPins((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -193,11 +238,14 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
   public void eUnset(int featureID)
   {
 		switch (featureID) {
-			case IotPackage.ARDUINO__MODELO:
-				setModelo(MODELO_EDEFAULT);
+			case IotPackage.ARDUINO__MODEL:
+				setModel(MODEL_EDEFAULT);
 				return;
 			case IotPackage.ARDUINO__CONECTOR:
 				getConector().clear();
+				return;
+			case IotPackage.ARDUINO__PINS:
+				setPins(PINS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -212,10 +260,12 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
   public boolean eIsSet(int featureID)
   {
 		switch (featureID) {
-			case IotPackage.ARDUINO__MODELO:
-				return MODELO_EDEFAULT == null ? modelo != null : !MODELO_EDEFAULT.equals(modelo);
+			case IotPackage.ARDUINO__MODEL:
+				return MODEL_EDEFAULT == null ? model != null : !MODEL_EDEFAULT.equals(model);
 			case IotPackage.ARDUINO__CONECTOR:
 				return conector != null && !conector.isEmpty();
+			case IotPackage.ARDUINO__PINS:
+				return pins != PINS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -231,8 +281,10 @@ public class ArduinoImpl extends EObjectImpl implements Arduino
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (modelo: ");
-		result.append(modelo);
+		result.append(" (model: ");
+		result.append(model);
+		result.append(", pins: ");
+		result.append(pins);
 		result.append(')');
 		return result.toString();
 	}

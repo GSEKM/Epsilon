@@ -1,0 +1,54 @@
+	/*
+ * 
+ */
+package iot.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class BoardItemSemanticEditPolicy extends iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public BoardItemSemanticEditPolicy() {
+				super(iot.diagram.providers.IotElementTypes.Board_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (iot.diagram.providers.IotElementTypes.Arduino_2004 == req.getElementType()) {
+	return getGEFWrapper(new iot.diagram.edit.commands.ArduinoCreateCommand(req));
+}
+		if (iot.diagram.providers.IotElementTypes.Motor_2005 == req.getElementType()) {
+	return getGEFWrapper(new iot.diagram.edit.commands.MotorCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

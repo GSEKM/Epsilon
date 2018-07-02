@@ -1,16 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.edit.policies;
-
-import iot.IotPackage;
-import iot.diagram.edit.parts.ArduinoEditPart;
-import iot.diagram.edit.parts.BoardEditPart;
-import iot.diagram.edit.parts.MotorEditPart;
-import iot.diagram.part.IotDiagramUpdater;
-import iot.diagram.part.IotLinkDescriptor;
-import iot.diagram.part.IotNodeDescriptor;
-import iot.diagram.part.IotVisualIDRegistry;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -20,8 +11,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
 import java.util.Set;
+
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
@@ -43,6 +34,15 @@ import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.update.UpdaterLinkDescriptor;
 
+import iot.IotPackage;
+import iot.diagram.edit.parts.ArduinoEditPart;
+import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorEditPart;
+import iot.diagram.part.IotDiagramUpdater;
+import iot.diagram.part.IotLinkDescriptor;
+import iot.diagram.part.IotNodeDescriptor;
+import iot.diagram.part.IotVisualIDRegistry;
+
 /**
  * @generated
  */
@@ -54,8 +54,8 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	private Set<EStructuralFeature> myFeaturesToSynchronize;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshOnActivate() {
 		// Need to activate editpart children before invoking the canonical refresh for EditParts to add event listeners
 		List<?> c = getHost().getChildren();
@@ -71,16 +71,17 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	protected Set getFeaturesToSynchronize() {
 		if (myFeaturesToSynchronize == null) {
 			myFeaturesToSynchronize = new HashSet<EStructuralFeature>();
-			myFeaturesToSynchronize.add(IotPackage.eINSTANCE.getBoard_Modelo());
-			myFeaturesToSynchronize.add(IotPackage.eINSTANCE.getBoard_Modulo());
+			myFeaturesToSynchronize.add(IotPackage.eINSTANCE.getBoard_Arduino());
+			myFeaturesToSynchronize.add(IotPackage.eINSTANCE.getBoard_Motor());
 		}
 		return myFeaturesToSynchronize;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@SuppressWarnings("rawtypes")
+
 	protected List getSemanticChildrenList() {
 		View viewObject = (View) getHost().getModel();
 		LinkedList<EObject> result = new LinkedList<EObject>();
@@ -92,8 +93,8 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean isOrphaned(Collection<EObject> semanticChildren, final View view) {
 		if (isShortcut(view)) {
 			return IotDiagramUpdater.isShortcutOrphaned(view);
@@ -102,23 +103,23 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean isMyDiagramElement(View view) {
 		int visualID = IotVisualIDRegistry.getVisualID(view);
 		return visualID == ArduinoEditPart.VISUAL_ID || visualID == MotorEditPart.VISUAL_ID;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected static boolean isShortcut(View view) {
 		return view.getEAnnotation("Shortcut") != null; //$NON-NLS-1$
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected void refreshSemantic() {
 		if (resolveSemanticElement() == null) {
 			return;
@@ -212,8 +213,8 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Collection<IAdaptable> refreshConnections() {
 		Domain2Notation domain2NotationMap = new Domain2Notation();
 		Collection<IotLinkDescriptor> linkDescriptors = collectAllLinks(getDiagram(), domain2NotationMap);
@@ -248,8 +249,8 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Collection<IotLinkDescriptor> collectAllLinks(View view, Domain2Notation domain2NotationMap) {
 		if (!BoardEditPart.MODEL_ID.equals(IotVisualIDRegistry.getModelID(view))) {
 			return Collections.emptyList();
@@ -265,14 +266,14 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 		}
 		case ArduinoEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(IotDiagramUpdater.getArduino_2002ContainedLinks(view));
+				result.addAll(IotDiagramUpdater.getArduino_2006ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
 		case MotorEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(IotDiagramUpdater.getMotor_2003ContainedLinks(view));
+				result.addAll(IotDiagramUpdater.getMotor_2007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -288,8 +289,8 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Collection<IAdaptable> createConnections(Collection<IotLinkDescriptor> linkDescriptors,
 			Domain2Notation domain2NotationMap) {
 		LinkedList<IAdaptable> adapters = new LinkedList<IAdaptable>();
@@ -322,8 +323,8 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private EditPart getEditPart(EObject domainModelElement, Domain2Notation domain2NotationMap) {
 		View view = (View) domain2NotationMap.get(domainModelElement);
 		if (view != null) {
@@ -333,29 +334,29 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Diagram getDiagram() {
 		return ((View) getHost().getModel()).getDiagram();
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private EditPart getSourceEditPart(UpdaterLinkDescriptor descriptor, Domain2Notation domain2NotationMap) {
 		return getEditPart(descriptor.getSource(), domain2NotationMap);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private EditPart getTargetEditPart(UpdaterLinkDescriptor descriptor, Domain2Notation domain2NotationMap) {
 		return getEditPart(descriptor.getDestination(), domain2NotationMap);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected final EditPart getHintedEditPart(EObject domainModelElement, Domain2Notation domain2NotationMap,
 			int hintVisualId) {
 		View view = (View) domain2NotationMap.getHinted(domainModelElement, IotVisualIDRegistry.getType(hintVisualId));
@@ -366,27 +367,27 @@ public class BoardCanonicalEditPolicy extends CanonicalEditPolicy {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	@SuppressWarnings("serial")
 	protected static class Domain2Notation extends HashMap<EObject, View> {
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public boolean containsDomainElement(EObject domainElement) {
 			return this.containsKey(domainElement);
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public View getHinted(EObject domainEObject, String hint) {
 			return this.get(domainEObject);
 		}
 
 		/**
-		 * @generated
-		 */
+		* @generated
+		*/
 		public void putView(EObject domainElement, View view) {
 			if (!containsKey(view.getElement()) || !isShortcut(view)) {
 				this.put(domainElement, view);

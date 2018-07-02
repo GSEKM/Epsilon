@@ -34,7 +34,7 @@ public class IotModelingAssistantProviderOfMotorEditPart extends IotModelingAssi
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(MotorEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(IotElementTypes.ArduinoConector_4004);
+		types.add(IotElementTypes.ArduinoConector_4005);
 		return types;
 	}
 
@@ -53,8 +53,8 @@ public class IotModelingAssistantProviderOfMotorEditPart extends IotModelingAssi
 	*/
 	public List<IElementType> doGetTypesForSource(MotorEditPart target, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == IotElementTypes.ArduinoConector_4004) {
-			types.add(IotElementTypes.Arduino_2002);
+		if (relationshipType == IotElementTypes.ArduinoConector_4005) {
+			types.add(IotElementTypes.Arduino_2006);
 		}
 		return types;
 	}

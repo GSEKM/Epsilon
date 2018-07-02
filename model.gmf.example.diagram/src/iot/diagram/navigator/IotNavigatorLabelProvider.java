@@ -1,18 +1,7 @@
 /*
- * 
- */
+* 
+*/
 package iot.diagram.navigator;
-
-import iot.diagram.edit.parts.ArduinoConectorEditPart;
-import iot.diagram.edit.parts.ArduinoEditPart;
-import iot.diagram.edit.parts.ArduinoModeloEditPart;
-import iot.diagram.edit.parts.BoardEditPart;
-import iot.diagram.edit.parts.MotorEditPart;
-import iot.diagram.edit.parts.MotorGrausEditPart;
-import iot.diagram.part.IotDiagramEditorPlugin;
-import iot.diagram.part.IotVisualIDRegistry;
-import iot.diagram.providers.IotElementTypes;
-import iot.diagram.providers.IotParserProvider;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint;
@@ -32,14 +21,25 @@ import org.eclipse.ui.IMemento;
 import org.eclipse.ui.navigator.ICommonContentExtensionSite;
 import org.eclipse.ui.navigator.ICommonLabelProvider;
 
+import iot.diagram.edit.parts.ArduinoConectorEditPart;
+import iot.diagram.edit.parts.ArduinoEditPart;
+import iot.diagram.edit.parts.ArduinoModelEditPart;
+import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorEditPart;
+import iot.diagram.edit.parts.MotorNameEditPart;
+import iot.diagram.part.IotDiagramEditorPlugin;
+import iot.diagram.part.IotVisualIDRegistry;
+import iot.diagram.providers.IotElementTypes;
+import iot.diagram.providers.IotParserProvider;
+
 /**
  * @generated
  */
 public class IotNavigatorLabelProvider extends LabelProvider implements ICommonLabelProvider, ITreePathLabelProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	static {
 		IotDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", //$NON-NLS-1$
 				ImageDescriptor.getMissingImageDescriptor());
@@ -48,8 +48,8 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void updateLabel(ViewerLabel label, TreePath elementPath) {
 		Object element = elementPath.getLastSegment();
 		if (element instanceof IotNavigatorItem && !isOwnView(((IotNavigatorItem) element).getView())) {
@@ -60,8 +60,8 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Image getImage(Object element) {
 		if (element instanceof IotNavigatorGroup) {
 			IotNavigatorGroup group = (IotNavigatorGroup) element;
@@ -88,25 +88,25 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Image getImage(View view) {
 		switch (IotVisualIDRegistry.getVisualID(view)) {
 		case BoardEditPart.VISUAL_ID:
-			return getImage("Navigator?Diagram?friends?Board", IotElementTypes.Board_1000); //$NON-NLS-1$
+			return getImage("Navigator?Diagram?iot?Board", IotElementTypes.Board_1000); //$NON-NLS-1$
 		case ArduinoEditPart.VISUAL_ID:
-			return getImage("Navigator?TopLevelNode?friends?Arduino", IotElementTypes.Arduino_2002); //$NON-NLS-1$
+			return getImage("Navigator?TopLevelNode?iot?Arduino", IotElementTypes.Arduino_2006); //$NON-NLS-1$
 		case MotorEditPart.VISUAL_ID:
-			return getImage("Navigator?TopLevelNode?friends?Motor", IotElementTypes.Motor_2003); //$NON-NLS-1$
+			return getImage("Navigator?TopLevelNode?iot?Motor", IotElementTypes.Motor_2007); //$NON-NLS-1$
 		case ArduinoConectorEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?friends?Arduino?conector", IotElementTypes.ArduinoConector_4004); //$NON-NLS-1$
+			return getImage("Navigator?Link?iot?Arduino?conector", IotElementTypes.ArduinoConector_4005); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Image getImage(String key, IElementType elementType) {
 		ImageRegistry imageRegistry = IotDiagramEditorPlugin.getInstance().getImageRegistry();
 		Image image = imageRegistry.get(key);
@@ -123,8 +123,8 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getText(Object element) {
 		if (element instanceof IotNavigatorGroup) {
 			IotNavigatorGroup group = (IotNavigatorGroup) element;
@@ -151,8 +151,8 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getText(View view) {
 		if (view.getElement() != null && view.getElement().eIsProxy()) {
 			return getUnresolvedDomainElementProxyText(view);
@@ -161,42 +161,34 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 		case BoardEditPart.VISUAL_ID:
 			return getBoard_1000Text(view);
 		case ArduinoEditPart.VISUAL_ID:
-			return getArduino_2002Text(view);
+			return getArduino_2006Text(view);
 		case MotorEditPart.VISUAL_ID:
-			return getMotor_2003Text(view);
+			return getMotor_2007Text(view);
 		case ArduinoConectorEditPart.VISUAL_ID:
-			return getArduinoConector_4004Text(view);
+			return getArduinoConector_4005Text(view);
 		}
 		return getUnknownElementText(view);
 	}
 
 	/**
-	 * @generated
-	 */
-	private String getArduinoConector_4004Text(View view) {
-		IParser parser = IotParserProvider.getParser(IotElementTypes.ArduinoConector_4004,
-				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6004); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
+	* @generated
+	*/
+	private String getBoard_1000Text(View view) {
+		return ""; //$NON-NLS-1$
 	}
 
 	/**
-	 * @generated
-	 */
-	private String getArduino_2002Text(View view) {
-		IParser parser = IotParserProvider.getParser(IotElementTypes.Arduino_2002,
+	* @generated
+	*/
+	private String getArduino_2006Text(View view) {
+		IParser parser = IotParserProvider.getParser(IotElementTypes.Arduino_2006,
 				view.getElement() != null ? view.getElement() : view,
-				IotVisualIDRegistry.getType(ArduinoModeloEditPart.VISUAL_ID));
+				IotVisualIDRegistry.getType(ArduinoModelEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
-			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5006); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -204,68 +196,76 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 	/**
 	* @generated
 	*/
-	private String getMotor_2003Text(View view) {
-		IParser parser = IotParserProvider.getParser(IotElementTypes.Motor_2003,
+	private String getMotor_2007Text(View view) {
+		IParser parser = IotParserProvider.getParser(IotElementTypes.Motor_2007,
 				view.getElement() != null ? view.getElement() : view,
-				IotVisualIDRegistry.getType(MotorGrausEditPart.VISUAL_ID));
+				IotVisualIDRegistry.getType(MotorNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
-			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5007); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
 
 	/**
-	 * @generated
-	 */
-	private String getBoard_1000Text(View view) {
-		return ""; //$NON-NLS-1$
+	* @generated
+	*/
+	private String getArduinoConector_4005Text(View view) {
+		IParser parser = IotParserProvider.getParser(IotElementTypes.ArduinoConector_4005,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6005); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private String getUnknownElementText(View view) {
 		return "<UnknownElement Visual_ID = " + view.getType() + ">"; //$NON-NLS-1$  //$NON-NLS-2$
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private String getUnresolvedDomainElementProxyText(View view) {
 		return "<Unresolved domain element Visual_ID = " + view.getType() + ">"; //$NON-NLS-1$  //$NON-NLS-2$
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void init(ICommonContentExtensionSite aConfig) {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void restoreState(IMemento aMemento) {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public void saveState(IMemento aMemento) {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getDescription(Object anElement) {
 		return null;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private boolean isOwnView(View view) {
 		return BoardEditPart.MODEL_ID.equals(IotVisualIDRegistry.getModelID(view));
 	}

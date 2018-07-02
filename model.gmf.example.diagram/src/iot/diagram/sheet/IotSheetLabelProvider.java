@@ -1,11 +1,8 @@
-/*
- * 
- */
-package iot.diagram.sheet;
 
-import iot.diagram.navigator.IotNavigatorGroup;
-import iot.diagram.part.IotVisualIDRegistry;
-import iot.diagram.providers.IotElementTypes;
+/*
+* 
+*/
+package iot.diagram.sheet;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
@@ -15,14 +12,18 @@ import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.graphics.Image;
 
+import iot.diagram.navigator.IotNavigatorGroup;
+import iot.diagram.part.IotVisualIDRegistry;
+import iot.diagram.providers.IotElementTypes;
+
 /**
  * @generated
  */
 public class IotSheetLabelProvider extends BaseLabelProvider implements ILabelProvider {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public String getText(Object element) {
 		element = unwrap(element);
 		if (element instanceof IotNavigatorGroup) {
@@ -33,16 +34,16 @@ public class IotSheetLabelProvider extends BaseLabelProvider implements ILabelPr
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public Image getImage(Object element) {
 		IElementType etype = getElementType(getView(unwrap(element)));
 		return etype == null ? null : IotElementTypes.getImage(etype);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private Object unwrap(Object element) {
 		if (element instanceof IStructuredSelection) {
 			return ((IStructuredSelection) element).getFirstElement();
@@ -51,8 +52,8 @@ public class IotSheetLabelProvider extends BaseLabelProvider implements ILabelPr
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private View getView(Object element) {
 		if (element instanceof View) {
 			return (View) element;
@@ -64,8 +65,8 @@ public class IotSheetLabelProvider extends BaseLabelProvider implements ILabelPr
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IElementType getElementType(View view) {
 		// For intermediate views climb up the containment hierarchy to find the one associated with an element type.
 		while (view != null) {

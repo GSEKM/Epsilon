@@ -3,6 +3,20 @@
  */
 package iot.diagram.providers;
 
+import java.util.HashSet;
+import java.util.IdentityHashMap;
+import java.util.Map;
+import java.util.Set;
+
+import org.eclipse.core.runtime.IAdaptable;
+import org.eclipse.emf.ecore.ENamedElement;
+import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
+import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
+
 import iot.IotPackage;
 import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
@@ -10,38 +24,20 @@ import iot.diagram.edit.parts.BoardEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.part.IotDiagramEditorPlugin;
 
-import java.util.HashSet;
-import java.util.IdentityHashMap;
-import java.util.Map;
-import java.util.Set;
-
-import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EClassifier;
-import org.eclipse.emf.ecore.ENamedElement;
-import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.gmf.runtime.emf.type.core.ElementTypeRegistry;
-import org.eclipse.gmf.runtime.emf.type.core.IElementType;
-import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypeImages;
-import org.eclipse.gmf.tooling.runtime.providers.DiagramElementTypes;
-import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.resource.ImageRegistry;
-import org.eclipse.swt.graphics.Image;
-
 /**
  * @generated
  */
 public class IotElementTypes {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private IotElementTypes() {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static Map<IElementType, ENamedElement> elements;
 
 	/**
@@ -51,62 +47,63 @@ public class IotElementTypes {
 			IotDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory());
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static Set<IElementType> KNOWN_ELEMENT_TYPES;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static final IElementType Board_1000 = getElementType("model.gmf.example.diagram.Board_1000"); //$NON-NLS-1$
-	/**
-	 * @generated
-	 */
-	public static final IElementType Arduino_2002 = getElementType("model.gmf.example.diagram.Arduino_2002"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType Motor_2003 = getElementType("model.gmf.example.diagram.Motor_2003"); //$NON-NLS-1$
+	public static final IElementType Arduino_2006 = getElementType("model.gmf.example.diagram.Arduino_2006"); //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
-	public static final IElementType ArduinoConector_4004 = getElementType(
-			"model.gmf.example.diagram.ArduinoConector_4004"); //$NON-NLS-1$
+	* @generated
+	*/
+	public static final IElementType Motor_2007 = getElementType("model.gmf.example.diagram.Motor_2007"); //$NON-NLS-1$
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
+	public static final IElementType ArduinoConector_4005 = getElementType(
+			"model.gmf.example.diagram.ArduinoConector_4005"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static ImageDescriptor getImageDescriptor(ENamedElement element) {
 		return elementTypeImages.getImageDescriptor(element);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static Image getImage(ENamedElement element) {
 		return elementTypeImages.getImage(element);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static ImageDescriptor getImageDescriptor(IAdaptable hint) {
 		return getImageDescriptor(getElement(hint));
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static Image getImage(IAdaptable hint) {
 		return getImage(getElement(hint));
 	}
 
 	/**
-	 * Returns 'type' of the ecore object associated with the hint.
-	 * 
-	 * @generated
-	 */
+	* Returns 'type' of the ecore object associated with the hint.
+	* 
+	* @generated
+	*/
 	public static ENamedElement getElement(IAdaptable hint) {
 		Object type = hint.getAdapter(IElementType.class);
 		if (elements == null) {
@@ -114,49 +111,49 @@ public class IotElementTypes {
 
 			elements.put(Board_1000, IotPackage.eINSTANCE.getBoard());
 
-			elements.put(Arduino_2002, IotPackage.eINSTANCE.getArduino());
+			elements.put(Arduino_2006, IotPackage.eINSTANCE.getArduino());
 
-			elements.put(Motor_2003, IotPackage.eINSTANCE.getMotor());
+			elements.put(Motor_2007, IotPackage.eINSTANCE.getMotor());
 
-			elements.put(ArduinoConector_4004, IotPackage.eINSTANCE.getArduino_Conector());
+			elements.put(ArduinoConector_4005, IotPackage.eINSTANCE.getArduino_Conector());
 		}
 		return (ENamedElement) elements.get(type);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private static IElementType getElementType(String id) {
 		return ElementTypeRegistry.getInstance().getType(id);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Board_1000);
-			KNOWN_ELEMENT_TYPES.add(Arduino_2002);
-			KNOWN_ELEMENT_TYPES.add(Motor_2003);
-			KNOWN_ELEMENT_TYPES.add(ArduinoConector_4004);
+			KNOWN_ELEMENT_TYPES.add(Arduino_2006);
+			KNOWN_ELEMENT_TYPES.add(Motor_2007);
+			KNOWN_ELEMENT_TYPES.add(ArduinoConector_4005);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public static IElementType getElementType(int visualID) {
 		switch (visualID) {
 		case BoardEditPart.VISUAL_ID:
 			return Board_1000;
 		case ArduinoEditPart.VISUAL_ID:
-			return Arduino_2002;
+			return Arduino_2006;
 		case MotorEditPart.VISUAL_ID:
-			return Motor_2003;
+			return Motor_2007;
 		case ArduinoConectorEditPart.VISUAL_ID:
-			return ArduinoConector_4004;
+			return ArduinoConector_4005;
 		}
 		return null;
 	}

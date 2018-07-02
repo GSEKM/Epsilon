@@ -3,10 +3,6 @@
  */
 package iot.diagram.edit.commands;
 
-import iot.Arduino;
-import iot.Motor;
-import iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy;
-
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -16,34 +12,38 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
+import iot.Arduino;
+import iot.Motor;
+import iot.diagram.edit.policies.IotBaseItemSemanticEditPolicy;
+
 /**
  * @generated
  */
 public class ArduinoConectorReorientCommand extends EditElementCommand {
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final int reorientDirection;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject referenceOwner;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject oldEnd;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	private final EObject newEnd;
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public ArduinoConectorReorientCommand(ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
@@ -53,8 +53,8 @@ public class ArduinoConectorReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	public boolean canExecute() {
 		if (false == referenceOwner instanceof Arduino) {
 			return false;
@@ -69,30 +69,30 @@ public class ArduinoConectorReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean canReorientSource() {
 		if (!(oldEnd instanceof Motor && newEnd instanceof Arduino)) {
 			return false;
 		}
-		return IotBaseItemSemanticEditPolicy.getLinkConstraints().canExistArduinoConector_4004(getNewSource(),
+		return IotBaseItemSemanticEditPolicy.getLinkConstraints().canExistArduinoConector_4005(getNewSource(),
 				getOldTarget());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected boolean canReorientTarget() {
 		if (!(oldEnd instanceof Motor && newEnd instanceof Motor)) {
 			return false;
 		}
-		return IotBaseItemSemanticEditPolicy.getLinkConstraints().canExistArduinoConector_4004(getOldSource(),
+		return IotBaseItemSemanticEditPolicy.getLinkConstraints().canExistArduinoConector_4005(getOldSource(),
 				getNewTarget());
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
 		if (!canExecute()) {
 			throw new ExecutionException("Invalid arguments in reorient link command"); //$NON-NLS-1$
@@ -107,8 +107,8 @@ public class ArduinoConectorReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult reorientSource() throws ExecutionException {
 		getOldSource().getConector().remove(getOldTarget());
 		getNewSource().getConector().add(getOldTarget());
@@ -116,8 +116,8 @@ public class ArduinoConectorReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
 		getOldSource().getConector().remove(getOldTarget());
 		getOldSource().getConector().add(getNewTarget());
@@ -125,29 +125,29 @@ public class ArduinoConectorReorientCommand extends EditElementCommand {
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Arduino getOldSource() {
 		return (Arduino) referenceOwner;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Arduino getNewSource() {
 		return (Arduino) newEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Motor getOldTarget() {
 		return (Motor) oldEnd;
 	}
 
 	/**
-	 * @generated
-	 */
+	* @generated
+	*/
 	protected Motor getNewTarget() {
 		return (Motor) newEnd;
 	}

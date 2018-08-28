@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 7 resources" deleteContents="false" description="Delete 7 resources" element1="/model.gmf.example" element2="/model.gmf.example.diagram" element3="/model.gmf.example.edit" element4="/model.gmf.example.editor" element5="/model.gmf.example.tests" element6="/org.eclipse.epsilon.eugenia.examples.friends" element7="/org.eclipse.epsilon.eugenia.examples.friends.figures" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1533075289292"/>
+</session>

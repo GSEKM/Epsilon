@@ -1,0 +1,7 @@
+# Tracing options for the TestEcoreModeling.diagram plug-in
+
+# Common issues
+TestEcoreModeling.diagram/debug=false
+
+# Visual IDs
+TestEcoreModeling.diagram/debug/visualID=false

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" copyrightText="">
+  <diagram visualID="1000" editPartClassName="ApplicationEditPart" itemSemanticEditPolicyClassName="ApplicationItemSemanticEditPolicy" canonicalEditPolicyClassName="ApplicationCanonicalEditPolicy" iconProviderPriority="Low" validationProviderPriority="Low" validationEnabled="true" validationDecorators="true" liveValidationUIFeedback="true">
+    <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ApplicationEditHelper"/>
+    <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <containsShortcutsTo>Acessibilidade</containsShortcutsTo>
+    <shortcutsProvidedFor>Acessibilidade</shortcutsProvidedFor>
+    <domainDiagramElement href="testEcoreModeling.genmodel#//Acessibilidade/Application"/>
+    <palette>
+      <groups title="Objects" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Button" description="Create new Button"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="ComboBox" description="Create new ComboBox"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Image" description="Create new Image"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="ImageButton" description="Create new ImageButton"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Input" description="Create new Input"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Output" description="Create new Output"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="RadioGroup" description="Create new RadioGroup"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Text_Input" description="Create new Text_Input"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Text_Output" description="Create new Text_Output"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Widget" description="Create new Widget"/>
+      </groups>
+    </palette>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="TestEcoreModeling.diagram.general" name="Acessibilidade Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="TestEcoreModeling.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="TestEcoreModeling.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="TestEcoreModeling.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="TestEcoreModeling.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin printingEnabled="true">
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences child="//@diagram"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="appearance"/>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="diagram"/>
+    <tabs xsi:type="gmfgen:GenCustomPropertyTab" iD="domain" label="Core">
+      <filter xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel href="testEcoreModeling.genmodel#/"/>
+  <contextMenus context="//@diagram">
+    <items xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>

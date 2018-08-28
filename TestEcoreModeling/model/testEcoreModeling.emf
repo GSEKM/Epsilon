@@ -1,0 +1,68 @@
+@namespace(uri="pucpr.ppgia.geps.mestrado.luanmelo.projeto", prefix="Acessibilidade")
+package Acessibilidade;
+
+@gmf.diagram(foo="bar")
+class Application {
+  volatile id attr String nomeProjeto = "MyProject";
+  val Window[+] windows;
+}
+
+class Window {
+  attr String ~id;
+  attr boolean isLaucher = true;
+  val Widget[*] widgets;
+}
+
+class Output extends Widget {
+}
+
+@gmf.node(figure="figures.PersonFigure", label.icon="false", label="contentDescription", label.placement="external")
+class Widget {
+  !unique attr String ~id;
+  attr int marginTop;
+  attr int marginBottom;
+  attr int marginLeft;
+  attr int MarginRight;
+  attr int width;
+  attr int height;
+  attr String contentDescription;
+}
+
+class Text_Output extends Output {
+  attr String text;
+}
+
+class Image extends Output {
+  attr String imagePath;
+}
+
+class Input extends Widget {
+}
+
+class Text_Input extends Input {
+  attr String text;
+  attr String type;
+}
+
+class ComboBox extends Input {
+  attr String text;
+}
+
+class RadioGroup extends Input {
+  val RadioButton[*] radioButtons;
+}
+
+class RadioButton {
+  attr String ~id;
+  attr String text;
+  attr String contentDescription;
+}
+
+class Button extends Input {
+  attr String text;
+}
+
+class ImageButton extends Input {
+  attr String imagePath;
+}
+

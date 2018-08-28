@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/TestEcoreModeling/src" modelPluginID="TestEcoreModeling"
+    modelName="Acessibilidade" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>testEcoreModeling.ecore</foreignModel>
+  <genPackages prefix="Acessibilidade" disposableProviderFactory="true" ecorePackage="testEcoreModeling.ecore#/">
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Application">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Application/nomeProjeto"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference testEcoreModeling.ecore#//Application/windows"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Window">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Window/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Window/isLaucher"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference testEcoreModeling.ecore#//Window/widgets"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Output"/>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Widget">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/marginTop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/marginBottom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/marginLeft"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/MarginRight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Widget/contentDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Text_Output">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Text_Output/text"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Image/imagePath"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Input"/>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Text_Input">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Text_Input/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Text_Input/type"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//ComboBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//ComboBox/text"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//RadioGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference testEcoreModeling.ecore#//RadioGroup/radioButtons"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//RadioButton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//RadioButton/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//RadioButton/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//RadioButton/contentDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//Button/text"/>
+    </genClasses>
+    <genClasses ecoreClass="testEcoreModeling.ecore#//ImageButton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute testEcoreModeling.ecore#//ImageButton/imagePath"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="Acessibilidade">
+  <figures name="Default">
+    <descriptors name="OutputFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="OutputFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="OutputLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="OutputLabelFigure" text="Output"/>
+    </descriptors>
+    <descriptors name="WidgetFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="WidgetFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="WidgetLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="WidgetLabelFigure" text="Widget"/>
+    </descriptors>
+    <descriptors name="Text_OutputFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="Text_OutputFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="Text_OutputLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="Text_OutputLabelFigure" text="Text_Output"/>
+    </descriptors>
+    <descriptors name="ImageFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="ImageFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="ImageLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ImageLabelFigure" text="Image"/>
+    </descriptors>
+    <descriptors name="InputFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="InputFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="InputLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="InputLabelFigure" text="Input"/>
+    </descriptors>
+    <descriptors name="Text_InputFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="Text_InputFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="Text_InputLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="Text_InputLabelFigure" text="Text_Input"/>
+    </descriptors>
+    <descriptors name="ComboBoxFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="ComboBoxFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="ComboBoxLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ComboBoxLabelFigure" text="ComboBox"/>
+    </descriptors>
+    <descriptors name="RadioGroupFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="RadioGroupFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="RadioGroupLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="RadioGroupLabelFigure" text="RadioGroup"/>
+    </descriptors>
+    <descriptors name="ButtonFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="ButtonFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="ButtonLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ButtonLabelFigure" text="Button"/>
+    </descriptors>
+    <descriptors name="ImageButtonFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="ImageButtonFigure" qualifiedClassName="figures.PersonFigure"/>
+    </descriptors>
+    <descriptors name="ImageButtonLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ImageButtonLabelFigure" text="ImageButton"/>
+    </descriptors>
+  </figures>
+  <nodes name="Output" figure="OutputFigure"/>
+  <nodes name="Widget" figure="WidgetFigure"/>
+  <nodes name="Text_Output" figure="Text_OutputFigure"/>
+  <nodes name="Image" figure="ImageFigure"/>
+  <nodes name="Input" figure="InputFigure"/>
+  <nodes name="Text_Input" figure="Text_InputFigure"/>
+  <nodes name="ComboBox" figure="ComboBoxFigure"/>
+  <nodes name="RadioGroup" figure="RadioGroupFigure"/>
+  <nodes name="Button" figure="ButtonFigure"/>
+  <nodes name="ImageButton" figure="ImageButtonFigure"/>
+  <labels name="OutputLabel" figure="OutputLabelFigure" elementIcon="false"/>
+  <labels name="WidgetLabel" figure="WidgetLabelFigure" elementIcon="false"/>
+  <labels name="Text_OutputLabel" figure="Text_OutputLabelFigure" elementIcon="false"/>
+  <labels name="ImageLabel" figure="ImageLabelFigure" elementIcon="false"/>
+  <labels name="InputLabel" figure="InputLabelFigure" elementIcon="false"/>
+  <labels name="Text_InputLabel" figure="Text_InputLabelFigure" elementIcon="false"/>
+  <labels name="ComboBoxLabel" figure="ComboBoxLabelFigure" elementIcon="false"/>
+  <labels name="RadioGroupLabel" figure="RadioGroupLabelFigure" elementIcon="false"/>
+  <labels name="ButtonLabel" figure="ButtonLabelFigure" elementIcon="false"/>
+  <labels name="ImageButtonLabel" figure="ImageButtonLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_klF_MJUQEeiQWPzA6ru2WQ" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Gn3LcJprEeiCFtfAixWRnw" type="2001" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_GoVFgJprEeiCFtfAixWRnw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GoYI0JprEeiCFtfAixWRnw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GoYI0ZprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GoYI0pprEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GoYv4JprEeiCFtfAixWRnw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GoYv4ZprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GoYv4pprEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GoYv45prEeiCFtfAixWRnw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GoYv5JprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GoYv5ZprEeiCFtfAixWRnw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="iot.ecore#//Board"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gn3LcZprEeiCFtfAixWRnw" x="156" y="96"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_GoZW8JprEeiCFtfAixWRnw" type="2001" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_GoZW8pprEeiCFtfAixWRnw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GoZ-AJprEeiCFtfAixWRnw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GoZ-AZprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GoZ-ApprEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GoZ-A5prEeiCFtfAixWRnw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GoZ-BJprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GoZ-BZprEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GoZ-BpprEeiCFtfAixWRnw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GoZ-B5prEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GoZ-CJprEeiCFtfAixWRnw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="iot.ecore#//Arduino"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GoZW8ZprEeiCFtfAixWRnw" x="360" y="204"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_GoalEJprEeiCFtfAixWRnw" type="2001" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_GobMIJprEeiCFtfAixWRnw" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GobMIZprEeiCFtfAixWRnw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GobMIpprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GobMI5prEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GobMJJprEeiCFtfAixWRnw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GobMJZprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GobMJpprEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_GobMJ5prEeiCFtfAixWRnw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_GobMKJprEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_GobMKZprEeiCFtfAixWRnw"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="iot.ecore#//Motor"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GoalEZprEeiCFtfAixWRnw" x="168" y="336"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_ILcbEJqMEeiCFtfAixWRnw" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ILdCIJqMEeiCFtfAixWRnw" type="5002"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ILdCIZqMEeiCFtfAixWRnw" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ILdCIpqMEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ILdCI5qMEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ILdCJJqMEeiCFtfAixWRnw" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ILdCJZqMEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ILdCJpqMEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ILdpMJqMEeiCFtfAixWRnw" type="7006">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ILdpMZqMEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ILdpMpqMEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ILdpM5qMEeiCFtfAixWRnw" type="7007">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ILdpNJqMEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ILdpNZqMEeiCFtfAixWRnw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ILdpNpqMEeiCFtfAixWRnw" type="7008">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ILdpN5qMEeiCFtfAixWRnw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ILdpOJqMEeiCFtfAixWRnw"/>
+    </children>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_ILcbEZqMEeiCFtfAixWRnw"/>
+    <element xmi:type="ecore:EPackage" href="iot.ecore#//%"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ILcbEpqMEeiCFtfAixWRnw" x="577" y="299"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_klF_MZUQEeiQWPzA6ru2WQ"/>
+  <element xmi:type="ecore:EPackage" href="iot.ecore#/"/>
+</notation:Diagram>

@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.EcoreEditorID&quot; name=&quot;iot.ecore&quot; tooltip=&quot;model.gmf.example/model/iot.ecore&quot;>&#xA;&lt;persistable path=&quot;/model.gmf.example/model/iot.ecore&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.emfatic.ui.editor.EmfaticEditor&quot; name=&quot;iot.emf&quot; tooltip=&quot;model.gmf.example/model/iot.emf&quot;>&#xA;&lt;persistable path=&quot;/model.gmf.example/model/iot.emf&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;EcoreEditor&quot; name=&quot;testEcoreModeling.ecore&quot; tooltip=&quot;TestEcoreModeling/model/testEcoreModeling.ecore&quot;>&#xA;&lt;persistable path=&quot;/TestEcoreModeling/model/testEcoreModeling.ecore&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AcessibilidadeViewProvider.java&quot; tooltip=&quot;TestEcoreModeling.diagram/src/Acessibilidade/diagram/providers/AcessibilidadeViewProvider.java&quot;>&#xA;&lt;persistable path=&quot;/TestEcoreModeling.diagram/src/Acessibilidade/diagram/providers/AcessibilidadeViewProvider.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.emfatic.ui.editor.EmfaticEditor&quot; name=&quot;testEcoreModeling.emf&quot; tooltip=&quot;TestEcoreModeling/model/testEcoreModeling.emf&quot;>&#xA;&lt;persistable path=&quot;/TestEcoreModeling/model/testEcoreModeling.emf&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;testEcoreModeling&quot; tooltip=&quot;platform:/resource/TestEcoreModeling/model/testEcoreModeling.aird/testEcoreModeling&quot;>&#xA;&lt;persistable SESSION_RESOURCE_URI=&quot;platform:/resource/TestEcoreModeling/model/testEcoreModeling.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;testEcoreModeling&quot; uri=&quot;platform:/resource/TestEcoreModeling/model/testEcoreModeling.aird#_VhVM8aAEEei8f8HOBgL4FA&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.ecore.part.EcoreDiagramEditorID&quot; name=&quot;iot.ecore_diagram&quot; tooltip=&quot;model.gmf.example/model/iot.ecore_diagram&quot;>&#xA;&lt;persistable path=&quot;/model.gmf.example/model/iot.ecore_diagram&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;iot.ecorediag&quot; tooltip=&quot;model.gmf.example/model/iot.ecorediag&quot;>&#xA;&lt;persistable path=&quot;/model.gmf.example/model/iot.ecorediag&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;iot.genmodel&quot; tooltip=&quot;model.gmf.example/model/iot.genmodel&quot;>&#xA;&lt;persistable path=&quot;/model.gmf.example/model/iot.genmodel&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ArduinoModeloEditPart.java&quot; tooltip=&quot;model.gmf.example.diagram/src/iot/diagram/edit/parts/ArduinoModeloEditPart.java&quot;>&#xA;&lt;persistable path=&quot;/model.gmf.example.diagram/src/iot/diagram/edit/parts/ArduinoModeloEditPart.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PersonFigure.java&quot; tooltip=&quot;org.eclipse.epsilon.eugenia.examples.friends.figures/src/figures/PersonFigure.java&quot;>&#xA;&lt;persistable path=&quot;/org.eclipse.epsilon.eugenia.examples.friends.figures/src/figures/PersonFigure.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PluginActivator.java&quot; tooltip=&quot;org.eclipse.epsilon.eugenia.examples.friends.figures/src/org/eclipse/epsilon/eugenia/examples/friends/figures/activator/PluginActivator.java&quot;>&#xA;&lt;persistable path=&quot;/org.eclipse.epsilon.eugenia.examples.friends.figures/src/org/eclipse/epsilon/eugenia/examples/friends/figures/activator/PluginActivator.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ArduinoFigure.java&quot; tooltip=&quot;org.eclipse.epsilon.eugenia.examples.friends.figures/src/figures/ArduinoFigure.java&quot;>&#xA;&lt;persistable path=&quot;/org.eclipse.epsilon.eugenia.examples.friends.figures/src/figures/ArduinoFigure.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_rl0LAaWaEeihHIP6T7rlAw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_rl0LAqWaEeihHIP6T7rlAw" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1600" height="900">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_rl0LAaWaEeihHIP6T7rlAw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_rl0LAqWaEeihHIP6T7rlAw" label="%trimmedwindow.label.eclipseSDK" x="802" y="4" width="798" height="895">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -35,9 +35,11 @@
           <tags>persp.viewSC:org.eclipse.ui.views.ProblemView</tags>
           <tags>persp.newWizSC:org.eclipse.ecoretools.emf.design.wizardID</tags>
           <tags>persp.actionSet:org.eclipse.acceleo.ide.ui.editors.template.actionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_rl0LBaWaEeihHIP6T7rlAw" selectedElement="_rl0LC6WaEeihHIP6T7rlAw" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_rl0LBaWaEeihHIP6T7rlAw" selectedElement="_rl0LBqWaEeihHIP6T7rlAw" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_rl0LBqWaEeihHIP6T7rlAw" containerData="2735" selectedElement="_rl0LB6WaEeihHIP6T7rlAw">
               <children xsi:type="basic:PartStack" xmi:id="_rl0LB6WaEeihHIP6T7rlAw" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack" containerData="5000" selectedElement="_rl0LCKWaEeihHIP6T7rlAw">
+                <tags>active</tags>
+                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_rl0LCKWaEeihHIP6T7rlAw" elementId="org.eclipse.sirius.ui.tools.views.model.explorer" ref="_rl0zhqWaEeihHIP6T7rlAw"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_rl0LCaWaEeihHIP6T7rlAw" elementId="org.eclipse.ui.views.ContentOutlineMStack" toBeRendered="false" containerData="5000">
@@ -95,8 +97,6 @@
         <children xsi:type="basic:PartStack" xmi:id="_rl0zeKWaEeihHIP6T7rlAw" elementId="org.eclipse.e4.primaryDataStack" containerData="3246" selectedElement="_rl0zf6WaEeihHIP6T7rlAw">
           <tags>org.eclipse.e4.primaryDataStack</tags>
           <tags>EditorStack</tags>
-          <tags>active</tags>
-          <tags>noFocus</tags>
           <children xsi:type="basic:Part" xmi:id="_rl0zeaWaEeihHIP6T7rlAw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="iot.genmodel" iconURI="platform:/plugin/org.eclipse.emf.codegen.ecore.ui/icons/full/obj16/GenModelModelFile.gif" closeable="true">
             <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;iot.genmodel&quot; partName=&quot;iot.genmodel&quot; title=&quot;iot.genmodel&quot; tooltip=&quot;model.gmf.example/model/iot.genmodel&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/model.gmf.example/model/iot.genmodel&quot;/>&#xA;&lt;/editor>"/>
             <tags>Editor</tags>
@@ -136,8 +136,6 @@
             <tags>Editor</tags>
             <tags>org.eclipse.emf.ecore.presentation.EcoreEditorID</tags>
             <tags>removeOnHide</tags>
-            <tags>active</tags>
-            <tags>activeOnClose</tags>
           </children>
           <children xsi:type="basic:Part" xmi:id="_rl0zgKWaEeihHIP6T7rlAw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="iot.ecore" iconURI="platform:/plugin/org.eclipse.emfforms.editor.ecore/icons/EcoreModelFile.gif" closeable="true">
             <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;EcoreEditor&quot; name=&quot;iot.ecore&quot; partName=&quot;iot.ecore&quot; title=&quot;iot.ecore&quot; tooltip=&quot;model.gmf.example/model/iot.ecore&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/model.gmf.example/model/iot.ecore&quot;/>&#xA;&lt;/editor>"/>
@@ -180,6 +178,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1529948941718&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Sirius</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_rl0zh6WaEeihHIP6T7rlAw" elementId="org.eclipse.sirius.ui.tools.views.model.explorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -328,7 +328,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rl1ZnaWaEeihHIP6T7rlAw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_weZ9UKpKEeix7tkzNaLm4A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_rl99n6WaEeihHIP6T7rlAw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-mJsYKpQEei4SLw26TRjcw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_rl99n6WaEeihHIP6T7rlAw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rl1ZqqWaEeihHIP6T7rlAw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -349,7 +349,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rl1aD6WaEeihHIP6T7rlAw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_wee10KpKEeix7tkzNaLm4A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_rl99S6WaEeihHIP6T7rlAw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-mQaEKpQEei4SLw26TRjcw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_rl99S6WaEeihHIP6T7rlAw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rl1aH6WaEeihHIP6T7rlAw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

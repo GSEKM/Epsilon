@@ -259,7 +259,7 @@
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="Iot"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2006,2007"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4005"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4005,4006"/>
       </viewProvider>
    </extension>
 
@@ -274,7 +274,7 @@
             <method name="getType()" value="2006,2007"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4005"/>
+            <method name="getType()" value="4005,4006"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5006,5007"/>
@@ -374,6 +374,15 @@
             <param name="semanticHint" value="4005"/>
          </specializationType>
       </metamodel>
+      <metamodel nsURI="iot">
+         <specializationType
+               id="model.gmf.example.diagram.MotorConectorMotorMotor_4006"
+               name="%metatype.name.MotorConectorMotorMotor_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
+      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -390,6 +399,7 @@
          <elementType ref="model.gmf.example.diagram.Arduino_2006"/>
          <elementType ref="model.gmf.example.diagram.Motor_2007"/>
          <elementType ref="model.gmf.example.diagram.ArduinoConector_4005"/>
+         <elementType ref="model.gmf.example.diagram.MotorConectorMotorMotor_4006"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

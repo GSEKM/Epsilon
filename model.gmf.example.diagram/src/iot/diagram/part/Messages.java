@@ -286,6 +286,16 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String ConectorMotorMotor2CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String ConectorMotorMotor2CreationTool_desc;
+
+	/**
+	* @generated
+	*/
 	public static String CommandName_OpenDiagram;
 
 	/**
@@ -306,12 +316,27 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String NavigatorGroupName_Motor_2007_outgoinglinks;
+
+	/**
+	* @generated
+	*/
 	public static String NavigatorGroupName_ArduinoConector_4005_target;
 
 	/**
 	* @generated
 	*/
 	public static String NavigatorGroupName_ArduinoConector_4005_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_MotorConectorMotorMotor_4006_target;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_MotorConectorMotorMotor_4006_source;
 
 	/**
 	* @generated

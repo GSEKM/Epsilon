@@ -67,6 +67,7 @@ public class MotorItemProvider
 			addPinsPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addLibraryPropertyDescriptor(object);
+			addConectorMotorMotorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -155,6 +156,28 @@ public class MotorItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+		/**
+	 * This adds a property descriptor for the Conector Motor Motor feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addConectorMotorMotorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Motor_conectorMotorMotor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Motor_conectorMotorMotor_feature", "_UI_Motor_type"),
+				 IotPackage.Literals.MOTOR__CONECTOR_MOTOR_MOTOR,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

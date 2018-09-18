@@ -46,6 +46,12 @@ public class IotEditPartFactory implements EditPartFactory {
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);
 
+			case MotorConectorMotorMotorEditPart.VISUAL_ID:
+				return new MotorConectorMotorMotorEditPart(view);
+
+			case WrappingLabel2EditPart.VISUAL_ID:
+				return new WrappingLabel2EditPart(view);
+
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

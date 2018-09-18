@@ -48,8 +48,10 @@ import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.ArduinoModelEditPart;
 import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.edit.parts.MotorNameEditPart;
+import iot.diagram.edit.parts.WrappingLabel2EditPart;
 import iot.diagram.edit.parts.WrappingLabelEditPart;
 import iot.diagram.part.IotVisualIDRegistry;
 
@@ -214,6 +216,8 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 		switch (IotVisualIDRegistry.getVisualID(elementTypeHint)) {
 		case ArduinoConectorEditPart.VISUAL_ID:
 			return createArduinoConector_4005(containerView, index, persisted, preferencesHint);
+		case MotorConectorMotorMotorEditPart.VISUAL_ID:
+			return createMotorConectorMotorMotor_4006(containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -341,6 +345,49 @@ public class IotViewProvider extends AbstractProvider implements IViewProvider {
 		Location location6005 = (Location) label6005.getLayoutConstraint();
 		location6005.setX(0);
 		location6005.setY(40);
+		return edge;
+	}
+
+	/**
+	* @generated
+	*/
+	public Edge createMotorConectorMotorMotor_4006(View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(IotVisualIDRegistry.getType(MotorConectorMotorMotorEditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		Routing routing = Routing.get(prefStore.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
+		}
+		Node label6006 = createLabel(edge, IotVisualIDRegistry.getType(WrappingLabel2EditPart.VISUAL_ID));
+		label6006.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		label6006.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6006 = (Location) label6006.getLayoutConstraint();
+		location6006.setX(0);
+		location6006.setY(40);
 		return edge;
 	}
 

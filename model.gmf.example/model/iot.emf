@@ -25,5 +25,8 @@ class Motor {
   attr int pins;
   attr String name;
   attr String library;
+
+  @gmf.link(width="2", color="0,255,0", source.decoration="arrow", target.decoration="arrow", style="dash")
+  ref Motor[*] conectorMotorMotor;
 }
 

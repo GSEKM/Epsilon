@@ -2,6 +2,7 @@
  */
 package iot;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link iot.Motor#getPins <em>Pins</em>}</li>
  *   <li>{@link iot.Motor#getName <em>Name</em>}</li>
  *   <li>{@link iot.Motor#getLibrary <em>Library</em>}</li>
+ *   <li>{@link iot.Motor#getConectorMotorMotor <em>Conector Motor Motor</em>}</li>
  * </ul>
  *
  * @see iot.IotPackage#getMotor()
@@ -128,6 +130,22 @@ public interface Motor extends EObject
 	 * @generated
 	 */
 	void setLibrary(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Conector Motor Motor</b></em>' reference list.
+	 * The list contents are of type {@link iot.Motor}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Conector Motor Motor</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Conector Motor Motor</em>' reference list.
+	 * @see iot.IotPackage#getMotor_ConectorMotorMotor()
+	 * @model annotation="gmf.link width='2' color='0,255,0' source.decoration='arrow' target.decoration='arrow' style='dash'"
+	 * @generated
+	 */
+	EList<Motor> getConectorMotorMotor();
 
 	/**
 	 * <!-- begin-user-doc -->

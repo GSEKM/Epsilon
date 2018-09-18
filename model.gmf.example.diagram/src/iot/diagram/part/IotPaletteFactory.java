@@ -48,6 +48,7 @@ public class IotPaletteFactory {
 		PaletteDrawer paletteContainer = new PaletteDrawer(Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
 		paletteContainer.add(createConector1CreationTool());
+		paletteContainer.add(createConectorMotorMotor2CreationTool());
 		return paletteContainer;
 	}
 
@@ -83,6 +84,19 @@ public class IotPaletteFactory {
 				Messages.Conector1CreationTool_desc, Collections.singletonList(IotElementTypes.ArduinoConector_4005));
 		entry.setId("createConector1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(IotElementTypes.getImageDescriptor(IotElementTypes.ArduinoConector_4005));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createConectorMotorMotor2CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.ConectorMotorMotor2CreationTool_title,
+				Messages.ConectorMotorMotor2CreationTool_desc,
+				Collections.singletonList(IotElementTypes.MotorConectorMotorMotor_4006));
+		entry.setId("createConectorMotorMotor2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(IotElementTypes.getImageDescriptor(IotElementTypes.MotorConectorMotorMotor_4006));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

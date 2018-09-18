@@ -221,6 +221,15 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 
 		/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMotor_ConectorMotorMotor() {
+		return (EReference)motorEClass.getEStructuralFeatures().get(4);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -263,6 +272,7 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 		createEAttribute(motorEClass, MOTOR__PINS);
 		createEAttribute(motorEClass, MOTOR__NAME);
 		createEAttribute(motorEClass, MOTOR__LIBRARY);
+		createEReference(motorEClass, MOTOR__CONECTOR_MOTOR_MOTOR);
 	}
 
   /**
@@ -314,6 +324,7 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 		initEAttribute(getMotor_Pins(), ecorePackage.getEInt(), "pins", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMotor_Name(), ecorePackage.getEString(), "name", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMotor_Library(), ecorePackage.getEString(), "library", null, 0, 1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMotor_ConectorMotorMotor(), this.getMotor(), null, "conectorMotorMotor", null, 0, -1, Motor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(motorEClass, null, "turn", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -386,6 +397,16 @@ public class IotPackageImpl extends EPackageImpl implements IotPackage
 		String source = "gmf.link";	
 		addAnnotation
 		  (getArduino_Conector(), 
+		   source, 
+		   new String[] {
+			 "width", "2",
+			 "color", "0,255,0",
+			 "source.decoration", "arrow",
+			 "target.decoration", "arrow",
+			 "style", "dash"
+		   });	
+		addAnnotation
+		  (getMotor_ConectorMotorMotor(), 
 		   source, 
 		   new String[] {
 			 "width", "2",

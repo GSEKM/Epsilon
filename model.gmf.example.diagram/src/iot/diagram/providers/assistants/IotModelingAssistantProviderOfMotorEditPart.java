@@ -4,6 +4,7 @@
 package iot.diagram.providers.assistants;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
@@ -24,6 +25,68 @@ public class IotModelingAssistantProviderOfMotorEditPart extends IotModelingAssi
 	*/
 	@Override
 
+	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((MotorEditPart) sourceEditPart);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetRelTypesOnSource(MotorEditPart source) {
+		List<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(IotElementTypes.MotorConectorMotorMotor_4006);
+		return types;
+	}
+
+	/**
+	* @generated
+	*/
+	@Override
+
+	public List<IElementType> getRelTypesOnSourceAndTarget(IAdaptable source, IAdaptable target) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSourceAndTarget((MotorEditPart) sourceEditPart, targetEditPart);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetRelTypesOnSourceAndTarget(MotorEditPart source, IGraphicalEditPart targetEditPart) {
+		List<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof MotorEditPart) {
+			types.add(IotElementTypes.MotorConectorMotorMotor_4006);
+		}
+		return types;
+	}
+
+	/**
+	* @generated
+	*/
+	@Override
+
+	public List<IElementType> getTypesForTarget(IAdaptable source, IElementType relationshipType) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		return doGetTypesForTarget((MotorEditPart) sourceEditPart, relationshipType);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetTypesForTarget(MotorEditPart source, IElementType relationshipType) {
+		List<IElementType> types = new ArrayList<IElementType>();
+		if (relationshipType == IotElementTypes.MotorConectorMotorMotor_4006) {
+			types.add(IotElementTypes.Motor_2007);
+		}
+		return types;
+	}
+
+	/**
+	* @generated
+	*/
+	@Override
+
 	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
 		return doGetRelTypesOnTarget((MotorEditPart) targetEditPart);
@@ -33,8 +96,9 @@ public class IotModelingAssistantProviderOfMotorEditPart extends IotModelingAssi
 	* @generated
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(MotorEditPart target) {
-		List<IElementType> types = new ArrayList<IElementType>(1);
+		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(IotElementTypes.ArduinoConector_4005);
+		types.add(IotElementTypes.MotorConectorMotorMotor_4006);
 		return types;
 	}
 
@@ -55,6 +119,8 @@ public class IotModelingAssistantProviderOfMotorEditPart extends IotModelingAssi
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == IotElementTypes.ArduinoConector_4005) {
 			types.add(IotElementTypes.Arduino_2006);
+		} else if (relationshipType == IotElementTypes.MotorConectorMotorMotor_4006) {
+			types.add(IotElementTypes.Motor_2007);
 		}
 		return types;
 	}

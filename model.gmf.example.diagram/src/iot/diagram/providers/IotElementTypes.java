@@ -21,6 +21,7 @@ import iot.IotPackage;
 import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.part.IotDiagramEditorPlugin;
 
@@ -74,6 +75,12 @@ public class IotElementTypes {
 	/**
 	* @generated
 	*/
+	public static final IElementType MotorConectorMotorMotor_4006 = getElementType(
+			"model.gmf.example.diagram.MotorConectorMotorMotor_4006"); //$NON-NLS-1$
+
+	/**
+	* @generated
+	*/
 	public static ImageDescriptor getImageDescriptor(ENamedElement element) {
 		return elementTypeImages.getImageDescriptor(element);
 	}
@@ -116,6 +123,8 @@ public class IotElementTypes {
 			elements.put(Motor_2007, IotPackage.eINSTANCE.getMotor());
 
 			elements.put(ArduinoConector_4005, IotPackage.eINSTANCE.getArduino_Conector());
+
+			elements.put(MotorConectorMotorMotor_4006, IotPackage.eINSTANCE.getMotor_ConectorMotorMotor());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -137,6 +146,7 @@ public class IotElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Arduino_2006);
 			KNOWN_ELEMENT_TYPES.add(Motor_2007);
 			KNOWN_ELEMENT_TYPES.add(ArduinoConector_4005);
+			KNOWN_ELEMENT_TYPES.add(MotorConectorMotorMotor_4006);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -154,6 +164,8 @@ public class IotElementTypes {
 			return Motor_2007;
 		case ArduinoConectorEditPart.VISUAL_ID:
 			return ArduinoConector_4005;
+		case MotorConectorMotorMotorEditPart.VISUAL_ID:
+			return MotorConectorMotorMotor_4006;
 		}
 		return null;
 	}

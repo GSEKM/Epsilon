@@ -31,6 +31,7 @@ import org.eclipse.ui.navigator.ICommonContentProvider;
 import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.part.IotVisualIDRegistry;
 import iot.diagram.part.Messages;
@@ -242,6 +243,9 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
 					IotVisualIDRegistry.getType(ArduinoConectorEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					IotVisualIDRegistry.getType(MotorConectorMotorMotorEditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
 			}
@@ -270,12 +274,24 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 			IotNavigatorGroup incominglinks = new IotNavigatorGroup(
 					Messages.NavigatorGroupName_Motor_2007_incominglinks, "icons/incomingLinksNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
+			IotNavigatorGroup outgoinglinks = new IotNavigatorGroup(
+					Messages.NavigatorGroupName_Motor_2007_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
 					IotVisualIDRegistry.getType(ArduinoConectorEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					IotVisualIDRegistry.getType(MotorConectorMotorMotorEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					IotVisualIDRegistry.getType(MotorConectorMotorMotorEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
 			}
 			return result.toArray();
 		}
@@ -293,6 +309,31 @@ public class IotNavigatorContentProvider implements ICommonContentProvider {
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					IotVisualIDRegistry.getType(ArduinoEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case MotorConectorMotorMotorEditPart.VISUAL_ID: {
+			LinkedList<IotAbstractNavigatorItem> result = new LinkedList<IotAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			IotNavigatorGroup target = new IotNavigatorGroup(
+					Messages.NavigatorGroupName_MotorConectorMotorMotor_4006_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			IotNavigatorGroup source = new IotNavigatorGroup(
+					Messages.NavigatorGroupName_MotorConectorMotorMotor_4006_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					IotVisualIDRegistry.getType(MotorEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					IotVisualIDRegistry.getType(MotorEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);

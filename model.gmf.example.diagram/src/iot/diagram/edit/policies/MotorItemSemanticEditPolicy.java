@@ -20,7 +20,10 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import iot.diagram.edit.commands.ArduinoConectorCreateCommand;
 import iot.diagram.edit.commands.ArduinoConectorReorientCommand;
+import iot.diagram.edit.commands.MotorConectorMotorMotorCreateCommand;
+import iot.diagram.edit.commands.MotorConectorMotorMotorReorientCommand;
 import iot.diagram.edit.parts.ArduinoConectorEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.part.IotVisualIDRegistry;
 import iot.diagram.providers.IotElementTypes;
 
@@ -52,6 +55,23 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
+			if (IotVisualIDRegistry.getVisualID(incomingLink) == MotorConectorMotorMotorEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(incomingLink.getSource().getElement(), null,
+						incomingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
+		}
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+			Edge outgoingLink = (Edge) it.next();
+			if (IotVisualIDRegistry.getVisualID(outgoingLink) == MotorConectorMotorMotorEditPart.VISUAL_ID) {
+				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
+						outgoingLink.getTarget().getElement(), false);
+				cmd.add(new DestroyReferenceCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
 		}
 		EAnnotation annotation = view.getEAnnotation("Shortcut"); //$NON-NLS-1$
 		if (annotation == null) {
@@ -81,6 +101,9 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 		if (IotElementTypes.ArduinoConector_4005 == req.getElementType()) {
 			return null;
 		}
+		if (IotElementTypes.MotorConectorMotorMotor_4006 == req.getElementType()) {
+			return getGEFWrapper(new MotorConectorMotorMotorCreateCommand(req, req.getSource(), req.getTarget()));
+		}
 		return null;
 	}
 
@@ -90,6 +113,9 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (IotElementTypes.ArduinoConector_4005 == req.getElementType()) {
 			return getGEFWrapper(new ArduinoConectorCreateCommand(req, req.getSource(), req.getTarget()));
+		}
+		if (IotElementTypes.MotorConectorMotorMotor_4006 == req.getElementType()) {
+			return getGEFWrapper(new MotorConectorMotorMotorCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -104,6 +130,8 @@ public class MotorItemSemanticEditPolicy extends IotBaseItemSemanticEditPolicy {
 		switch (getVisualID(req)) {
 		case ArduinoConectorEditPart.VISUAL_ID:
 			return getGEFWrapper(new ArduinoConectorReorientCommand(req));
+		case MotorConectorMotorMotorEditPart.VISUAL_ID:
+			return getGEFWrapper(new MotorConectorMotorMotorReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

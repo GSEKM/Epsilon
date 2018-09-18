@@ -23,6 +23,7 @@ import iot.Motor;
 import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.providers.IotElementTypes;
 
@@ -139,7 +140,10 @@ public class IotDiagramUpdater {
 	* @generated
 	*/
 	public static List<IotLinkDescriptor> getMotor_2007ContainedLinks(View view) {
-		return Collections.emptyList();
+		Motor modelElement = (Motor) view.getElement();
+		LinkedList<IotLinkDescriptor> result = new LinkedList<IotLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Motor_ConectorMotorMotor_4006(modelElement));
+		return result;
 	}
 
 	/**
@@ -158,6 +162,7 @@ public class IotDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<IotLinkDescriptor> result = new LinkedList<IotLinkDescriptor>();
 		result.addAll(getIncomingFeatureModelFacetLinks_Arduino_Conector_4005(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Motor_ConectorMotorMotor_4006(modelElement, crossReferences));
 		return result;
 	}
 
@@ -175,7 +180,10 @@ public class IotDiagramUpdater {
 	* @generated
 	*/
 	public static List<IotLinkDescriptor> getMotor_2007OutgoingLinks(View view) {
-		return Collections.emptyList();
+		Motor modelElement = (Motor) view.getElement();
+		LinkedList<IotLinkDescriptor> result = new LinkedList<IotLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Motor_ConectorMotorMotor_4006(modelElement));
+		return result;
 	}
 
 	/**
@@ -197,6 +205,22 @@ public class IotDiagramUpdater {
 	/**
 	* @generated
 	*/
+	private static Collection<IotLinkDescriptor> getIncomingFeatureModelFacetLinks_Motor_ConectorMotorMotor_4006(
+			Motor target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<IotLinkDescriptor> result = new LinkedList<IotLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() == IotPackage.eINSTANCE.getMotor_ConectorMotorMotor()) {
+				result.add(new IotLinkDescriptor(setting.getEObject(), target,
+						IotElementTypes.MotorConectorMotorMotor_4006, MotorConectorMotorMotorEditPart.VISUAL_ID));
+			}
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
 	private static Collection<IotLinkDescriptor> getOutgoingFeatureModelFacetLinks_Arduino_Conector_4005(
 			Arduino source) {
 		LinkedList<IotLinkDescriptor> result = new LinkedList<IotLinkDescriptor>();
@@ -204,6 +228,20 @@ public class IotDiagramUpdater {
 			Motor destination = (Motor) destinations.next();
 			result.add(new IotLinkDescriptor(source, destination, IotElementTypes.ArduinoConector_4005,
 					ArduinoConectorEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	private static Collection<IotLinkDescriptor> getOutgoingFeatureModelFacetLinks_Motor_ConectorMotorMotor_4006(
+			Motor source) {
+		LinkedList<IotLinkDescriptor> result = new LinkedList<IotLinkDescriptor>();
+		for (Iterator<?> destinations = source.getConectorMotorMotor().iterator(); destinations.hasNext();) {
+			Motor destination = (Motor) destinations.next();
+			result.add(new IotLinkDescriptor(source, destination, IotElementTypes.MotorConectorMotorMotor_4006,
+					MotorConectorMotorMotorEditPart.VISUAL_ID));
 		}
 		return result;
 	}

@@ -25,6 +25,7 @@ import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.ArduinoModelEditPart;
 import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.edit.parts.MotorNameEditPart;
 import iot.diagram.part.IotDiagramEditorPlugin;
@@ -100,6 +101,9 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 			return getImage("Navigator?TopLevelNode?iot?Motor", IotElementTypes.Motor_2007); //$NON-NLS-1$
 		case ArduinoConectorEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?iot?Arduino?conector", IotElementTypes.ArduinoConector_4005); //$NON-NLS-1$
+		case MotorConectorMotorMotorEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?iot?Motor?conectorMotorMotor", //$NON-NLS-1$
+					IotElementTypes.MotorConectorMotorMotor_4006);
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -166,6 +170,8 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 			return getMotor_2007Text(view);
 		case ArduinoConectorEditPart.VISUAL_ID:
 			return getArduinoConector_4005Text(view);
+		case MotorConectorMotorMotorEditPart.VISUAL_ID:
+			return getMotorConectorMotorMotor_4006Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -220,6 +226,21 @@ public class IotNavigatorLabelProvider extends LabelProvider implements ICommonL
 					ParserOptions.NONE.intValue());
 		} else {
 			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6005); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getMotorConectorMotorMotor_4006Text(View view) {
+		IParser parser = IotParserProvider.getParser(IotElementTypes.MotorConectorMotorMotor_4006,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			IotDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6006); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

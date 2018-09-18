@@ -5,12 +5,15 @@ package iot.impl;
 import iot.IotPackage;
 import iot.Motor;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link iot.impl.MotorImpl#getPins <em>Pins</em>}</li>
  *   <li>{@link iot.impl.MotorImpl#getName <em>Name</em>}</li>
  *   <li>{@link iot.impl.MotorImpl#getLibrary <em>Library</em>}</li>
+ *   <li>{@link iot.impl.MotorImpl#getConectorMotorMotor <em>Conector Motor Motor</em>}</li>
  * </ul>
  *
  * @generated
@@ -109,6 +113,16 @@ public class MotorImpl extends EObjectImpl implements Motor
 	 * @ordered
 	 */
 	protected String library = LIBRARY_EDEFAULT;
+
+		/**
+	 * The cached value of the '{@link #getConectorMotorMotor() <em>Conector Motor Motor</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConectorMotorMotor()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Motor> conectorMotorMotor;
 
 		/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +234,18 @@ public class MotorImpl extends EObjectImpl implements Motor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Motor> getConectorMotorMotor() {
+		if (conectorMotorMotor == null) {
+			conectorMotorMotor = new EObjectResolvingEList<Motor>(Motor.class, this, IotPackage.MOTOR__CONECTOR_MOTOR_MOTOR);
+		}
+		return conectorMotorMotor;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void turn() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -243,6 +269,8 @@ public class MotorImpl extends EObjectImpl implements Motor
 				return getName();
 			case IotPackage.MOTOR__LIBRARY:
 				return getLibrary();
+			case IotPackage.MOTOR__CONECTOR_MOTOR_MOTOR:
+				return getConectorMotorMotor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -252,7 +280,8 @@ public class MotorImpl extends EObjectImpl implements Motor
    * <!-- end-user-doc -->
 	 * @generated
 	 */
-  @Override
+  @SuppressWarnings("unchecked")
+		@Override
   public void eSet(int featureID, Object newValue)
   {
 		switch (featureID) {
@@ -267,6 +296,10 @@ public class MotorImpl extends EObjectImpl implements Motor
 				return;
 			case IotPackage.MOTOR__LIBRARY:
 				setLibrary((String)newValue);
+				return;
+			case IotPackage.MOTOR__CONECTOR_MOTOR_MOTOR:
+				getConectorMotorMotor().clear();
+				getConectorMotorMotor().addAll((Collection<? extends Motor>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,6 +326,9 @@ public class MotorImpl extends EObjectImpl implements Motor
 			case IotPackage.MOTOR__LIBRARY:
 				setLibrary(LIBRARY_EDEFAULT);
 				return;
+			case IotPackage.MOTOR__CONECTOR_MOTOR_MOTOR:
+				getConectorMotorMotor().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -314,6 +350,8 @@ public class MotorImpl extends EObjectImpl implements Motor
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IotPackage.MOTOR__LIBRARY:
 				return LIBRARY_EDEFAULT == null ? library != null : !LIBRARY_EDEFAULT.equals(library);
+			case IotPackage.MOTOR__CONECTOR_MOTOR_MOTOR:
+				return conectorMotorMotor != null && !conectorMotorMotor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

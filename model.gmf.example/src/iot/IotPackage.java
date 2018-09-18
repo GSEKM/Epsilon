@@ -186,13 +186,22 @@ public interface IotPackage extends EPackage
 	int MOTOR__LIBRARY = 3;
 
 		/**
+	 * The feature id for the '<em><b>Conector Motor Motor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__CONECTOR_MOTOR_MOTOR = 4;
+
+		/**
 	 * The number of structural features of the '<em>Motor</em>' class.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-  int MOTOR_FEATURE_COUNT = 4;
+  int MOTOR_FEATURE_COUNT = 5;
 
 
   /**
@@ -325,6 +334,17 @@ public interface IotPackage extends EPackage
 	EAttribute getMotor_Library();
 
 		/**
+	 * Returns the meta object for the reference list '{@link iot.Motor#getConectorMotorMotor <em>Conector Motor Motor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Conector Motor Motor</em>'.
+	 * @see iot.Motor#getConectorMotorMotor()
+	 * @see #getMotor()
+	 * @generated
+	 */
+	EReference getMotor_ConectorMotorMotor();
+
+		/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -448,6 +468,14 @@ public interface IotPackage extends EPackage
 		 * @generated
 		 */
 		EAttribute MOTOR__LIBRARY = eINSTANCE.getMotor_Library();
+
+				/**
+		 * The meta object literal for the '<em><b>Conector Motor Motor</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MOTOR__CONECTOR_MOTOR_MOTOR = eINSTANCE.getMotor_ConectorMotorMotor();
 
   }
 

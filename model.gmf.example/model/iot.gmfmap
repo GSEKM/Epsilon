@@ -62,6 +62,22 @@
         xsi:type="ecore:EReference"
         href="iot.ecore#//Arduino/conector"/>
   </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="iot.gmfgraph#MotorConectorMotorMotorExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="iot.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="iot.gmfgraph#MotorConectorMotorMotor"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="iot.ecore#//Motor/conectorMotorMotor"/>
+  </links>
   <diagram>
     <diagramCanvas
         href="iot.gmfgraph#iot"/>

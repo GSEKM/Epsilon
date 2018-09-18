@@ -323,7 +323,27 @@ public class IotBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
+		public boolean canCreateMotorConectorMotorMotor_4006(Motor source, Motor target) {
+			if (source != null) {
+				if (source.getConectorMotorMotor().contains(target)) {
+					return false;
+				}
+			}
+
+			return canExistMotorConectorMotorMotor_4006(source, target);
+		}
+
+		/**
+			* @generated
+			*/
 		public boolean canExistArduinoConector_4005(Arduino source, Motor target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistMotorConectorMotorMotor_4006(Motor source, Motor target) {
 			return true;
 		}
 	}

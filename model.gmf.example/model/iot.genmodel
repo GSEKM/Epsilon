@@ -21,6 +21,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iot.ecore#//Motor/pins"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iot.ecore#//Motor/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iot.ecore#//Motor/library"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iot.ecore#//Motor/conectorMotorMotor"/>
       <genOperations ecoreOperation="iot.ecore#//Motor/turn"/>
     </genClasses>
   </genPackages>

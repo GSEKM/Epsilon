@@ -16,8 +16,10 @@ import iot.diagram.edit.parts.ArduinoConectorEditPart;
 import iot.diagram.edit.parts.ArduinoEditPart;
 import iot.diagram.edit.parts.ArduinoModelEditPart;
 import iot.diagram.edit.parts.BoardEditPart;
+import iot.diagram.edit.parts.MotorConectorMotorMotorEditPart;
 import iot.diagram.edit.parts.MotorEditPart;
 import iot.diagram.edit.parts.MotorNameEditPart;
+import iot.diagram.edit.parts.WrappingLabel2EditPart;
 import iot.diagram.edit.parts.WrappingLabelEditPart;
 
 /**
@@ -171,6 +173,11 @@ public class IotVisualIDRegistry {
 			break;
 		case ArduinoConectorEditPart.VISUAL_ID:
 			if (WrappingLabelEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case MotorConectorMotorMotorEditPart.VISUAL_ID:
+			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
